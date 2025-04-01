@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **do_not_disturb** | [**ServiceVOIPSharedDoNotDisturb**](ServiceVOIPSharedDoNotDisturb.md) |  | [optional] 
 **enabled** | **bool** | cannot use required, else it has to be true and false is not allowed | [optional] 
 **mac_address** | **str** | dont use mac, it enforces :, which voip does not like | [optional] 
+**media** | [**ServiceVOIPDeviceAddEdit3d**](ServiceVOIPDeviceAddEdit3d.md) |  | [optional] 
 **music_on_hold** | [**ServiceMusicOnHold**](ServiceMusicOnHold.md) |  | [optional] 
 **name** | **str** |  | 
 **owner_id** | **str** | json omitempty is needed else voip fails on \&quot;\&quot; for owner_id | [optional] 

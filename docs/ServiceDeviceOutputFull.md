@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **enabled** | **bool** |  | [optional] 
 **id** | **str** |  | [optional] 
 **mac_address** | **str** |  | [optional] 
+**media** | [**ServiceDeviceOutputFullMedia**](ServiceDeviceOutputFullMedia.md) |  | [optional] 
 **music_on_hold** | [**ServiceMusicOnHold**](ServiceMusicOnHold.md) | Provision  *DeviceOutputFullProvision &#x60;json:\&quot;provision\&quot;&#x60; | [optional] 
 **name** | **str** |  | [optional] 
 **owner_id** | **str** |  | [optional] 

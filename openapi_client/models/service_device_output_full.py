@@ -23,6 +23,7 @@ from typing import Any, ClassVar, Dict, List, Optional
 from openapi_client.models.service_call_forward import ServiceCallForward
 from openapi_client.models.service_call_recording_settings import ServiceCallRecordingSettings
 from openapi_client.models.service_device_output_full_callerid import ServiceDeviceOutputFullCallerid
+from openapi_client.models.service_device_output_full_media import ServiceDeviceOutputFullMedia
 from openapi_client.models.service_device_output_full_sip import ServiceDeviceOutputFullSIP
 from openapi_client.models.service_music_on_hold import ServiceMusicOnHold
 from openapi_client.models.service_voip_shared_do_not_disturb import ServiceVOIPSharedDoNotDisturb
@@ -41,11 +42,12 @@ class ServiceDeviceOutputFull(BaseModel):
     enabled: Optional[StrictBool] = None
     id: Optional[StrictStr] = None
     mac_address: Optional[StrictStr] = None
+    media: Optional[ServiceDeviceOutputFullMedia] = None
     music_on_hold: Optional[ServiceMusicOnHold] = Field(default=None, description="Provision  *DeviceOutputFullProvision `json:\"provision\"`")
     name: Optional[StrictStr] = None
     owner_id: Optional[StrictStr] = None
     sip: Optional[ServiceDeviceOutputFullSIP] = None
-    __properties: ClassVar[List[str]] = ["call_forward", "call_recording", "caller_id", "device_type", "do_not_disturb", "enabled", "id", "mac_address", "music_on_hold", "name", "owner_id", "sip"]
+    __properties: ClassVar[List[str]] = ["call_forward", "call_recording", "caller_id", "device_type", "do_not_disturb", "enabled", "id", "mac_address", "media", "music_on_hold", "name", "owner_id", "sip"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -98,6 +100,9 @@ class ServiceDeviceOutputFull(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of do_not_disturb
         if self.do_not_disturb:
             _dict['do_not_disturb'] = self.do_not_disturb.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of media
+        if self.media:
+            _dict['media'] = self.media.to_dict()
         # override the default output from pydantic by calling `to_dict()` of music_on_hold
         if self.music_on_hold:
             _dict['music_on_hold'] = self.music_on_hold.to_dict()
@@ -124,6 +129,7 @@ class ServiceDeviceOutputFull(BaseModel):
             "enabled": obj.get("enabled"),
             "id": obj.get("id"),
             "mac_address": obj.get("mac_address"),
+            "media": ServiceDeviceOutputFullMedia.from_dict(obj["media"]) if obj.get("media") is not None else None,
             "music_on_hold": ServiceMusicOnHold.from_dict(obj["music_on_hold"]) if obj.get("music_on_hold") is not None else None,
             "name": obj.get("name"),
             "owner_id": obj.get("owner_id"),

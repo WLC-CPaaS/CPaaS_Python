@@ -30,7 +30,8 @@ class ServiceVOIPDeviceAddEdit3c(BaseModel):
     """ # noqa: E501
     emergency: Optional[ServiceVOIPDeviceAddEdit4] = None
     external: Optional[ServiceVOIPDeviceAddEdit4] = None
-    __properties: ClassVar[List[str]] = ["emergency", "external"]
+    internal: Optional[ServiceVOIPDeviceAddEdit4] = None
+    __properties: ClassVar[List[str]] = ["emergency", "external", "internal"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -77,6 +78,9 @@ class ServiceVOIPDeviceAddEdit3c(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of external
         if self.external:
             _dict['external'] = self.external.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of internal
+        if self.internal:
+            _dict['internal'] = self.internal.to_dict()
         return _dict
 
     @classmethod
@@ -90,7 +94,8 @@ class ServiceVOIPDeviceAddEdit3c(BaseModel):
 
         _obj = cls.model_validate({
             "emergency": ServiceVOIPDeviceAddEdit4.from_dict(obj["emergency"]) if obj.get("emergency") is not None else None,
-            "external": ServiceVOIPDeviceAddEdit4.from_dict(obj["external"]) if obj.get("external") is not None else None
+            "external": ServiceVOIPDeviceAddEdit4.from_dict(obj["external"]) if obj.get("external") is not None else None,
+            "internal": ServiceVOIPDeviceAddEdit4.from_dict(obj["internal"]) if obj.get("internal") is not None else None
         })
         return _obj
 

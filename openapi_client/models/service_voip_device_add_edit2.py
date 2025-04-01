@@ -26,6 +26,7 @@ from openapi_client.models.service_call_recording_settings import ServiceCallRec
 from openapi_client.models.service_music_on_hold import ServiceMusicOnHold
 from openapi_client.models.service_voip_device_add_edit3a import ServiceVOIPDeviceAddEdit3a
 from openapi_client.models.service_voip_device_add_edit3c import ServiceVOIPDeviceAddEdit3c
+from openapi_client.models.service_voip_device_add_edit3d import ServiceVOIPDeviceAddEdit3d
 from openapi_client.models.service_voip_shared_do_not_disturb import ServiceVOIPSharedDoNotDisturb
 from typing import Optional, Set
 from typing_extensions import Self
@@ -41,11 +42,12 @@ class ServiceVOIPDeviceAddEdit2(BaseModel):
     do_not_disturb: Optional[ServiceVOIPSharedDoNotDisturb] = None
     enabled: Optional[StrictBool] = Field(default=None, description="cannot use required, else it has to be true and false is not allowed")
     mac_address: Optional[StrictStr] = Field(default=None, description="dont use mac, it enforces :, which voip does not like")
+    media: Optional[ServiceVOIPDeviceAddEdit3d] = None
     music_on_hold: Optional[ServiceMusicOnHold] = None
     name: Annotated[str, Field(strict=True, max_length=128)]
     owner_id: Optional[StrictStr] = Field(default=None, description="json omitempty is needed else voip fails on \"\" for owner_id")
     sip: ServiceVOIPDeviceAddEdit3a
-    __properties: ClassVar[List[str]] = ["call_forward", "call_recording", "caller_id", "device_type", "do_not_disturb", "enabled", "mac_address", "music_on_hold", "name", "owner_id", "sip"]
+    __properties: ClassVar[List[str]] = ["call_forward", "call_recording", "caller_id", "device_type", "do_not_disturb", "enabled", "mac_address", "media", "music_on_hold", "name", "owner_id", "sip"]
 
     @field_validator('device_type')
     def device_type_validate_enum(cls, value):
@@ -108,6 +110,9 @@ class ServiceVOIPDeviceAddEdit2(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of do_not_disturb
         if self.do_not_disturb:
             _dict['do_not_disturb'] = self.do_not_disturb.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of media
+        if self.media:
+            _dict['media'] = self.media.to_dict()
         # override the default output from pydantic by calling `to_dict()` of music_on_hold
         if self.music_on_hold:
             _dict['music_on_hold'] = self.music_on_hold.to_dict()
@@ -133,6 +138,7 @@ class ServiceVOIPDeviceAddEdit2(BaseModel):
             "do_not_disturb": ServiceVOIPSharedDoNotDisturb.from_dict(obj["do_not_disturb"]) if obj.get("do_not_disturb") is not None else None,
             "enabled": obj.get("enabled"),
             "mac_address": obj.get("mac_address"),
+            "media": ServiceVOIPDeviceAddEdit3d.from_dict(obj["media"]) if obj.get("media") is not None else None,
             "music_on_hold": ServiceMusicOnHold.from_dict(obj["music_on_hold"]) if obj.get("music_on_hold") is not None else None,
             "name": obj.get("name"),
             "owner_id": obj.get("owner_id"),

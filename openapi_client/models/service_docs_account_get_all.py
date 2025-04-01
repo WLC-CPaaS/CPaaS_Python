@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.service_account_output import ServiceAccountOutput
+from openapi_client.models.service_account_output_short import ServiceAccountOutputShort
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class ServiceDocsAccountGetAll(BaseModel):
     """
     ServiceDocsAccountGetAll
     """ # noqa: E501
-    data: Optional[List[ServiceAccountOutput]] = None
+    data: Optional[List[ServiceAccountOutputShort]] = None
     next_start_key: Optional[StrictStr] = Field(default=None, description="List Pagination: Used to get the next page of results. Will not exist if this is the last page.")
     page_size: Optional[StrictInt] = Field(default=None, description="List Pagination: The number of results returned in this page")
     request_id: Optional[StrictStr] = Field(default=None, description="Unique id for each request")
@@ -94,7 +94,7 @@ class ServiceDocsAccountGetAll(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "data": [ServiceAccountOutput.from_dict(_item) for _item in obj["data"]] if obj.get("data") is not None else None,
+            "data": [ServiceAccountOutputShort.from_dict(_item) for _item in obj["data"]] if obj.get("data") is not None else None,
             "next_start_key": obj.get("next_start_key"),
             "page_size": obj.get("page_size"),
             "request_id": obj.get("request_id"),

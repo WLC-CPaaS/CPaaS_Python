@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **call_forward** | [**ServiceCallForward**](ServiceCallForward.md) |  | [optional] 
 **call_recording** | [**ServiceCallRecordingSettings**](ServiceCallRecordingSettings.md) |  | [optional] 
+**caller_id** | [**ServiceUserOutputFullCallerid**](ServiceUserOutputFullCallerid.md) |  | [optional] 
 **do_not_disturb** | [**ServiceVOIPSharedDoNotDisturb**](ServiceVOIPSharedDoNotDisturb.md) |  | [optional] 
 **email** | **str** |  | [optional] 
 **enabled** | **bool** |  | [optional] 

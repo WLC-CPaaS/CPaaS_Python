@@ -22,6 +22,7 @@ from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
 from openapi_client.models.service_device_output_full_callerid_emergency import ServiceDeviceOutputFullCalleridEmergency
 from openapi_client.models.service_device_output_full_callerid_external import ServiceDeviceOutputFullCalleridExternal
+from openapi_client.models.service_device_output_full_callerid_internal import ServiceDeviceOutputFullCalleridInternal
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -31,7 +32,8 @@ class ServiceDeviceOutputFullCallerid(BaseModel):
     """ # noqa: E501
     emergency: Optional[ServiceDeviceOutputFullCalleridEmergency] = None
     external: Optional[ServiceDeviceOutputFullCalleridExternal] = None
-    __properties: ClassVar[List[str]] = ["emergency", "external"]
+    internal: Optional[ServiceDeviceOutputFullCalleridInternal] = None
+    __properties: ClassVar[List[str]] = ["emergency", "external", "internal"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -78,6 +80,9 @@ class ServiceDeviceOutputFullCallerid(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of external
         if self.external:
             _dict['external'] = self.external.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of internal
+        if self.internal:
+            _dict['internal'] = self.internal.to_dict()
         return _dict
 
     @classmethod
@@ -91,7 +96,8 @@ class ServiceDeviceOutputFullCallerid(BaseModel):
 
         _obj = cls.model_validate({
             "emergency": ServiceDeviceOutputFullCalleridEmergency.from_dict(obj["emergency"]) if obj.get("emergency") is not None else None,
-            "external": ServiceDeviceOutputFullCalleridExternal.from_dict(obj["external"]) if obj.get("external") is not None else None
+            "external": ServiceDeviceOutputFullCalleridExternal.from_dict(obj["external"]) if obj.get("external") is not None else None,
+            "internal": ServiceDeviceOutputFullCalleridInternal.from_dict(obj["internal"]) if obj.get("internal") is not None else None
         })
         return _obj
 

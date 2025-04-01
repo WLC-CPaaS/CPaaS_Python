@@ -23,6 +23,7 @@ from typing import Any, ClassVar, Dict, List, Optional
 from openapi_client.models.service_call_forward import ServiceCallForward
 from openapi_client.models.service_call_recording_settings import ServiceCallRecordingSettings
 from openapi_client.models.service_music_on_hold import ServiceMusicOnHold
+from openapi_client.models.service_user_output_full_callerid import ServiceUserOutputFullCallerid
 from openapi_client.models.service_voip_shared_do_not_disturb import ServiceVOIPSharedDoNotDisturb
 from typing import Optional, Set
 from typing_extensions import Self
@@ -33,6 +34,7 @@ class ServiceUserOutputFull(BaseModel):
     """ # noqa: E501
     call_forward: Optional[ServiceCallForward] = None
     call_recording: Optional[ServiceCallRecordingSettings] = None
+    caller_id: Optional[ServiceUserOutputFullCallerid] = None
     do_not_disturb: Optional[ServiceVOIPSharedDoNotDisturb] = None
     email: Optional[StrictStr] = None
     enabled: Optional[StrictBool] = None
@@ -43,7 +45,7 @@ class ServiceUserOutputFull(BaseModel):
     presence_id: Optional[StrictStr] = None
     timezone: Optional[StrictStr] = None
     verified: Optional[StrictBool] = None
-    __properties: ClassVar[List[str]] = ["call_forward", "call_recording", "do_not_disturb", "email", "enabled", "first_name", "id", "last_name", "music_on_hold", "presence_id", "timezone", "verified"]
+    __properties: ClassVar[List[str]] = ["call_forward", "call_recording", "caller_id", "do_not_disturb", "email", "enabled", "first_name", "id", "last_name", "music_on_hold", "presence_id", "timezone", "verified"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -90,6 +92,9 @@ class ServiceUserOutputFull(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of call_recording
         if self.call_recording:
             _dict['call_recording'] = self.call_recording.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of caller_id
+        if self.caller_id:
+            _dict['caller_id'] = self.caller_id.to_dict()
         # override the default output from pydantic by calling `to_dict()` of do_not_disturb
         if self.do_not_disturb:
             _dict['do_not_disturb'] = self.do_not_disturb.to_dict()
@@ -110,6 +115,7 @@ class ServiceUserOutputFull(BaseModel):
         _obj = cls.model_validate({
             "call_forward": ServiceCallForward.from_dict(obj["call_forward"]) if obj.get("call_forward") is not None else None,
             "call_recording": ServiceCallRecordingSettings.from_dict(obj["call_recording"]) if obj.get("call_recording") is not None else None,
+            "caller_id": ServiceUserOutputFullCallerid.from_dict(obj["caller_id"]) if obj.get("caller_id") is not None else None,
             "do_not_disturb": ServiceVOIPSharedDoNotDisturb.from_dict(obj["do_not_disturb"]) if obj.get("do_not_disturb") is not None else None,
             "email": obj.get("email"),
             "enabled": obj.get("enabled"),
