@@ -71,7 +71,7 @@ class DataApi:
     ) -> ServiceDocsCallDailySummary:
         """Get Call Daily Summary List
 
-        Retrieve a paginated list of call daily summary based on query parameters.
+        Retrieve a daily summary of calls, including the account ID that made or received a call, the call type, the month and year, the duration, and other relevant information.
 
         :param account_id:
         :type account_id: str
@@ -161,7 +161,7 @@ class DataApi:
     ) -> ApiResponse[ServiceDocsCallDailySummary]:
         """Get Call Daily Summary List
 
-        Retrieve a paginated list of call daily summary based on query parameters.
+        Retrieve a daily summary of calls, including the account ID that made or received a call, the call type, the month and year, the duration, and other relevant information.
 
         :param account_id:
         :type account_id: str
@@ -251,7 +251,7 @@ class DataApi:
     ) -> RESTResponseType:
         """Get Call Daily Summary List
 
-        Retrieve a paginated list of call daily summary based on query parameters.
+        Retrieve a daily summary of calls, including the account ID that made or received a call, the call type, the month and year, the duration, and other relevant information.
 
         :param account_id:
         :type account_id: str
@@ -432,7 +432,7 @@ class DataApi:
     ) -> ServiceDocsCallDetail:
         """Get Call Detail List
 
-        Retrieve a paginated list of call details based on query parameters.
+        Retrieve specific details about a call (e.g., caller, recipient, date, time, duration, etc.).
 
         :param account:
         :type account: str
@@ -538,7 +538,7 @@ class DataApi:
     ) -> ApiResponse[ServiceDocsCallDetail]:
         """Get Call Detail List
 
-        Retrieve a paginated list of call details based on query parameters.
+        Retrieve specific details about a call (e.g., caller, recipient, date, time, duration, etc.).
 
         :param account:
         :type account: str
@@ -644,7 +644,7 @@ class DataApi:
     ) -> RESTResponseType:
         """Get Call Detail List
 
-        Retrieve a paginated list of call details based on query parameters.
+        Retrieve specific details about a call (e.g., caller, recipient, date, time, duration, etc.).
 
         :param account:
         :type account: str
@@ -855,7 +855,7 @@ class DataApi:
     ) -> ServiceDocsCallMonthlySummary:
         """Get Call Detail List
 
-        Retrieve a paginated list of call monthly summary based on query parameters.
+        Retrieve a monthly summary of calls, including which accounts made or received calls, the call type, and other relevant information.
 
         :param account:
         :type account: str
@@ -953,7 +953,7 @@ class DataApi:
     ) -> ApiResponse[ServiceDocsCallMonthlySummary]:
         """Get Call Detail List
 
-        Retrieve a paginated list of call monthly summary based on query parameters.
+        Retrieve a monthly summary of calls, including which accounts made or received calls, the call type, and other relevant information.
 
         :param account:
         :type account: str
@@ -1051,7 +1051,7 @@ class DataApi:
     ) -> RESTResponseType:
         """Get Call Detail List
 
-        Retrieve a paginated list of call monthly summary based on query parameters.
+        Retrieve a monthly summary of calls, including which accounts made or received calls, the call type, and other relevant information.
 
         :param account:
         :type account: str
@@ -1244,7 +1244,7 @@ class DataApi:
     ) -> ServiceDocsEndpointList:
         """Get Endpoint List
 
-        Retrieve a paginated list of endpoints based on query parameters.
+        Access the endpoint list for each CPaaS API.
 
         :param endpoint_name:
         :type endpoint_name: str
@@ -1334,7 +1334,7 @@ class DataApi:
     ) -> ApiResponse[ServiceDocsEndpointList]:
         """Get Endpoint List
 
-        Retrieve a paginated list of endpoints based on query parameters.
+        Access the endpoint list for each CPaaS API.
 
         :param endpoint_name:
         :type endpoint_name: str
@@ -1424,7 +1424,7 @@ class DataApi:
     ) -> RESTResponseType:
         """Get Endpoint List
 
-        Retrieve a paginated list of endpoints based on query parameters.
+        Access the endpoint list for each CPaaS API.
 
         :param endpoint_name:
         :type endpoint_name: str
@@ -1601,7 +1601,7 @@ class DataApi:
     ) -> ServiceDocsEventDailySummary:
         """Get Event Daily Summary List
 
-        Retrieve a paginated list of event daily summaries based on query parameters.
+        Obtain a daily summary of events in a CPaaS account (e.g., setting/resetting the presence status for a user or extension).
 
         :param account_id:
         :type account_id: str
@@ -1691,7 +1691,7 @@ class DataApi:
     ) -> ApiResponse[ServiceDocsEventDailySummary]:
         """Get Event Daily Summary List
 
-        Retrieve a paginated list of event daily summaries based on query parameters.
+        Obtain a daily summary of events in a CPaaS account (e.g., setting/resetting the presence status for a user or extension).
 
         :param account_id:
         :type account_id: str
@@ -1781,7 +1781,7 @@ class DataApi:
     ) -> RESTResponseType:
         """Get Event Daily Summary List
 
-        Retrieve a paginated list of event daily summaries based on query parameters.
+        Obtain a daily summary of events in a CPaaS account (e.g., setting/resetting the presence status for a user or extension).
 
         :param account_id:
         :type account_id: str
@@ -1961,7 +1961,7 @@ class DataApi:
     ) -> ServiceDocsEventDetail:
         """Get Event Details
 
-        Retrieve a paginated list of event detail based on query parameters.
+        Obtain specific details about an event (e.g., an E911 notification, a deleted account, or a created user).
 
         :param account_id:
         :type account_id: str
@@ -2063,7 +2063,7 @@ class DataApi:
     ) -> ApiResponse[ServiceDocsEventDetail]:
         """Get Event Details
 
-        Retrieve a paginated list of event detail based on query parameters.
+        Obtain specific details about an event (e.g., an E911 notification, a deleted account, or a created user).
 
         :param account_id:
         :type account_id: str
@@ -2165,7 +2165,7 @@ class DataApi:
     ) -> RESTResponseType:
         """Get Event Details
 
-        Retrieve a paginated list of event detail based on query parameters.
+        Obtain specific details about an event (e.g., an E911 notification, a deleted account, or a created user).
 
         :param account_id:
         :type account_id: str
@@ -2368,7 +2368,7 @@ class DataApi:
     ) -> ServiceDocsEventMonthlySummary:
         """Get Event Monthly Summary List
 
-        Retrieve a paginated list of event monthly summaries based on query parameters.
+        Obtain a monthly summary of events in a CPaaS account (e.g., adding media files or assigning phone numbers).
 
         :param account_id:
         :type account_id: str
@@ -2466,7 +2466,7 @@ class DataApi:
     ) -> ApiResponse[ServiceDocsEventMonthlySummary]:
         """Get Event Monthly Summary List
 
-        Retrieve a paginated list of event monthly summaries based on query parameters.
+        Obtain a monthly summary of events in a CPaaS account (e.g., adding media files or assigning phone numbers).
 
         :param account_id:
         :type account_id: str
@@ -2564,7 +2564,7 @@ class DataApi:
     ) -> RESTResponseType:
         """Get Event Monthly Summary List
 
-        Retrieve a paginated list of event monthly summaries based on query parameters.
+        Obtain a monthly summary of events in a CPaaS account (e.g., adding media files or assigning phone numbers).
 
         :param account_id:
         :type account_id: str
@@ -2756,7 +2756,7 @@ class DataApi:
     ) -> ServiceDocsFeatureDailySummary:
         """Get Feature Daily Summary List
 
-        Retrieve a paginated list of feature daily summary based on query parameters.
+        Retrieve a daily summary about a feature, including usage, which accounts execute the steps, and other relevant information.
 
         :param end_date:
         :type end_date: str
@@ -2842,7 +2842,7 @@ class DataApi:
     ) -> ApiResponse[ServiceDocsFeatureDailySummary]:
         """Get Feature Daily Summary List
 
-        Retrieve a paginated list of feature daily summary based on query parameters.
+        Retrieve a daily summary about a feature, including usage, which accounts execute the steps, and other relevant information.
 
         :param end_date:
         :type end_date: str
@@ -2928,7 +2928,7 @@ class DataApi:
     ) -> RESTResponseType:
         """Get Feature Daily Summary List
 
-        Retrieve a paginated list of feature daily summary based on query parameters.
+        Retrieve a daily summary about a feature, including usage, which accounts execute the steps, and other relevant information.
 
         :param end_date:
         :type end_date: str
@@ -3098,7 +3098,7 @@ class DataApi:
     ) -> ServiceDocsFeatureMonthlySummary:
         """Get Feature Monthly Summary List
 
-        Retrieve a paginated list of feature monthly summary based on query parameters.
+        Retrieve a monthly summary about a feature’s usage, new users, updates, and other relevant information.
 
         :param end_month:
         :type end_month: int
@@ -3192,7 +3192,7 @@ class DataApi:
     ) -> ApiResponse[ServiceDocsFeatureMonthlySummary]:
         """Get Feature Monthly Summary List
 
-        Retrieve a paginated list of feature monthly summary based on query parameters.
+        Retrieve a monthly summary about a feature’s usage, new users, updates, and other relevant information.
 
         :param end_month:
         :type end_month: int
@@ -3286,7 +3286,7 @@ class DataApi:
     ) -> RESTResponseType:
         """Get Feature Monthly Summary List
 
-        Retrieve a paginated list of feature monthly summary based on query parameters.
+        Retrieve a monthly summary about a feature’s usage, new users, updates, and other relevant information.
 
         :param end_month:
         :type end_month: int

@@ -28,10 +28,13 @@ class ServiceDocGroupGetAll(BaseModel):
     """
     ServiceDocGroupGetAll
     """ # noqa: E501
-    data: Optional[ServiceGroupOutputShort] = None
+    data: Optional[List[ServiceGroupOutputShort]] = None
+    next_start_key: Optional[StrictStr] = Field(default=None, description="List Pagination: Used to get the next page of results. Will not exist if this is the last page.")
+    page_size: Optional[StrictInt] = Field(default=None, description="List Pagination: The number of results returned in this page")
     request_id: Optional[StrictStr] = Field(default=None, description="Unique id for each request")
+    start_key: Optional[StrictStr] = Field(default=None, description="List Pagination: Code for paged results")
     status_code: Optional[StrictInt] = Field(default=None, description="HTTP response status code")
-    __properties: ClassVar[List[str]] = ["data", "request_id", "status_code"]
+    __properties: ClassVar[List[str]] = ["data", "next_start_key", "page_size", "request_id", "start_key", "status_code"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -72,9 +75,13 @@ class ServiceDocGroupGetAll(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of data
+        # override the default output from pydantic by calling `to_dict()` of each item in data (list)
+        _items = []
         if self.data:
-            _dict['data'] = self.data.to_dict()
+            for _item_data in self.data:
+                if _item_data:
+                    _items.append(_item_data.to_dict())
+            _dict['data'] = _items
         return _dict
 
     @classmethod
@@ -87,8 +94,11 @@ class ServiceDocGroupGetAll(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "data": ServiceGroupOutputShort.from_dict(obj["data"]) if obj.get("data") is not None else None,
+            "data": [ServiceGroupOutputShort.from_dict(_item) for _item in obj["data"]] if obj.get("data") is not None else None,
+            "next_start_key": obj.get("next_start_key"),
+            "page_size": obj.get("page_size"),
             "request_id": obj.get("request_id"),
+            "start_key": obj.get("start_key"),
             "status_code": obj.get("status_code")
         })
         return _obj

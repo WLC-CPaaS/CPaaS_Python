@@ -14,8 +14,6 @@ Method | HTTP request | Description
 # **v1_sms_account_account_id_campaign_campaign_id_import_get**
 > ServiceDocsCampaignImportOutput v1_sms_account_account_id_campaign_campaign_id_import_get(account_id, campaign_id)
 
-
-
 Get details about a single imported campaign in an account.
 
 ### Example
@@ -95,8 +93,6 @@ Name | Type | Description  | Notes
 # **v1_sms_account_account_id_campaign_campaign_id_import_post**
 > ServiceDocsCampaignImportOutput v1_sms_account_account_id_campaign_campaign_id_import_post(account_id, campaign_id)
 
-
-
 Import campaign
 
 ### Example
@@ -175,8 +171,6 @@ Name | Type | Description  | Notes
 
 # **v1_sms_account_account_id_campaign_campaign_id_phonenumber_get**
 > ServiceDocsCampaignPhoneNumberOutput v1_sms_account_account_id_campaign_campaign_id_phonenumber_get(account_id, campaign_id, page_num=page_num, page_size=page_size)
-
-
 
 Get telephone numbers associated with a campaign.
 
@@ -261,8 +255,6 @@ Name | Type | Description  | Notes
 # **v1_sms_account_account_id_campaign_campaign_id_phonenumber_put**
 > ServiceDocsCampaignTagDetagPhonenumbersOutput v1_sms_account_account_id_campaign_campaign_id_phonenumber_put(account_id, campaign_id, req_body)
 
-
-
 Associate or dissociate telephone numbers with a campaign.
 
 ### Example
@@ -344,8 +336,6 @@ Name | Type | Description  | Notes
 
 # **v1_sms_account_account_id_campaign_import_get**
 > ServiceDocsCampaignImportedGetAllOutput v1_sms_account_account_id_campaign_import_get(account_id, page_num=page_num, page_size=page_size)
-
-
 
 Get a list of all imported campaigns in an account.
 

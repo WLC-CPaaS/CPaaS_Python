@@ -13,6 +13,8 @@ Method | HTTP request | Description
 [**v1_account_accountid_limit_get**](AccountApi.md#v1_account_accountid_limit_get) | **GET** /v1/account/{accountid}/limit | Get Account Limits
 [**v1_account_accountid_limit_put**](AccountApi.md#v1_account_accountid_limit_put) | **PUT** /v1/account/{accountid}/limit | Set Account Limits
 [**v1_account_accountid_post**](AccountApi.md#v1_account_accountid_post) | **POST** /v1/account/{accountid} | Create Sub Account
+[**v1_account_accountid_provisioningdetails_get**](AccountApi.md#v1_account_accountid_provisioningdetails_get) | **GET** /v1/account/{accountid}/provisioningdetails | Get Account Provisioning Details
+[**v1_account_accountid_provisioningdetails_resetpw_put**](AccountApi.md#v1_account_accountid_provisioningdetails_resetpw_put) | **PUT** /v1/account/{accountid}/provisioningdetails/resetpw | Reset the provisioning details password.
 [**v1_account_accountid_put**](AccountApi.md#v1_account_accountid_put) | **PUT** /v1/account/{accountid} | Update Account
 [**v1_account_apikey_get**](AccountApi.md#v1_account_apikey_get) | **GET** /v1/account/apikey | 
 [**v1_account_get**](AccountApi.md#v1_account_get) | **GET** /v1/account | Get Account List
@@ -752,6 +754,166 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1_account_accountid_provisioningdetails_get**
+> ServiceDocsAccountProvisioning v1_account_accountid_provisioningdetails_get(accountid)
+
+Get Account Provisioning Details
+
+Get the provisioning details of an account.
+
+### Example
+
+* Api Key Authentication (BearerAuth):
+
+```python
+import openapi_client
+from openapi_client.models.service_docs_account_provisioning import ServiceDocsAccountProvisioning
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://api.cpaaslabs.net"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerAuth
+configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.AccountApi(api_client)
+    accountid = 'accountid_example' # str | Account ID, 32 alpha numeric
+
+    try:
+        # Get Account Provisioning Details
+        api_response = api_instance.v1_account_accountid_provisioningdetails_get(accountid)
+        print("The response of AccountApi->v1_account_accountid_provisioningdetails_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AccountApi->v1_account_accountid_provisioningdetails_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountid** | **str**| Account ID, 32 alpha numeric | 
+
+### Return type
+
+[**ServiceDocsAccountProvisioning**](ServiceDocsAccountProvisioning.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_account_accountid_provisioningdetails_resetpw_put**
+> ServiceDocsAccountProvisioning v1_account_accountid_provisioningdetails_resetpw_put(accountid)
+
+Reset the provisioning details password.
+
+Reset the existing provisioning details password and set it to a new one.
+
+### Example
+
+* Api Key Authentication (BearerAuth):
+
+```python
+import openapi_client
+from openapi_client.models.service_docs_account_provisioning import ServiceDocsAccountProvisioning
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://api.cpaaslabs.net"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerAuth
+configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.AccountApi(api_client)
+    accountid = 'accountid_example' # str | Account ID, 32 alpha numeric
+
+    try:
+        # Reset the provisioning details password.
+        api_response = api_instance.v1_account_accountid_provisioningdetails_resetpw_put(accountid)
+        print("The response of AccountApi->v1_account_accountid_provisioningdetails_resetpw_put:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AccountApi->v1_account_accountid_provisioningdetails_resetpw_put: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountid** | **str**| Account ID, 32 alpha numeric | 
+
+### Return type
+
+[**ServiceDocsAccountProvisioning**](ServiceDocsAccountProvisioning.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1_account_accountid_put**
 > ServiceDocsAccountGetSingle v1_account_accountid_put(accountid, account)
 
@@ -837,8 +999,6 @@ Name | Type | Description  | Notes
 
 # **v1_account_apikey_get**
 > ServiceDocsAccountAPIKey v1_account_apikey_get()
-
-
 
 Authenticate an application or user request to get the client ID and client secret for a CPaaS account.
 

@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **featurecode** | [**ServiceFeatureCode**](ServiceFeatureCode.md) |  | [optional] 
-**flow** | [**ServiceCallflowAddEditFlowData**](ServiceCallflowAddEditFlowData.md) |  | [optional] 
+**flow** | [**ServiceCallflowAddEditFlowData**](ServiceCallflowAddEditFlowData.md) |  | 
 **id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **numbers** | **List[str]** |  | 

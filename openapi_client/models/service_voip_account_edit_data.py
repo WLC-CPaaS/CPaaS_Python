@@ -21,10 +21,9 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from openapi_client.models.service_voip_account_call_recording import ServiceVOIPAccountCallRecording
-from openapi_client.models.service_voip_account_music_on_hold import ServiceVOIPAccountMusicOnHold
-from openapi_client.models.service_voip_account_output_full_callerid import ServiceVOIPAccountOutputFullCallerid
-from openapi_client.models.service_voip_shared_do_not_disturb import ServiceVOIPSharedDoNotDisturb
+from openapi_client.models.models_voip_account_music_on_hold import ModelsVOIPAccountMusicOnHold
+from openapi_client.models.models_voip_account_output_full_callerid import ModelsVOIPAccountOutputFullCallerid
+from openapi_client.models.models_voip_shared_do_not_disturb import ModelsVOIPSharedDoNotDisturb
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -32,14 +31,13 @@ class ServiceVOIPAccountEditData(BaseModel):
     """
     ServiceVOIPAccountEditData
     """ # noqa: E501
-    call_recording: Optional[ServiceVOIPAccountCallRecording] = None
-    caller_id: Optional[ServiceVOIPAccountOutputFullCallerid] = None
-    do_not_disturb: Optional[ServiceVOIPSharedDoNotDisturb] = None
+    caller_id: Optional[ModelsVOIPAccountOutputFullCallerid] = None
+    do_not_disturb: Optional[ModelsVOIPSharedDoNotDisturb] = None
     enabled: Optional[StrictBool] = None
-    music_on_hold: Optional[ServiceVOIPAccountMusicOnHold] = None
+    music_on_hold: Optional[ModelsVOIPAccountMusicOnHold] = None
     name: Annotated[str, Field(strict=True, max_length=128)]
     timezone: Annotated[str, Field(min_length=5, strict=True, max_length=32)]
-    __properties: ClassVar[List[str]] = ["call_recording", "caller_id", "do_not_disturb", "enabled", "music_on_hold", "name", "timezone"]
+    __properties: ClassVar[List[str]] = ["caller_id", "do_not_disturb", "enabled", "music_on_hold", "name", "timezone"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -80,9 +78,6 @@ class ServiceVOIPAccountEditData(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of call_recording
-        if self.call_recording:
-            _dict['call_recording'] = self.call_recording.to_dict()
         # override the default output from pydantic by calling `to_dict()` of caller_id
         if self.caller_id:
             _dict['caller_id'] = self.caller_id.to_dict()
@@ -104,11 +99,10 @@ class ServiceVOIPAccountEditData(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "call_recording": ServiceVOIPAccountCallRecording.from_dict(obj["call_recording"]) if obj.get("call_recording") is not None else None,
-            "caller_id": ServiceVOIPAccountOutputFullCallerid.from_dict(obj["caller_id"]) if obj.get("caller_id") is not None else None,
-            "do_not_disturb": ServiceVOIPSharedDoNotDisturb.from_dict(obj["do_not_disturb"]) if obj.get("do_not_disturb") is not None else None,
+            "caller_id": ModelsVOIPAccountOutputFullCallerid.from_dict(obj["caller_id"]) if obj.get("caller_id") is not None else None,
+            "do_not_disturb": ModelsVOIPSharedDoNotDisturb.from_dict(obj["do_not_disturb"]) if obj.get("do_not_disturb") is not None else None,
             "enabled": obj.get("enabled"),
-            "music_on_hold": ServiceVOIPAccountMusicOnHold.from_dict(obj["music_on_hold"]) if obj.get("music_on_hold") is not None else None,
+            "music_on_hold": ModelsVOIPAccountMusicOnHold.from_dict(obj["music_on_hold"]) if obj.get("music_on_hold") is not None else None,
             "name": obj.get("name"),
             "timezone": obj.get("timezone")
         })

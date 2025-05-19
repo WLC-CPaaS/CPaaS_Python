@@ -27,4 +27,5 @@ from openapi_client.api.temporal_rule_set_api import TemporalRuleSetApi
 from openapi_client.api.vo_ip_user_api import VoIPUserApi
 from openapi_client.api.voicemail_api import VoicemailApi
 from openapi_client.api.webhook_api import WebhookApi
+from openapi_client.api.cdr_api import CdrApi
 

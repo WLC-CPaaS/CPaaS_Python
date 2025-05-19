@@ -21,11 +21,11 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from openapi_client.models.service_call_forward import ServiceCallForward
-from openapi_client.models.service_call_recording_settings import ServiceCallRecordingSettings
-from openapi_client.models.service_music_on_hold import ServiceMusicOnHold
-from openapi_client.models.service_user_output_full_callerid import ServiceUserOutputFullCallerid
-from openapi_client.models.service_voip_shared_do_not_disturb import ServiceVOIPSharedDoNotDisturb
+from openapi_client.models.models_call_forward import ModelsCallForward
+from openapi_client.models.models_call_recording_settings import ModelsCallRecordingSettings
+from openapi_client.models.models_music_on_hold import ModelsMusicOnHold
+from openapi_client.models.models_user_output_full_callerid import ModelsUserOutputFullCallerid
+from openapi_client.models.models_voip_shared_do_not_disturb import ModelsVOIPSharedDoNotDisturb
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -33,15 +33,15 @@ class ServiceVOIPUserAdd2(BaseModel):
     """
     ServiceVOIPUserAdd2
     """ # noqa: E501
-    call_forward: Optional[ServiceCallForward] = None
-    call_recording: Optional[ServiceCallRecordingSettings] = None
-    caller_id: Optional[ServiceUserOutputFullCallerid] = None
-    do_not_disturb: Optional[ServiceVOIPSharedDoNotDisturb] = None
+    call_forward: Optional[ModelsCallForward] = None
+    call_recording: Optional[ModelsCallRecordingSettings] = None
+    caller_id: Optional[ModelsUserOutputFullCallerid] = None
+    do_not_disturb: Optional[ModelsVOIPSharedDoNotDisturb] = None
     email: Annotated[str, Field(min_length=3, strict=True, max_length=254)]
     enabled: Optional[StrictBool] = None
     first_name: Annotated[str, Field(strict=True, max_length=128)]
     last_name: Annotated[str, Field(strict=True, max_length=128)]
-    music_on_hold: Optional[ServiceMusicOnHold] = None
+    music_on_hold: Optional[ModelsMusicOnHold] = None
     presence_id: Optional[StrictStr] = None
     timezone: Optional[StrictStr] = None
     verified: Optional[StrictBool] = None
@@ -113,15 +113,15 @@ class ServiceVOIPUserAdd2(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "call_forward": ServiceCallForward.from_dict(obj["call_forward"]) if obj.get("call_forward") is not None else None,
-            "call_recording": ServiceCallRecordingSettings.from_dict(obj["call_recording"]) if obj.get("call_recording") is not None else None,
-            "caller_id": ServiceUserOutputFullCallerid.from_dict(obj["caller_id"]) if obj.get("caller_id") is not None else None,
-            "do_not_disturb": ServiceVOIPSharedDoNotDisturb.from_dict(obj["do_not_disturb"]) if obj.get("do_not_disturb") is not None else None,
+            "call_forward": ModelsCallForward.from_dict(obj["call_forward"]) if obj.get("call_forward") is not None else None,
+            "call_recording": ModelsCallRecordingSettings.from_dict(obj["call_recording"]) if obj.get("call_recording") is not None else None,
+            "caller_id": ModelsUserOutputFullCallerid.from_dict(obj["caller_id"]) if obj.get("caller_id") is not None else None,
+            "do_not_disturb": ModelsVOIPSharedDoNotDisturb.from_dict(obj["do_not_disturb"]) if obj.get("do_not_disturb") is not None else None,
             "email": obj.get("email"),
             "enabled": obj.get("enabled"),
             "first_name": obj.get("first_name"),
             "last_name": obj.get("last_name"),
-            "music_on_hold": ServiceMusicOnHold.from_dict(obj["music_on_hold"]) if obj.get("music_on_hold") is not None else None,
+            "music_on_hold": ModelsMusicOnHold.from_dict(obj["music_on_hold"]) if obj.get("music_on_hold") is not None else None,
             "presence_id": obj.get("presence_id"),
             "timezone": obj.get("timezone"),
             "verified": obj.get("verified")

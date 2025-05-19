@@ -21,13 +21,13 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from openapi_client.models.service_call_forward import ServiceCallForward
-from openapi_client.models.service_call_recording_settings import ServiceCallRecordingSettings
-from openapi_client.models.service_music_on_hold import ServiceMusicOnHold
+from openapi_client.models.models_call_forward import ModelsCallForward
+from openapi_client.models.models_music_on_hold import ModelsMusicOnHold
+from openapi_client.models.models_voip_shared_do_not_disturb import ModelsVOIPSharedDoNotDisturb
 from openapi_client.models.service_voip_device_add_edit3a import ServiceVOIPDeviceAddEdit3a
 from openapi_client.models.service_voip_device_add_edit3c import ServiceVOIPDeviceAddEdit3c
 from openapi_client.models.service_voip_device_add_edit3d import ServiceVOIPDeviceAddEdit3d
-from openapi_client.models.service_voip_shared_do_not_disturb import ServiceVOIPSharedDoNotDisturb
+from openapi_client.models.service_voip_device_add_edit_provision import ServiceVOIPDeviceAddEditProvision
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -35,19 +35,19 @@ class ServiceVOIPDeviceAddEdit2(BaseModel):
     """
     ServiceVOIPDeviceAddEdit2
     """ # noqa: E501
-    call_forward: Optional[ServiceCallForward] = None
-    call_recording: Optional[ServiceCallRecordingSettings] = None
+    call_forward: Optional[ModelsCallForward] = None
     caller_id: Optional[ServiceVOIPDeviceAddEdit3c] = None
     device_type: Optional[StrictStr] = None
-    do_not_disturb: Optional[ServiceVOIPSharedDoNotDisturb] = None
+    do_not_disturb: Optional[ModelsVOIPSharedDoNotDisturb] = None
     enabled: Optional[StrictBool] = Field(default=None, description="cannot use required, else it has to be true and false is not allowed")
     mac_address: Optional[StrictStr] = Field(default=None, description="dont use mac, it enforces :, which voip does not like")
     media: Optional[ServiceVOIPDeviceAddEdit3d] = None
-    music_on_hold: Optional[ServiceMusicOnHold] = None
+    music_on_hold: Optional[ModelsMusicOnHold] = None
     name: Annotated[str, Field(strict=True, max_length=128)]
     owner_id: Optional[StrictStr] = Field(default=None, description="json omitempty is needed else voip fails on \"\" for owner_id")
+    provision: Optional[ServiceVOIPDeviceAddEditProvision] = None
     sip: ServiceVOIPDeviceAddEdit3a
-    __properties: ClassVar[List[str]] = ["call_forward", "call_recording", "caller_id", "device_type", "do_not_disturb", "enabled", "mac_address", "media", "music_on_hold", "name", "owner_id", "sip"]
+    __properties: ClassVar[List[str]] = ["call_forward", "caller_id", "device_type", "do_not_disturb", "enabled", "mac_address", "media", "music_on_hold", "name", "owner_id", "provision", "sip"]
 
     @field_validator('device_type')
     def device_type_validate_enum(cls, value):
@@ -55,8 +55,8 @@ class ServiceVOIPDeviceAddEdit2(BaseModel):
         if value is None:
             return value
 
-        if value not in set(['softphone', 'sip_uri']):
-            raise ValueError("must be one of enum values ('softphone', 'sip_uri')")
+        if value not in set(['softphone', 'sip_uri', 'sip_device']):
+            raise ValueError("must be one of enum values ('softphone', 'sip_uri', 'sip_device')")
         return value
 
     model_config = ConfigDict(
@@ -101,9 +101,6 @@ class ServiceVOIPDeviceAddEdit2(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of call_forward
         if self.call_forward:
             _dict['call_forward'] = self.call_forward.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of call_recording
-        if self.call_recording:
-            _dict['call_recording'] = self.call_recording.to_dict()
         # override the default output from pydantic by calling `to_dict()` of caller_id
         if self.caller_id:
             _dict['caller_id'] = self.caller_id.to_dict()
@@ -116,6 +113,9 @@ class ServiceVOIPDeviceAddEdit2(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of music_on_hold
         if self.music_on_hold:
             _dict['music_on_hold'] = self.music_on_hold.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of provision
+        if self.provision:
+            _dict['provision'] = self.provision.to_dict()
         # override the default output from pydantic by calling `to_dict()` of sip
         if self.sip:
             _dict['sip'] = self.sip.to_dict()
@@ -131,17 +131,17 @@ class ServiceVOIPDeviceAddEdit2(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "call_forward": ServiceCallForward.from_dict(obj["call_forward"]) if obj.get("call_forward") is not None else None,
-            "call_recording": ServiceCallRecordingSettings.from_dict(obj["call_recording"]) if obj.get("call_recording") is not None else None,
+            "call_forward": ModelsCallForward.from_dict(obj["call_forward"]) if obj.get("call_forward") is not None else None,
             "caller_id": ServiceVOIPDeviceAddEdit3c.from_dict(obj["caller_id"]) if obj.get("caller_id") is not None else None,
             "device_type": obj.get("device_type"),
-            "do_not_disturb": ServiceVOIPSharedDoNotDisturb.from_dict(obj["do_not_disturb"]) if obj.get("do_not_disturb") is not None else None,
+            "do_not_disturb": ModelsVOIPSharedDoNotDisturb.from_dict(obj["do_not_disturb"]) if obj.get("do_not_disturb") is not None else None,
             "enabled": obj.get("enabled"),
             "mac_address": obj.get("mac_address"),
             "media": ServiceVOIPDeviceAddEdit3d.from_dict(obj["media"]) if obj.get("media") is not None else None,
-            "music_on_hold": ServiceMusicOnHold.from_dict(obj["music_on_hold"]) if obj.get("music_on_hold") is not None else None,
+            "music_on_hold": ModelsMusicOnHold.from_dict(obj["music_on_hold"]) if obj.get("music_on_hold") is not None else None,
             "name": obj.get("name"),
             "owner_id": obj.get("owner_id"),
+            "provision": ServiceVOIPDeviceAddEditProvision.from_dict(obj["provision"]) if obj.get("provision") is not None else None,
             "sip": ServiceVOIPDeviceAddEdit3a.from_dict(obj["sip"]) if obj.get("sip") is not None else None
         })
         return _obj

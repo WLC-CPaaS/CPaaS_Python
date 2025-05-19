@@ -5,8 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**ServiceGroupOutputShort**](ServiceGroupOutputShort.md) |  | [optional] 
+**data** | [**List[ServiceGroupOutputShort]**](ServiceGroupOutputShort.md) |  | [optional] 
+**next_start_key** | **str** | List Pagination: Used to get the next page of results. Will not exist if this is the last page. | [optional] 
+**page_size** | **int** | List Pagination: The number of results returned in this page | [optional] 
 **request_id** | **str** | Unique id for each request | [optional] 
+**start_key** | **str** | List Pagination: Code for paged results | [optional] 
 **status_code** | **int** | HTTP response status code | [optional] 
 
 ## Example

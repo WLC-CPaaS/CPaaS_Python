@@ -108,7 +108,7 @@ Link an action, such as transfer or hangup to a channel.
 ```python
 import openapi_client
 from openapi_client.models.service_api_response import ServiceAPIResponse
-from openapi_client.models.service_channel_run_action_data import ServiceChannelRunActionData
+from openapi_client.models.service_voip_channel_run_action_data import ServiceVOIPChannelRunActionData
 from openapi_client.rest import ApiException
 from pprint import pprint
 
@@ -135,7 +135,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.ChannelApi(api_client)
     account_id = 'account_id_example' # str | Account ID, 32 alpha numeric
     channel_id = 'channel_id_example' # str | Channel ID
-    req_body = openapi_client.ServiceChannelRunActionData() # ServiceChannelRunActionData | payload fields
+    req_body = openapi_client.ServiceVOIPChannelRunActionData() # ServiceVOIPChannelRunActionData | payload fields
 
     try:
         # Associate Action to Channel
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **str**| Account ID, 32 alpha numeric | 
  **channel_id** | **str**| Channel ID | 
- **req_body** | [**ServiceChannelRunActionData**](ServiceChannelRunActionData.md)| payload fields | 
+ **req_body** | [**ServiceVOIPChannelRunActionData**](ServiceVOIPChannelRunActionData.md)| payload fields | 
 
 ### Return type
 
@@ -193,7 +193,7 @@ Link a metaflow to an active channel.
 ```python
 import openapi_client
 from openapi_client.models.service_api_response import ServiceAPIResponse
-from openapi_client.models.service_channel_run_metaflow_data import ServiceChannelRunMetaflowData
+from openapi_client.models.service_voip_channel_run_metaflow_data import ServiceVOIPChannelRunMetaflowData
 from openapi_client.rest import ApiException
 from pprint import pprint
 
@@ -220,7 +220,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.ChannelApi(api_client)
     account_id = 'account_id_example' # str | Account ID, 32 alpha numeric
     channel_id = 'channel_id_example' # str | Channel ID
-    req_body = openapi_client.ServiceChannelRunMetaflowData() # ServiceChannelRunMetaflowData | payload fields
+    req_body = openapi_client.ServiceVOIPChannelRunMetaflowData() # ServiceVOIPChannelRunMetaflowData | payload fields
 
     try:
         # Associate Metaflow to Channel
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **str**| Account ID, 32 alpha numeric | 
  **channel_id** | **str**| Channel ID | 
- **req_body** | [**ServiceChannelRunMetaflowData**](ServiceChannelRunMetaflowData.md)| payload fields | 
+ **req_body** | [**ServiceVOIPChannelRunMetaflowData**](ServiceVOIPChannelRunMetaflowData.md)| payload fields | 
 
 ### Return type
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_account_account_id_channel_get**
-> ServiceDocsChannelGet v1_account_account_id_channel_get(account_id)
+> ServiceDocsChannelGetAll v1_account_account_id_channel_get(account_id)
 
 Get Account Channel List
 
@@ -277,7 +277,7 @@ Get a list of active channels for an account.
 
 ```python
 import openapi_client
-from openapi_client.models.service_docs_channel_get import ServiceDocsChannelGet
+from openapi_client.models.service_docs_channel_get_all import ServiceDocsChannelGetAll
 from openapi_client.rest import ApiException
 from pprint import pprint
 
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsChannelGet**](ServiceDocsChannelGet.md)
+[**ServiceDocsChannelGetAll**](ServiceDocsChannelGetAll.md)
 
 ### Authorization
 
@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_account_account_id_device_device_id_channel_get**
-> ServiceDocsChannelGet v1_account_account_id_device_device_id_channel_get(account_id, device_id)
+> ServiceDocsChannelGetAll v1_account_account_id_device_device_id_channel_get(account_id, device_id)
 
 Get Device Channel List
 
@@ -357,7 +357,7 @@ Get the list of active channels for a device.
 
 ```python
 import openapi_client
-from openapi_client.models.service_docs_channel_get import ServiceDocsChannelGet
+from openapi_client.models.service_docs_channel_get_all import ServiceDocsChannelGetAll
 from openapi_client.rest import ApiException
 from pprint import pprint
 
@@ -406,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsChannelGet**](ServiceDocsChannelGet.md)
+[**ServiceDocsChannelGetAll**](ServiceDocsChannelGetAll.md)
 
 ### Authorization
 
@@ -427,7 +427,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_account_account_id_user_user_id_channel_get**
-> ServiceDocsChannelGet v1_account_account_id_user_user_id_channel_get(account_id, user_id)
+> ServiceDocsChannelGetAll v1_account_account_id_user_user_id_channel_get(account_id, user_id)
 
 Get User Channel List
 
@@ -439,7 +439,7 @@ Get the list of active channels for a user.
 
 ```python
 import openapi_client
-from openapi_client.models.service_docs_channel_get import ServiceDocsChannelGet
+from openapi_client.models.service_docs_channel_get_all import ServiceDocsChannelGetAll
 from openapi_client.rest import ApiException
 from pprint import pprint
 
@@ -488,7 +488,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsChannelGet**](ServiceDocsChannelGet.md)
+[**ServiceDocsChannelGetAll**](ServiceDocsChannelGetAll.md)
 
 ### Authorization
 

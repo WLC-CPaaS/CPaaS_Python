@@ -29,7 +29,7 @@ class ServiceVOIPVoicemailMessageAddData(BaseModel):
     """ # noqa: E501
     caller_id_name: Optional[StrictStr] = None
     caller_id_number: Optional[StrictStr] = None
-    folder: Optional[StrictStr] = None
+    folder: StrictStr
     var_from: Optional[StrictStr] = Field(default=None, alias="from")
     to: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["caller_id_name", "caller_id_number", "folder", "from", "to"]
@@ -37,9 +37,6 @@ class ServiceVOIPVoicemailMessageAddData(BaseModel):
     @field_validator('folder')
     def folder_validate_enum(cls, value):
         """Validates the enum"""
-        if value is None:
-            return value
-
         if value not in set(['deleted', 'saved', 'new']):
             raise ValueError("must be one of enum values ('deleted', 'saved', 'new')")
         return value

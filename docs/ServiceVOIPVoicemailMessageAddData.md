@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **caller_id_name** | **str** |  | [optional] 
 **caller_id_number** | **str** |  | [optional] 
-**folder** | **str** |  | [optional] 
+**folder** | **str** |  | 
 **var_from** | **str** |  | [optional] 
 **to** | **str** |  | [optional] 
 

@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.service_user_output_full import ServiceUserOutputFull
+from openapi_client.models.models_user_output_full import ModelsUserOutputFull
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class ServiceDocsUserGetSingle(BaseModel):
     """
     ServiceDocsUserGetSingle
     """ # noqa: E501
-    data: Optional[ServiceUserOutputFull] = None
+    data: Optional[ModelsUserOutputFull] = None
     request_id: Optional[StrictStr] = Field(default=None, description="Unique id for each request")
     status_code: Optional[StrictInt] = Field(default=None, description="HTTP response status code")
     __properties: ClassVar[List[str]] = ["data", "request_id", "status_code"]
@@ -87,7 +87,7 @@ class ServiceDocsUserGetSingle(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "data": ServiceUserOutputFull.from_dict(obj["data"]) if obj.get("data") is not None else None,
+            "data": ModelsUserOutputFull.from_dict(obj["data"]) if obj.get("data") is not None else None,
             "request_id": obj.get("request_id"),
             "status_code": obj.get("status_code")
         })

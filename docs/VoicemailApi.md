@@ -695,7 +695,9 @@ Name | Type | Description  | Notes
 
 Get Voicemail Message File
 
-Get the original audio content of a specific voicemail message identified by its unique ID within an account's voicemail box. URL Param \"voicemailID\" is a unique 32-character alphanumeric identifier assigned by the system, which refers to a specific voicemail box. URL Param \"messageID\" is a unique 32-character alphanumeric identifier assigned by the system, which refers to a specific message within a voicemail box.
+Get the original audio content of a specific voicemail message identified by its unique ID within an account's voicemail box.
+URL Param "voicemailID" is a unique 32-character alphanumeric identifier assigned by the system, which refers to a specific voicemail box.
+URL Param "messageID" is a unique 32-character alphanumeric identifier assigned by the system, which refers to a specific message within a voicemail box.
 
 ### Example
 

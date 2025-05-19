@@ -5,17 +5,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**call_forward** | [**ServiceCallForward**](ServiceCallForward.md) |  | [optional] 
-**call_recording** | [**ServiceCallRecordingSettings**](ServiceCallRecordingSettings.md) |  | [optional] 
+**call_forward** | [**ModelsCallForward**](ModelsCallForward.md) |  | [optional] 
 **caller_id** | [**ServiceVOIPDeviceAddEdit3c**](ServiceVOIPDeviceAddEdit3c.md) |  | [optional] 
 **device_type** | **str** |  | [optional] 
-**do_not_disturb** | [**ServiceVOIPSharedDoNotDisturb**](ServiceVOIPSharedDoNotDisturb.md) |  | [optional] 
+**do_not_disturb** | [**ModelsVOIPSharedDoNotDisturb**](ModelsVOIPSharedDoNotDisturb.md) |  | [optional] 
 **enabled** | **bool** | cannot use required, else it has to be true and false is not allowed | [optional] 
 **mac_address** | **str** | dont use mac, it enforces :, which voip does not like | [optional] 
 **media** | [**ServiceVOIPDeviceAddEdit3d**](ServiceVOIPDeviceAddEdit3d.md) |  | [optional] 
-**music_on_hold** | [**ServiceMusicOnHold**](ServiceMusicOnHold.md) |  | [optional] 
+**music_on_hold** | [**ModelsMusicOnHold**](ModelsMusicOnHold.md) |  | [optional] 
 **name** | **str** |  | 
 **owner_id** | **str** | json omitempty is needed else voip fails on \&quot;\&quot; for owner_id | [optional] 
+**provision** | [**ServiceVOIPDeviceAddEditProvision**](ServiceVOIPDeviceAddEditProvision.md) |  | [optional] 
 **sip** | [**ServiceVOIPDeviceAddEdit3a**](ServiceVOIPDeviceAddEdit3a.md) |  | 
 
 ## Example

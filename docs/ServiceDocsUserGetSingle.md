@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**ServiceUserOutputFull**](ServiceUserOutputFull.md) |  | [optional] 
+**data** | [**ModelsUserOutputFull**](ModelsUserOutputFull.md) |  | [optional] 
 **request_id** | **str** | Unique id for each request | [optional] 
 **status_code** | **int** | HTTP response status code | [optional] 
 

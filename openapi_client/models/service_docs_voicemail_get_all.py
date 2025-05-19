@@ -28,7 +28,7 @@ class ServiceDocsVoicemailGetAll(BaseModel):
     """
     ServiceDocsVoicemailGetAll
     """ # noqa: E501
-    data: Optional[ServiceVoicemailOutputShort] = None
+    data: Optional[List[ServiceVoicemailOutputShort]] = None
     next_start_key: Optional[StrictStr] = Field(default=None, description="List Pagination: Used to get the next page of results. Will not exist if this is the last page.")
     page_size: Optional[StrictInt] = Field(default=None, description="List Pagination: The number of results returned in this page")
     request_id: Optional[StrictStr] = Field(default=None, description="Unique id for each request")
@@ -75,9 +75,13 @@ class ServiceDocsVoicemailGetAll(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of data
+        # override the default output from pydantic by calling `to_dict()` of each item in data (list)
+        _items = []
         if self.data:
-            _dict['data'] = self.data.to_dict()
+            for _item_data in self.data:
+                if _item_data:
+                    _items.append(_item_data.to_dict())
+            _dict['data'] = _items
         return _dict
 
     @classmethod
@@ -90,7 +94,7 @@ class ServiceDocsVoicemailGetAll(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "data": ServiceVoicemailOutputShort.from_dict(obj["data"]) if obj.get("data") is not None else None,
+            "data": [ServiceVoicemailOutputShort.from_dict(_item) for _item in obj["data"]] if obj.get("data") is not None else None,
             "next_start_key": obj.get("next_start_key"),
             "page_size": obj.get("page_size"),
             "request_id": obj.get("request_id"),

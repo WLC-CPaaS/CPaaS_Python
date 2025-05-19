@@ -31,7 +31,7 @@ class ServiceCallflowOutputFull(BaseModel):
     ServiceCallflowOutputFull
     """ # noqa: E501
     featurecode: Optional[ServiceFeatureCode] = None
-    flow: Optional[ServiceCallflowAddEditFlowData] = None
+    flow: ServiceCallflowAddEditFlowData
     id: Optional[StrictStr] = None
     name: Optional[Annotated[str, Field(strict=True, max_length=128)]] = None
     numbers: List[StrictStr]

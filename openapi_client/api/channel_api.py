@@ -20,10 +20,10 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr
 from typing_extensions import Annotated
 from openapi_client.models.service_api_response import ServiceAPIResponse
-from openapi_client.models.service_channel_run_action_data import ServiceChannelRunActionData
-from openapi_client.models.service_channel_run_metaflow_data import ServiceChannelRunMetaflowData
-from openapi_client.models.service_docs_channel_get import ServiceDocsChannelGet
+from openapi_client.models.service_docs_channel_get_all import ServiceDocsChannelGetAll
 from openapi_client.models.service_docs_channel_get_single import ServiceDocsChannelGetSingle
+from openapi_client.models.service_voip_channel_run_action_data import ServiceVOIPChannelRunActionData
+from openapi_client.models.service_voip_channel_run_metaflow_data import ServiceVOIPChannelRunMetaflowData
 
 from openapi_client.api_client import ApiClient, RequestSerialized
 from openapi_client.api_response import ApiResponse
@@ -327,7 +327,7 @@ class ChannelApi:
         self,
         account_id: Annotated[StrictStr, Field(description="Account ID, 32 alpha numeric")],
         channel_id: Annotated[StrictStr, Field(description="Channel ID")],
-        req_body: Annotated[ServiceChannelRunActionData, Field(description="payload fields")],
+        req_body: Annotated[ServiceVOIPChannelRunActionData, Field(description="payload fields")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -350,7 +350,7 @@ class ChannelApi:
         :param channel_id: Channel ID (required)
         :type channel_id: str
         :param req_body: payload fields (required)
-        :type req_body: ServiceChannelRunActionData
+        :type req_body: ServiceVOIPChannelRunActionData
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -403,7 +403,7 @@ class ChannelApi:
         self,
         account_id: Annotated[StrictStr, Field(description="Account ID, 32 alpha numeric")],
         channel_id: Annotated[StrictStr, Field(description="Channel ID")],
-        req_body: Annotated[ServiceChannelRunActionData, Field(description="payload fields")],
+        req_body: Annotated[ServiceVOIPChannelRunActionData, Field(description="payload fields")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -426,7 +426,7 @@ class ChannelApi:
         :param channel_id: Channel ID (required)
         :type channel_id: str
         :param req_body: payload fields (required)
-        :type req_body: ServiceChannelRunActionData
+        :type req_body: ServiceVOIPChannelRunActionData
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -479,7 +479,7 @@ class ChannelApi:
         self,
         account_id: Annotated[StrictStr, Field(description="Account ID, 32 alpha numeric")],
         channel_id: Annotated[StrictStr, Field(description="Channel ID")],
-        req_body: Annotated[ServiceChannelRunActionData, Field(description="payload fields")],
+        req_body: Annotated[ServiceVOIPChannelRunActionData, Field(description="payload fields")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -502,7 +502,7 @@ class ChannelApi:
         :param channel_id: Channel ID (required)
         :type channel_id: str
         :param req_body: payload fields (required)
-        :type req_body: ServiceChannelRunActionData
+        :type req_body: ServiceVOIPChannelRunActionData
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -634,7 +634,7 @@ class ChannelApi:
         self,
         account_id: Annotated[StrictStr, Field(description="Account ID, 32 alpha numeric")],
         channel_id: Annotated[StrictStr, Field(description="Channel ID")],
-        req_body: Annotated[ServiceChannelRunMetaflowData, Field(description="payload fields")],
+        req_body: Annotated[ServiceVOIPChannelRunMetaflowData, Field(description="payload fields")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -657,7 +657,7 @@ class ChannelApi:
         :param channel_id: Channel ID (required)
         :type channel_id: str
         :param req_body: payload fields (required)
-        :type req_body: ServiceChannelRunMetaflowData
+        :type req_body: ServiceVOIPChannelRunMetaflowData
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -710,7 +710,7 @@ class ChannelApi:
         self,
         account_id: Annotated[StrictStr, Field(description="Account ID, 32 alpha numeric")],
         channel_id: Annotated[StrictStr, Field(description="Channel ID")],
-        req_body: Annotated[ServiceChannelRunMetaflowData, Field(description="payload fields")],
+        req_body: Annotated[ServiceVOIPChannelRunMetaflowData, Field(description="payload fields")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -733,7 +733,7 @@ class ChannelApi:
         :param channel_id: Channel ID (required)
         :type channel_id: str
         :param req_body: payload fields (required)
-        :type req_body: ServiceChannelRunMetaflowData
+        :type req_body: ServiceVOIPChannelRunMetaflowData
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -786,7 +786,7 @@ class ChannelApi:
         self,
         account_id: Annotated[StrictStr, Field(description="Account ID, 32 alpha numeric")],
         channel_id: Annotated[StrictStr, Field(description="Channel ID")],
-        req_body: Annotated[ServiceChannelRunMetaflowData, Field(description="payload fields")],
+        req_body: Annotated[ServiceVOIPChannelRunMetaflowData, Field(description="payload fields")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -809,7 +809,7 @@ class ChannelApi:
         :param channel_id: Channel ID (required)
         :type channel_id: str
         :param req_body: payload fields (required)
-        :type req_body: ServiceChannelRunMetaflowData
+        :type req_body: ServiceVOIPChannelRunMetaflowData
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -952,7 +952,7 @@ class ChannelApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocsChannelGet:
+    ) -> ServiceDocsChannelGetAll:
         """Get Account Channel List
 
         Get a list of active channels for an account.
@@ -990,7 +990,7 @@ class ChannelApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsChannelGet",
+            '200': "ServiceDocsChannelGetAll",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1020,7 +1020,7 @@ class ChannelApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocsChannelGet]:
+    ) -> ApiResponse[ServiceDocsChannelGetAll]:
         """Get Account Channel List
 
         Get a list of active channels for an account.
@@ -1058,7 +1058,7 @@ class ChannelApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsChannelGet",
+            '200': "ServiceDocsChannelGetAll",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1126,7 +1126,7 @@ class ChannelApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsChannelGet",
+            '200': "ServiceDocsChannelGetAll",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1217,7 +1217,7 @@ class ChannelApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocsChannelGet:
+    ) -> ServiceDocsChannelGetAll:
         """Get Device Channel List
 
         Get the list of active channels for a device.
@@ -1258,7 +1258,7 @@ class ChannelApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsChannelGet",
+            '200': "ServiceDocsChannelGetAll",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1289,7 +1289,7 @@ class ChannelApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocsChannelGet]:
+    ) -> ApiResponse[ServiceDocsChannelGetAll]:
         """Get Device Channel List
 
         Get the list of active channels for a device.
@@ -1330,7 +1330,7 @@ class ChannelApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsChannelGet",
+            '200': "ServiceDocsChannelGetAll",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1402,7 +1402,7 @@ class ChannelApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsChannelGet",
+            '200': "ServiceDocsChannelGetAll",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1496,7 +1496,7 @@ class ChannelApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocsChannelGet:
+    ) -> ServiceDocsChannelGetAll:
         """Get User Channel List
 
         Get the list of active channels for a user.
@@ -1537,7 +1537,7 @@ class ChannelApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsChannelGet",
+            '200': "ServiceDocsChannelGetAll",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1568,7 +1568,7 @@ class ChannelApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocsChannelGet]:
+    ) -> ApiResponse[ServiceDocsChannelGetAll]:
         """Get User Channel List
 
         Get the list of active channels for a user.
@@ -1609,7 +1609,7 @@ class ChannelApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsChannelGet",
+            '200': "ServiceDocsChannelGetAll",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1681,7 +1681,7 @@ class ChannelApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsChannelGet",
+            '200': "ServiceDocsChannelGetAll",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(

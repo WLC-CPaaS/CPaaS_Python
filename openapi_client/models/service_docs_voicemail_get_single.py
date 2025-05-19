@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.service_voicemail_output import ServiceVoicemailOutput
+from openapi_client.models.service_voicemail_output_full import ServiceVoicemailOutputFull
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class ServiceDocsVoicemailGetSingle(BaseModel):
     """
     ServiceDocsVoicemailGetSingle
     """ # noqa: E501
-    data: Optional[ServiceVoicemailOutput] = None
+    data: Optional[ServiceVoicemailOutputFull] = None
     request_id: Optional[StrictStr] = Field(default=None, description="Unique id for each request")
     status_code: Optional[StrictInt] = Field(default=None, description="HTTP response status code")
     __properties: ClassVar[List[str]] = ["data", "request_id", "status_code"]
@@ -87,7 +87,7 @@ class ServiceDocsVoicemailGetSingle(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "data": ServiceVoicemailOutput.from_dict(obj["data"]) if obj.get("data") is not None else None,
+            "data": ServiceVoicemailOutputFull.from_dict(obj["data"]) if obj.get("data") is not None else None,
             "request_id": obj.get("request_id"),
             "status_code": obj.get("status_code")
         })

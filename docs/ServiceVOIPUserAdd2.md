@@ -5,15 +5,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**call_forward** | [**ServiceCallForward**](ServiceCallForward.md) |  | [optional] 
-**call_recording** | [**ServiceCallRecordingSettings**](ServiceCallRecordingSettings.md) |  | [optional] 
-**caller_id** | [**ServiceUserOutputFullCallerid**](ServiceUserOutputFullCallerid.md) |  | [optional] 
-**do_not_disturb** | [**ServiceVOIPSharedDoNotDisturb**](ServiceVOIPSharedDoNotDisturb.md) |  | [optional] 
+**call_forward** | [**ModelsCallForward**](ModelsCallForward.md) |  | [optional] 
+**call_recording** | [**ModelsCallRecordingSettings**](ModelsCallRecordingSettings.md) |  | [optional] 
+**caller_id** | [**ModelsUserOutputFullCallerid**](ModelsUserOutputFullCallerid.md) |  | [optional] 
+**do_not_disturb** | [**ModelsVOIPSharedDoNotDisturb**](ModelsVOIPSharedDoNotDisturb.md) |  | [optional] 
 **email** | **str** |  | 
 **enabled** | **bool** |  | [optional] 
 **first_name** | **str** |  | 
 **last_name** | **str** |  | 
-**music_on_hold** | [**ServiceMusicOnHold**](ServiceMusicOnHold.md) |  | [optional] 
+**music_on_hold** | [**ModelsMusicOnHold**](ModelsMusicOnHold.md) |  | [optional] 
 **presence_id** | **str** |  | [optional] 
 **timezone** | **str** |  | [optional] 
 **verified** | **bool** |  | [optional] 

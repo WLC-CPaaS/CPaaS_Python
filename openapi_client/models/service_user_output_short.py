@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.service_call_recording_settings import ServiceCallRecordingSettings
-from openapi_client.models.service_voip_shared_do_not_disturb import ServiceVOIPSharedDoNotDisturb
+from openapi_client.models.models_call_recording_settings import ModelsCallRecordingSettings
+from openapi_client.models.models_voip_shared_do_not_disturb import ModelsVOIPSharedDoNotDisturb
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,8 +29,8 @@ class ServiceUserOutputShort(BaseModel):
     """
     ServiceUserOutputShort
     """ # noqa: E501
-    call_recording: Optional[ServiceCallRecordingSettings] = None
-    do_not_disturb: Optional[ServiceVOIPSharedDoNotDisturb] = None
+    call_recording: Optional[ModelsCallRecordingSettings] = None
+    do_not_disturb: Optional[ModelsVOIPSharedDoNotDisturb] = None
     email: Optional[StrictStr] = None
     enabled: Optional[StrictBool] = None
     features: Optional[List[StrictStr]] = None
@@ -98,8 +98,8 @@ class ServiceUserOutputShort(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "call_recording": ServiceCallRecordingSettings.from_dict(obj["call_recording"]) if obj.get("call_recording") is not None else None,
-            "do_not_disturb": ServiceVOIPSharedDoNotDisturb.from_dict(obj["do_not_disturb"]) if obj.get("do_not_disturb") is not None else None,
+            "call_recording": ModelsCallRecordingSettings.from_dict(obj["call_recording"]) if obj.get("call_recording") is not None else None,
+            "do_not_disturb": ModelsVOIPSharedDoNotDisturb.from_dict(obj["do_not_disturb"]) if obj.get("do_not_disturb") is not None else None,
             "email": obj.get("email"),
             "enabled": obj.get("enabled"),
             "features": obj.get("features"),

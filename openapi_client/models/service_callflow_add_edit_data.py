@@ -31,7 +31,7 @@ class ServiceCallflowAddEditData(BaseModel):
     ServiceCallflowAddEditData
     """ # noqa: E501
     featurecode: Optional[ServiceFeatureCode] = None
-    flow: Optional[ServiceCallflowAddEditFlowData] = None
+    flow: ServiceCallflowAddEditFlowData
     name: Optional[Annotated[str, Field(strict=True, max_length=128)]] = None
     numbers: List[StrictStr]
     patterns: List[StrictStr]
