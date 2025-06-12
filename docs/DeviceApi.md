@@ -1,6 +1,6 @@
 # openapi_client.DeviceApi
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**v1_account_accountid_device_deviceid_reboot_post**](DeviceApi.md#v1_account_accountid_device_deviceid_reboot_post) | **POST** /v1/account/{accountid}/device/{deviceid}/reboot | Reboot Device
 [**v1_account_accountid_device_get**](DeviceApi.md#v1_account_accountid_device_get) | **GET** /v1/account/{accountid}/device | Get Device List
 [**v1_account_accountid_device_post**](DeviceApi.md#v1_account_accountid_device_post) | **POST** /v1/account/{accountid}/device | Create Device
+[**v1_account_accountid_device_status_get**](DeviceApi.md#v1_account_accountid_device_status_get) | **GET** /v1/account/{accountid}/device/status | Get Device Status
 
 
 # **v1_account_accountid_device_deviceid_delete**
@@ -29,10 +30,10 @@ from openapi_client.models.service_docs_device_get_single import ServiceDocsDevi
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -111,10 +112,10 @@ from openapi_client.models.service_docs_device_get_single import ServiceDocsDevi
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -194,10 +195,10 @@ from openapi_client.models.service_voip_device_add_edit2 import ServiceVOIPDevic
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -266,7 +267,7 @@ Name | Type | Description  | Notes
 
 Reboot Device
 
-Reboot one device from a CPaaS account.
+Reboot a device in an account to mitigate malware and improve device performance.
 
 ### Example
 
@@ -278,10 +279,10 @@ from openapi_client.models.service_docs_device_reboot import ServiceDocsDeviceRe
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -360,10 +361,10 @@ from openapi_client.models.service_docs_device_get_all import ServiceDocsDeviceG
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -445,10 +446,10 @@ from openapi_client.models.service_voip_device_add_edit2 import ServiceVOIPDevic
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -499,6 +500,86 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_account_accountid_device_status_get**
+> ServiceDocsDeviceStatus v1_account_accountid_device_status_get(accountid)
+
+Get Device Status
+
+Retrieve a device’s status (e.g., registered or not registered) in an account.
+
+### Example
+
+* Api Key Authentication (BearerAuth):
+
+```python
+import openapi_client
+from openapi_client.models.service_docs_device_status import ServiceDocsDeviceStatus
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://API_HOSTNAME
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://API_HOSTNAME"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerAuth
+configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.DeviceApi(api_client)
+    accountid = 'accountid_example' # str | Account ID, 32 alpha numeric
+
+    try:
+        # Get Device Status
+        api_response = api_instance.v1_account_accountid_device_status_get(accountid)
+        print("The response of DeviceApi->v1_account_accountid_device_status_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DeviceApi->v1_account_accountid_device_status_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountid** | **str**| Account ID, 32 alpha numeric | 
+
+### Return type
+
+[**ServiceDocsDeviceStatus**](ServiceDocsDeviceStatus.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details

@@ -1,13 +1,91 @@
 # openapi_client.SystemStatusApi
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**v1_ap_ping_get**](SystemStatusApi.md#v1_ap_ping_get) | **GET** /v1/ap/ping | Provisioning Ping
 [**v1_ping_get**](SystemStatusApi.md#v1_ping_get) | **GET** /v1/ping | Ping Backend
 [**v1_pingseccognito_get**](SystemStatusApi.md#v1_pingseccognito_get) | **GET** /v1/pingseccognito | Ping Cognito
 [**v1_system_status_get**](SystemStatusApi.md#v1_system_status_get) | **GET** /v1/system_status | Get System Status
 
+
+# **v1_ap_ping_get**
+> ProvisioningDocsDocsPingOutput v1_ap_ping_get()
+
+Provisioning Ping
+
+Ping the provisioning service.
+
+### Example
+
+* Api Key Authentication (BearerAuth):
+
+```python
+import openapi_client
+from openapi_client.models.provisioning_docs_docs_ping_output import ProvisioningDocsDocsPingOutput
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://API_HOSTNAME
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://API_HOSTNAME"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerAuth
+configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.SystemStatusApi(api_client)
+
+    try:
+        # Provisioning Ping
+        api_response = api_instance.v1_ap_ping_get()
+        print("The response of SystemStatusApi->v1_ap_ping_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SystemStatusApi->v1_ap_ping_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ProvisioningDocsDocsPingOutput**](ProvisioningDocsDocsPingOutput.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_ping_get**
 > ServiceDocsPingGet v1_ping_get()
@@ -26,10 +104,10 @@ from openapi_client.models.service_docs_ping_get import ServiceDocsPingGet
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -102,10 +180,10 @@ from openapi_client.models.service_docs_ping_get import ServiceDocsPingGet
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -178,10 +256,10 @@ from openapi_client.models.service_docs_system_status_get_single import ServiceD
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters

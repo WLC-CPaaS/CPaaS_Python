@@ -1,6 +1,6 @@
 # openapi_client.E911Api
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -30,10 +30,10 @@ from openapi_client.models.service_doc_e911_uris_api_output import ServiceDocE91
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 
@@ -96,10 +96,10 @@ from openapi_client.models.service_doc_e911_active_location_output import Servic
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 
@@ -166,10 +166,10 @@ from openapi_client.models.service_doc_e911_remove_location_output import Servic
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 
@@ -237,10 +237,10 @@ from openapi_client.models.service_e911_validate_location_input import ServiceE9
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 
@@ -307,10 +307,10 @@ from openapi_client.models.service_doc_e911_remove_uri_api_output import Service
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 
@@ -377,10 +377,10 @@ from openapi_client.models.service_doc_e911_active_location_uri_api_output impor
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 
@@ -447,10 +447,10 @@ from openapi_client.models.service_doc_e911_locations_uri_api_output import Serv
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 
@@ -518,10 +518,10 @@ from openapi_client.models.service_e911_add_location_input import ServiceE911Add
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 

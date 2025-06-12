@@ -1,6 +1,6 @@
 # openapi_client.TemporalRuleApi
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -28,10 +28,10 @@ from openapi_client.models.service_docs_temporal_rule_get_all import ServiceDocs
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -113,10 +113,10 @@ from openapi_client.models.service_voip_temporal_rule_add_edit2 import ServiceVO
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -195,10 +195,10 @@ from openapi_client.models.service_docs_temporal_rule_get_single import ServiceD
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -277,10 +277,10 @@ from openapi_client.models.service_docs_temporal_rule_get_single import ServiceD
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -360,10 +360,10 @@ from openapi_client.models.service_voip_temporal_rule_add_edit2 import ServiceVO
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters

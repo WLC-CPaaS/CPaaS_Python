@@ -1,6 +1,6 @@
 # openapi_client.WebhookApi
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -28,10 +28,10 @@ from openapi_client.models.service_docs_webhook_get_all import ServiceDocsWebhoo
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -115,10 +115,10 @@ from openapi_client.models.service_webhook_add import ServiceWebhookAdd
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -198,10 +198,10 @@ from openapi_client.models.service_docs_webhook_delete import ServiceDocsWebhook
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -282,10 +282,10 @@ from openapi_client.models.service_docs_webhook_get_single import ServiceDocsWeb
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -367,10 +367,10 @@ from openapi_client.models.service_webhook_edit import ServiceWebhookEdit
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters

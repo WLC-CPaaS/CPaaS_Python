@@ -19,6 +19,7 @@ from openapi_client.api.menu_api import MenuApi
 from openapi_client.api.metaflow_api import MetaflowApi
 from openapi_client.api.phone_number_api import PhoneNumberApi
 from openapi_client.api.presence_api import PresenceApi
+from openapi_client.api.provisioning_api import ProvisioningApi
 from openapi_client.api.sms_api import SMSApi
 from openapi_client.api.storage_api import StorageApi
 from openapi_client.api.system_status_api import SystemStatusApi
@@ -27,5 +28,5 @@ from openapi_client.api.temporal_rule_set_api import TemporalRuleSetApi
 from openapi_client.api.vo_ip_user_api import VoIPUserApi
 from openapi_client.api.voicemail_api import VoicemailApi
 from openapi_client.api.webhook_api import WebhookApi
-from openapi_client.api.cdr_api import CdrApi
+from openapi_client.api.provision_api import ProvisionApi
 

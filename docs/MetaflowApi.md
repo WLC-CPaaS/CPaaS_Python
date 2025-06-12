@@ -1,6 +1,6 @@
 # openapi_client.MetaflowApi
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **v1_account_account_id_device_device_id_metaflow_delete**
-> ServiceDocMetaflowGet v1_account_account_id_device_device_id_metaflow_delete(account_id, device_id)
+> ServiceDocsMetaflowGet v1_account_account_id_device_device_id_metaflow_delete(account_id, device_id)
 
 Delete Device Metaflow
 
@@ -28,14 +28,14 @@ Delete all metaflows associated with a device.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_metaflow_get import ServiceDocMetaflowGet
+from openapi_client.models.service_docs_metaflow_get import ServiceDocsMetaflowGet
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_account_account_id_device_device_id_metaflow_get**
-> ServiceDocMetaflowGet v1_account_account_id_device_device_id_metaflow_get(account_id, device_id)
+> ServiceDocsMetaflowGet v1_account_account_id_device_device_id_metaflow_get(account_id, device_id)
 
 Get Device Metaflow List
 
@@ -110,14 +110,14 @@ Get the list of metaflows for a device.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_metaflow_get import ServiceDocMetaflowGet
+from openapi_client.models.service_docs_metaflow_get import ServiceDocsMetaflowGet
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_account_account_id_device_device_id_metaflow_post**
-> ServiceDocMetaflowGet v1_account_account_id_device_device_id_metaflow_post(account_id, device_id, req_body)
+> ServiceDocsMetaflowGet v1_account_account_id_device_device_id_metaflow_post(account_id, device_id, req_body)
 
 Create Device Metaflow
 
@@ -192,15 +192,15 @@ Create a metaflow or multiple metaflows for a device.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_metaflow_get import ServiceDocMetaflowGet
+from openapi_client.models.service_docs_metaflow_get import ServiceDocsMetaflowGet
 from openapi_client.models.service_voip_metaflow_add_data import ServiceVOIPMetaflowAddData
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_account_account_id_metaflow_delete**
-> ServiceDocMetaflowGet v1_account_account_id_metaflow_delete(account_id)
+> ServiceDocsMetaflowGet v1_account_account_id_metaflow_delete(account_id)
 
 Delete Account Metaflow
 
@@ -277,14 +277,14 @@ Remove all metaflows from an account.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_metaflow_get import ServiceDocMetaflowGet
+from openapi_client.models.service_docs_metaflow_get import ServiceDocsMetaflowGet
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_account_account_id_metaflow_get**
-> ServiceDocMetaflowGet v1_account_account_id_metaflow_get(account_id)
+> ServiceDocsMetaflowGet v1_account_account_id_metaflow_get(account_id)
 
 Get Account Metaflow List
 
@@ -357,14 +357,14 @@ Get an account's metaflow list.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_metaflow_get import ServiceDocMetaflowGet
+from openapi_client.models.service_docs_metaflow_get import ServiceDocsMetaflowGet
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -425,7 +425,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_account_account_id_metaflow_post**
-> ServiceDocMetaflowGet v1_account_account_id_metaflow_post(account_id, metaflow)
+> ServiceDocsMetaflowGet v1_account_account_id_metaflow_post(account_id, metaflow)
 
 Create Account Metaflow
 
@@ -437,15 +437,15 @@ Generate a metaflow for an account.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_metaflow_get import ServiceDocMetaflowGet
+from openapi_client.models.service_docs_metaflow_get import ServiceDocsMetaflowGet
 from openapi_client.models.service_voip_metaflow_add_data import ServiceVOIPMetaflowAddData
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -508,7 +508,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_account_account_id_user_user_id_metaflow_delete**
-> ServiceDocMetaflowGet v1_account_account_id_user_user_id_metaflow_delete(account_id, user_id)
+> ServiceDocsMetaflowGet v1_account_account_id_user_user_id_metaflow_delete(account_id, user_id)
 
 Delete User Metaflow
 
@@ -520,14 +520,14 @@ Delete all metaflows associated with a user.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_metaflow_get import ServiceDocMetaflowGet
+from openapi_client.models.service_docs_metaflow_get import ServiceDocsMetaflowGet
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -569,7 +569,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -590,7 +590,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_account_account_id_user_user_id_metaflow_get**
-> ServiceDocMetaflowGet v1_account_account_id_user_user_id_metaflow_get(account_id, user_id)
+> ServiceDocsMetaflowGet v1_account_account_id_user_user_id_metaflow_get(account_id, user_id)
 
 Get User Metaflow List
 
@@ -602,14 +602,14 @@ Get the list of metaflows for a user.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_metaflow_get import ServiceDocMetaflowGet
+from openapi_client.models.service_docs_metaflow_get import ServiceDocsMetaflowGet
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -651,7 +651,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_account_account_id_user_user_id_metaflow_post**
-> ServiceDocMetaflowGet v1_account_account_id_user_user_id_metaflow_post(account_id, user_id, req_body)
+> ServiceDocsMetaflowGet v1_account_account_id_user_user_id_metaflow_post(account_id, user_id, req_body)
 
 Create User Metaflow
 
@@ -684,15 +684,15 @@ Add a metaflow or multiple metaflows for a user in an account.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_metaflow_get import ServiceDocMetaflowGet
+from openapi_client.models.service_docs_metaflow_get import ServiceDocsMetaflowGet
 from openapi_client.models.service_voip_metaflow_add_data import ServiceVOIPMetaflowAddData
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -736,7 +736,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 

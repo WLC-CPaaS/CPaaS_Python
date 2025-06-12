@@ -19,7 +19,7 @@ from typing_extensions import Annotated
 
 from pydantic import Field, StrictStr
 from typing_extensions import Annotated
-from openapi_client.models.service_doc_metaflow_get import ServiceDocMetaflowGet
+from openapi_client.models.service_docs_metaflow_get import ServiceDocsMetaflowGet
 from openapi_client.models.service_voip_metaflow_add_data import ServiceVOIPMetaflowAddData
 
 from openapi_client.api_client import ApiClient, RequestSerialized
@@ -57,7 +57,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocMetaflowGet:
+    ) -> ServiceDocsMetaflowGet:
         """Delete Device Metaflow
 
         Delete all metaflows associated with a device.
@@ -98,7 +98,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -129,7 +129,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocMetaflowGet]:
+    ) -> ApiResponse[ServiceDocsMetaflowGet]:
         """Delete Device Metaflow
 
         Delete all metaflows associated with a device.
@@ -170,7 +170,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -242,7 +242,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -336,7 +336,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocMetaflowGet:
+    ) -> ServiceDocsMetaflowGet:
         """Get Device Metaflow List
 
         Get the list of metaflows for a device.
@@ -377,7 +377,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -408,7 +408,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocMetaflowGet]:
+    ) -> ApiResponse[ServiceDocsMetaflowGet]:
         """Get Device Metaflow List
 
         Get the list of metaflows for a device.
@@ -449,7 +449,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -521,7 +521,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -616,7 +616,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocMetaflowGet:
+    ) -> ServiceDocsMetaflowGet:
         """Create Device Metaflow
 
         Create a metaflow or multiple metaflows for a device.
@@ -660,7 +660,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -692,7 +692,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocMetaflowGet]:
+    ) -> ApiResponse[ServiceDocsMetaflowGet]:
         """Create Device Metaflow
 
         Create a metaflow or multiple metaflows for a device.
@@ -736,7 +736,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -812,7 +812,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -921,7 +921,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocMetaflowGet:
+    ) -> ServiceDocsMetaflowGet:
         """Delete Account Metaflow
 
         Remove all metaflows from an account.
@@ -959,7 +959,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -989,7 +989,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocMetaflowGet]:
+    ) -> ApiResponse[ServiceDocsMetaflowGet]:
         """Delete Account Metaflow
 
         Remove all metaflows from an account.
@@ -1027,7 +1027,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1095,7 +1095,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1185,7 +1185,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocMetaflowGet:
+    ) -> ServiceDocsMetaflowGet:
         """Get Account Metaflow List
 
         Get an account's metaflow list.
@@ -1223,7 +1223,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1253,7 +1253,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocMetaflowGet]:
+    ) -> ApiResponse[ServiceDocsMetaflowGet]:
         """Get Account Metaflow List
 
         Get an account's metaflow list.
@@ -1291,7 +1291,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1359,7 +1359,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1450,7 +1450,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocMetaflowGet:
+    ) -> ServiceDocsMetaflowGet:
         """Create Account Metaflow
 
         Generate a metaflow for an account.
@@ -1491,7 +1491,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1522,7 +1522,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocMetaflowGet]:
+    ) -> ApiResponse[ServiceDocsMetaflowGet]:
         """Create Account Metaflow
 
         Generate a metaflow for an account.
@@ -1563,7 +1563,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1635,7 +1635,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1742,7 +1742,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocMetaflowGet:
+    ) -> ServiceDocsMetaflowGet:
         """Delete User Metaflow
 
         Delete all metaflows associated with a user.
@@ -1783,7 +1783,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1814,7 +1814,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocMetaflowGet]:
+    ) -> ApiResponse[ServiceDocsMetaflowGet]:
         """Delete User Metaflow
 
         Delete all metaflows associated with a user.
@@ -1855,7 +1855,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1927,7 +1927,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -2021,7 +2021,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocMetaflowGet:
+    ) -> ServiceDocsMetaflowGet:
         """Get User Metaflow List
 
         Get the list of metaflows for a user.
@@ -2062,7 +2062,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -2093,7 +2093,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocMetaflowGet]:
+    ) -> ApiResponse[ServiceDocsMetaflowGet]:
         """Get User Metaflow List
 
         Get the list of metaflows for a user.
@@ -2134,7 +2134,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -2206,7 +2206,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -2301,7 +2301,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocMetaflowGet:
+    ) -> ServiceDocsMetaflowGet:
         """Create User Metaflow
 
         Add a metaflow or multiple metaflows for a user in an account.
@@ -2345,7 +2345,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -2377,7 +2377,7 @@ class MetaflowApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocMetaflowGet]:
+    ) -> ApiResponse[ServiceDocsMetaflowGet]:
         """Create User Metaflow
 
         Add a metaflow or multiple metaflows for a user in an account.
@@ -2421,7 +2421,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -2497,7 +2497,7 @@ class MetaflowApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocMetaflowGet",
+            '200': "ServiceDocsMetaflowGet",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(

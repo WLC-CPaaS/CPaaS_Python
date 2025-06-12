@@ -1,9 +1,11 @@
 # openapi_client.DataApi
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**v1_account_account_id_cdr_cdr_id_get**](DataApi.md#v1_account_account_id_cdr_cdr_id_get) | **GET** /v1/account/{accountID}/cdr/{cdrID} | Get CDR Details
+[**v1_account_account_id_cdr_get**](DataApi.md#v1_account_account_id_cdr_get) | **GET** /v1/account/{accountID}/cdr | Get CDR List
 [**v1_data_call_daily_summary_get**](DataApi.md#v1_data_call_daily_summary_get) | **GET** /v1/data/call_daily_summary | Get Call Daily Summary List
 [**v1_data_call_detail_get**](DataApi.md#v1_data_call_detail_get) | **GET** /v1/data/call_detail | Get Call Detail List
 [**v1_data_call_monthly_summary_get**](DataApi.md#v1_data_call_monthly_summary_get) | **GET** /v1/data/call_monthly_summary | Get Call Detail List
@@ -14,6 +16,176 @@ Method | HTTP request | Description
 [**v1_data_feature_daily_summary_get**](DataApi.md#v1_data_feature_daily_summary_get) | **GET** /v1/data/feature_daily_summary | Get Feature Daily Summary List
 [**v1_data_feature_monthly_summary_get**](DataApi.md#v1_data_feature_monthly_summary_get) | **GET** /v1/data/feature_monthly_summary | Get Feature Monthly Summary List
 
+
+# **v1_account_account_id_cdr_cdr_id_get**
+> ServiceDocsCdrGetSingle v1_account_account_id_cdr_cdr_id_get(account_id, cdr_id)
+
+Get CDR Details
+
+Retrieve the details of a single CDR record from an account.
+
+### Example
+
+* Api Key Authentication (BearerAuth):
+
+```python
+import openapi_client
+from openapi_client.models.service_docs_cdr_get_single import ServiceDocsCdrGetSingle
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://API_HOSTNAME
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://API_HOSTNAME"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerAuth
+configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.DataApi(api_client)
+    account_id = 'account_id_example' # str | Account ID, 32 alpha numeric
+    cdr_id = 'cdr_id_example' # str | CDR ID, string
+
+    try:
+        # Get CDR Details
+        api_response = api_instance.v1_account_account_id_cdr_cdr_id_get(account_id, cdr_id)
+        print("The response of DataApi->v1_account_account_id_cdr_cdr_id_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DataApi->v1_account_account_id_cdr_cdr_id_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| Account ID, 32 alpha numeric | 
+ **cdr_id** | **str**| CDR ID, string | 
+
+### Return type
+
+[**ServiceDocsCdrGetSingle**](ServiceDocsCdrGetSingle.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_account_account_id_cdr_get**
+> ServiceDocsCdrGetAll v1_account_account_id_cdr_get(account_id, page_size=page_size, start_key=start_key, created_from=created_from, created_to=created_to)
+
+Get CDR List
+
+Retrieve a list of CDRs in a specific account.
+
+### Example
+
+* Api Key Authentication (BearerAuth):
+
+```python
+import openapi_client
+from openapi_client.models.service_docs_cdr_get_all import ServiceDocsCdrGetAll
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://API_HOSTNAME
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://API_HOSTNAME"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerAuth
+configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.DataApi(api_client)
+    account_id = 'account_id_example' # str | Account ID, 32 alpha numeric
+    page_size = 'page_size_example' # str | Page size (Maximum number of results to display per page) (optional)
+    start_key = 'start_key_example' # str | Start key (Starting offset for displaying results) (optional)
+    created_from = 'created_from_example' # str | For displaying records which are created on or after this timestamp (Supported timestamp formats: iso 8601, unix time in seconds or milliseconds or microseconds or nanoseconds) (optional)
+    created_to = 'created_to_example' # str | For displaying records which are created on or before this timestamp (Supported timestamp formats: iso 8601, unix time in seconds or milliseconds or microseconds or nanoseconds) (optional)
+
+    try:
+        # Get CDR List
+        api_response = api_instance.v1_account_account_id_cdr_get(account_id, page_size=page_size, start_key=start_key, created_from=created_from, created_to=created_to)
+        print("The response of DataApi->v1_account_account_id_cdr_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DataApi->v1_account_account_id_cdr_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| Account ID, 32 alpha numeric | 
+ **page_size** | **str**| Page size (Maximum number of results to display per page) | [optional] 
+ **start_key** | **str**| Start key (Starting offset for displaying results) | [optional] 
+ **created_from** | **str**| For displaying records which are created on or after this timestamp (Supported timestamp formats: iso 8601, unix time in seconds or milliseconds or microseconds or nanoseconds) | [optional] 
+ **created_to** | **str**| For displaying records which are created on or before this timestamp (Supported timestamp formats: iso 8601, unix time in seconds or milliseconds or microseconds or nanoseconds) | [optional] 
+
+### Return type
+
+[**ServiceDocsCdrGetAll**](ServiceDocsCdrGetAll.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_data_call_daily_summary_get**
 > ServiceDocsCallDailySummary v1_data_call_daily_summary_get(account_id=account_id, call_type=call_type, end_date=end_date, page_size=page_size, start_date=start_date, start_key=start_key)
@@ -32,10 +204,10 @@ from openapi_client.models.service_docs_call_daily_summary import ServiceDocsCal
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -124,10 +296,10 @@ from openapi_client.models.service_docs_call_detail import ServiceDocsCallDetail
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -224,10 +396,10 @@ from openapi_client.models.service_docs_call_monthly_summary import ServiceDocsC
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -320,10 +492,10 @@ from openapi_client.models.service_docs_endpoint_list import ServiceDocsEndpoint
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -412,10 +584,10 @@ from openapi_client.models.service_docs_event_daily_summary import ServiceDocsEv
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -504,10 +676,10 @@ from openapi_client.models.service_docs_event_detail import ServiceDocsEventDeta
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -602,10 +774,10 @@ from openapi_client.models.service_docs_event_monthly_summary import ServiceDocs
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -698,10 +870,10 @@ from openapi_client.models.service_docs_feature_daily_summary import ServiceDocs
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -788,10 +960,10 @@ from openapi_client.models.service_docs_feature_monthly_summary import ServiceDo
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters

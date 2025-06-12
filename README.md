@@ -56,10 +56,10 @@ import openapi_client
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://api.cpaaslabs.net
+# Defining the host is optional and defaults to http://API_HOSTNAME
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://api.cpaaslabs.net"
+    host = "http://API_HOSTNAME"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -94,7 +94,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -148,6 +148,8 @@ Class | Method | HTTP request | Description
 *ChannelApi* | [**v1_account_account_id_channel_get**](docs/ChannelApi.md#v1_account_account_id_channel_get) | **GET** /v1/account/{accountID}/channel | Get Account Channel List
 *ChannelApi* | [**v1_account_account_id_device_device_id_channel_get**](docs/ChannelApi.md#v1_account_account_id_device_device_id_channel_get) | **GET** /v1/account/{accountID}/device/{deviceID}/channel | Get Device Channel List
 *ChannelApi* | [**v1_account_account_id_user_user_id_channel_get**](docs/ChannelApi.md#v1_account_account_id_user_user_id_channel_get) | **GET** /v1/account/{accountID}/user/{userID}/channel | Get User Channel List
+*DataApi* | [**v1_account_account_id_cdr_cdr_id_get**](docs/DataApi.md#v1_account_account_id_cdr_cdr_id_get) | **GET** /v1/account/{accountID}/cdr/{cdrID} | Get CDR Details
+*DataApi* | [**v1_account_account_id_cdr_get**](docs/DataApi.md#v1_account_account_id_cdr_get) | **GET** /v1/account/{accountID}/cdr | Get CDR List
 *DataApi* | [**v1_data_call_daily_summary_get**](docs/DataApi.md#v1_data_call_daily_summary_get) | **GET** /v1/data/call_daily_summary | Get Call Daily Summary List
 *DataApi* | [**v1_data_call_detail_get**](docs/DataApi.md#v1_data_call_detail_get) | **GET** /v1/data/call_detail | Get Call Detail List
 *DataApi* | [**v1_data_call_monthly_summary_get**](docs/DataApi.md#v1_data_call_monthly_summary_get) | **GET** /v1/data/call_monthly_summary | Get Call Detail List
@@ -163,6 +165,7 @@ Class | Method | HTTP request | Description
 *DeviceApi* | [**v1_account_accountid_device_deviceid_reboot_post**](docs/DeviceApi.md#v1_account_accountid_device_deviceid_reboot_post) | **POST** /v1/account/{accountid}/device/{deviceid}/reboot | Reboot Device
 *DeviceApi* | [**v1_account_accountid_device_get**](docs/DeviceApi.md#v1_account_accountid_device_get) | **GET** /v1/account/{accountid}/device | Get Device List
 *DeviceApi* | [**v1_account_accountid_device_post**](docs/DeviceApi.md#v1_account_accountid_device_post) | **POST** /v1/account/{accountid}/device | Create Device
+*DeviceApi* | [**v1_account_accountid_device_status_get**](docs/DeviceApi.md#v1_account_accountid_device_status_get) | **GET** /v1/account/{accountid}/device/status | Get Device Status
 *E911Api* | [**v1_e911_get**](docs/E911Api.md#v1_e911_get) | **GET** /v1/e911 | Get E911 List
 *E911Api* | [**v1_e911_location_location_id_activate_put**](docs/E911Api.md#v1_e911_location_location_id_activate_put) | **PUT** /v1/e911/location/{locationID}/activate | Activate E911 Location
 *E911Api* | [**v1_e911_location_location_id_delete**](docs/E911Api.md#v1_e911_location_location_id_delete) | **DELETE** /v1/e911/location/{locationID} | Delete E911 Location
@@ -206,6 +209,15 @@ Class | Method | HTTP request | Description
 *PresenceApi* | [**v1_account_account_id_presence_extension_put**](docs/PresenceApi.md#v1_account_account_id_presence_extension_put) | **PUT** /v1/account/{accountID}/presence/{extension} | Set/Reset Presence for Extension
 *PresenceApi* | [**v1_account_account_id_presence_get**](docs/PresenceApi.md#v1_account_account_id_presence_get) | **GET** /v1/account/{accountID}/presence | Get Presence Details
 *PresenceApi* | [**v1_account_account_id_user_user_id_presence_put**](docs/PresenceApi.md#v1_account_account_id_user_user_id_presence_put) | **PUT** /v1/account/{accountID}/user/{userID}/presence | Set/Reset Presence for User
+*ProvisioningApi* | [**v1_ap_brand_brand_family_family_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_get) | **GET** /v1/ap/brand/{brand}/family/{family} | Get Family
+*ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model | Get Model List
+*ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_model_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model} | Get Model
+*ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_model_template_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_template_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model}/template | Get Template List
+*ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_model_template_template_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_template_template_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model}/template/{template} | Get Template
+*ProvisioningApi* | [**v1_ap_brand_brand_family_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_get) | **GET** /v1/ap/brand/{brand}/family | Get Family List
+*ProvisioningApi* | [**v1_ap_brand_brand_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_get) | **GET** /v1/ap/brand/{brand} | Get Brand
+*ProvisioningApi* | [**v1_ap_brand_get**](docs/ProvisioningApi.md#v1_ap_brand_get) | **GET** /v1/ap/brand | Get Brand
+*ProvisioningApi* | [**v1_ap_configfile_generate_post**](docs/ProvisioningApi.md#v1_ap_configfile_generate_post) | **POST** /v1/ap/configfile/generate | Generate config file
 *SMSApi* | [**v1_sms_account_account_id_campaign_campaign_id_import_get**](docs/SMSApi.md#v1_sms_account_account_id_campaign_campaign_id_import_get) | **GET** /v1/sms/account/{accountID}/campaign/{campaignID}/import | 
 *SMSApi* | [**v1_sms_account_account_id_campaign_campaign_id_import_post**](docs/SMSApi.md#v1_sms_account_account_id_campaign_campaign_id_import_post) | **POST** /v1/sms/account/{accountID}/campaign/{campaignID}/import | 
 *SMSApi* | [**v1_sms_account_account_id_campaign_campaign_id_phonenumber_get**](docs/SMSApi.md#v1_sms_account_account_id_campaign_campaign_id_phonenumber_get) | **GET** /v1/sms/account/{accountID}/campaign/{campaignID}/phonenumber | 
@@ -215,6 +227,7 @@ Class | Method | HTTP request | Description
 *StorageApi* | [**v1_account_account_id_storage_get**](docs/StorageApi.md#v1_account_account_id_storage_get) | **GET** /v1/account/{accountID}/storage | Get Storage Details
 *StorageApi* | [**v1_account_account_id_storage_post**](docs/StorageApi.md#v1_account_account_id_storage_post) | **POST** /v1/account/{accountID}/storage | Create Storage
 *StorageApi* | [**v1_account_account_id_storage_put**](docs/StorageApi.md#v1_account_account_id_storage_put) | **PUT** /v1/account/{accountID}/storage | Update Storage
+*SystemStatusApi* | [**v1_ap_ping_get**](docs/SystemStatusApi.md#v1_ap_ping_get) | **GET** /v1/ap/ping | Provisioning Ping
 *SystemStatusApi* | [**v1_ping_get**](docs/SystemStatusApi.md#v1_ping_get) | **GET** /v1/ping | Ping Backend
 *SystemStatusApi* | [**v1_pingseccognito_get**](docs/SystemStatusApi.md#v1_pingseccognito_get) | **GET** /v1/pingseccognito | Ping Cognito
 *SystemStatusApi* | [**v1_system_status_get**](docs/SystemStatusApi.md#v1_system_status_get) | **GET** /v1/system_status | Get System Status
@@ -233,6 +246,7 @@ Class | Method | HTTP request | Description
 *VoIPUserApi* | [**v1_account_accountid_user_userid_delete**](docs/VoIPUserApi.md#v1_account_accountid_user_userid_delete) | **DELETE** /v1/account/{accountid}/user/{userid} | Delete User
 *VoIPUserApi* | [**v1_account_accountid_user_userid_get**](docs/VoIPUserApi.md#v1_account_accountid_user_userid_get) | **GET** /v1/account/{accountid}/user/{userid} | Get User Details
 *VoIPUserApi* | [**v1_account_accountid_user_userid_put**](docs/VoIPUserApi.md#v1_account_accountid_user_userid_put) | **PUT** /v1/account/{accountid}/user/{userid} | Update User
+*VoIPUserApi* | [**v1_account_accountid_user_userid_userauth_post**](docs/VoIPUserApi.md#v1_account_accountid_user_userid_userauth_post) | **POST** /v1/account/{accountid}/user/{userid}/userauth | Impersonate a User
 *VoicemailApi* | [**v1_account_account_id_voicemail_get**](docs/VoicemailApi.md#v1_account_account_id_voicemail_get) | **GET** /v1/account/{accountID}/voicemail | Get Voicemail Box List
 *VoicemailApi* | [**v1_account_account_id_voicemail_post**](docs/VoicemailApi.md#v1_account_account_id_voicemail_post) | **POST** /v1/account/{accountID}/voicemail | Create Voicemail Box
 *VoicemailApi* | [**v1_account_account_id_voicemail_voicemail_id_delete**](docs/VoicemailApi.md#v1_account_account_id_voicemail_voicemail_id_delete) | **DELETE** /v1/account/{accountID}/voicemail/{voicemailID} | Delete Voicemail Box
@@ -250,8 +264,7 @@ Class | Method | HTTP request | Description
 *WebhookApi* | [**v1_webhook_account_account_id_webhook_id_delete**](docs/WebhookApi.md#v1_webhook_account_account_id_webhook_id_delete) | **DELETE** /v1/webhook/account/{accountID}/{webhookID} | Delete Webhook
 *WebhookApi* | [**v1_webhook_account_account_id_webhook_id_get**](docs/WebhookApi.md#v1_webhook_account_account_id_webhook_id_get) | **GET** /v1/webhook/account/{accountID}/{webhookID} | Get Webhook Details
 *WebhookApi* | [**v1_webhook_account_account_id_webhook_id_put**](docs/WebhookApi.md#v1_webhook_account_account_id_webhook_id_put) | **PUT** /v1/webhook/account/{accountID}/{webhookID} | Update Webhook
-*CdrApi* | [**v1_account_account_id_cdr_cdr_id_get**](docs/CdrApi.md#v1_account_account_id_cdr_cdr_id_get) | **GET** /v1/account/{accountID}/cdr/{cdrID} | 
-*CdrApi* | [**v1_account_account_id_cdr_get**](docs/CdrApi.md#v1_account_account_id_cdr_get) | **GET** /v1/account/{accountID}/cdr | 
+*ProvisionApi* | [**v1_account_account_id_provision_filename_get**](docs/ProvisionApi.md#v1_account_account_id_provision_filename_get) | **GET** /v1/account/{accountID}/provision/{filename} | 
 
 
 ## Documentation For Models
@@ -278,10 +291,12 @@ Class | Method | HTTP request | Description
  - [ModelsAccountOutputFullCalleridEmergency](docs/ModelsAccountOutputFullCalleridEmergency.md)
  - [ModelsAccountOutputFullCalleridExternal](docs/ModelsAccountOutputFullCalleridExternal.md)
  - [ModelsAccountOutputFullCalleridInternal](docs/ModelsAccountOutputFullCalleridInternal.md)
+ - [ModelsBrand](docs/ModelsBrand.md)
  - [ModelsCallForward](docs/ModelsCallForward.md)
  - [ModelsCallRecordingParameters](docs/ModelsCallRecordingParameters.md)
  - [ModelsCallRecordingSettings](docs/ModelsCallRecordingSettings.md)
  - [ModelsCallRecordingSource](docs/ModelsCallRecordingSource.md)
+ - [ModelsConfigFileParameter](docs/ModelsConfigFileParameter.md)
  - [ModelsDeviceOutputFull](docs/ModelsDeviceOutputFull.md)
  - [ModelsDeviceOutputFullCallerid](docs/ModelsDeviceOutputFullCallerid.md)
  - [ModelsDeviceOutputFullCalleridEmergency](docs/ModelsDeviceOutputFullCalleridEmergency.md)
@@ -291,7 +306,11 @@ Class | Method | HTTP request | Description
  - [ModelsDeviceOutputFullMediaAudio](docs/ModelsDeviceOutputFullMediaAudio.md)
  - [ModelsDeviceOutputFullProvision](docs/ModelsDeviceOutputFullProvision.md)
  - [ModelsDeviceOutputFullSIP](docs/ModelsDeviceOutputFullSIP.md)
+ - [ModelsFamily](docs/ModelsFamily.md)
+ - [ModelsGenerateConfigFileRequest](docs/ModelsGenerateConfigFileRequest.md)
+ - [ModelsModel](docs/ModelsModel.md)
  - [ModelsMusicOnHold](docs/ModelsMusicOnHold.md)
+ - [ModelsTemplate](docs/ModelsTemplate.md)
  - [ModelsUserOutputFull](docs/ModelsUserOutputFull.md)
  - [ModelsUserOutputFullCallerid](docs/ModelsUserOutputFullCallerid.md)
  - [ModelsUserOutputFullCalleridEmergency](docs/ModelsUserOutputFullCalleridEmergency.md)
@@ -300,7 +319,19 @@ Class | Method | HTTP request | Description
  - [ModelsVOIPAccountMusicOnHold](docs/ModelsVOIPAccountMusicOnHold.md)
  - [ModelsVOIPAccountOutputFullCallerid](docs/ModelsVOIPAccountOutputFullCallerid.md)
  - [ModelsVOIPSharedDoNotDisturb](docs/ModelsVOIPSharedDoNotDisturb.md)
+ - [ProvisioningDocsDocsBrandOutputSingle](docs/ProvisioningDocsDocsBrandOutputSingle.md)
+ - [ProvisioningDocsDocsBrandsOutput](docs/ProvisioningDocsDocsBrandsOutput.md)
+ - [ProvisioningDocsDocsConfigFileOutput](docs/ProvisioningDocsDocsConfigFileOutput.md)
+ - [ProvisioningDocsDocsFamilyOutput](docs/ProvisioningDocsDocsFamilyOutput.md)
+ - [ProvisioningDocsDocsFamilyOutputSingle](docs/ProvisioningDocsDocsFamilyOutputSingle.md)
+ - [ProvisioningDocsDocsModelOutput](docs/ProvisioningDocsDocsModelOutput.md)
+ - [ProvisioningDocsDocsModelOutputSingle](docs/ProvisioningDocsDocsModelOutputSingle.md)
+ - [ProvisioningDocsDocsPingOutput](docs/ProvisioningDocsDocsPingOutput.md)
+ - [ProvisioningDocsDocsPingOutputData](docs/ProvisioningDocsDocsPingOutputData.md)
+ - [ProvisioningDocsDocsTemplateOutputSingle](docs/ProvisioningDocsDocsTemplateOutputSingle.md)
+ - [ProvisioningDocsDocsTemplatesOutput](docs/ProvisioningDocsDocsTemplatesOutput.md)
  - [RepositoryLocationsResponse](docs/RepositoryLocationsResponse.md)
+ - [ResponseProvisionError](docs/ResponseProvisionError.md)
  - [ServiceAPIKey](docs/ServiceAPIKey.md)
  - [ServiceAPIResponse](docs/ServiceAPIResponse.md)
  - [ServiceAPIResponseStatusCodeOnly](docs/ServiceAPIResponseStatusCodeOnly.md)
@@ -328,6 +359,7 @@ Class | Method | HTTP request | Description
  - [ServiceCdrOutputShort](docs/ServiceCdrOutputShort.md)
  - [ServiceChannelOutput](docs/ServiceChannelOutput.md)
  - [ServiceDeviceOutputShort](docs/ServiceDeviceOutputShort.md)
+ - [ServiceDeviceStatusOutput](docs/ServiceDeviceStatusOutput.md)
  - [ServiceDocE911ActiveLocationOutput](docs/ServiceDocE911ActiveLocationOutput.md)
  - [ServiceDocE911ActiveLocationURIApiOutput](docs/ServiceDocE911ActiveLocationURIApiOutput.md)
  - [ServiceDocE911AddLocationOutput](docs/ServiceDocE911AddLocationOutput.md)
@@ -338,7 +370,6 @@ Class | Method | HTTP request | Description
  - [ServiceDocE911ValidateLocationOutput](docs/ServiceDocE911ValidateLocationOutput.md)
  - [ServiceDocGroupGetAll](docs/ServiceDocGroupGetAll.md)
  - [ServiceDocGroupGetSingle](docs/ServiceDocGroupGetSingle.md)
- - [ServiceDocMetaflowGet](docs/ServiceDocMetaflowGet.md)
  - [ServiceDocsAccountAPIKey](docs/ServiceDocsAccountAPIKey.md)
  - [ServiceDocsAccountGetAll](docs/ServiceDocsAccountGetAll.md)
  - [ServiceDocsAccountGetSingle](docs/ServiceDocsAccountGetSingle.md)
@@ -372,6 +403,7 @@ Class | Method | HTTP request | Description
  - [ServiceDocsDeviceGetAll](docs/ServiceDocsDeviceGetAll.md)
  - [ServiceDocsDeviceGetSingle](docs/ServiceDocsDeviceGetSingle.md)
  - [ServiceDocsDeviceReboot](docs/ServiceDocsDeviceReboot.md)
+ - [ServiceDocsDeviceStatus](docs/ServiceDocsDeviceStatus.md)
  - [ServiceDocsEndpointList](docs/ServiceDocsEndpointList.md)
  - [ServiceDocsEventDailySummary](docs/ServiceDocsEventDailySummary.md)
  - [ServiceDocsEventDetail](docs/ServiceDocsEventDetail.md)
@@ -379,8 +411,10 @@ Class | Method | HTTP request | Description
  - [ServiceDocsFeatureDailySummary](docs/ServiceDocsFeatureDailySummary.md)
  - [ServiceDocsFeatureMonthlySummary](docs/ServiceDocsFeatureMonthlySummary.md)
  - [ServiceDocsGetQueueRecipients](docs/ServiceDocsGetQueueRecipients.md)
+ - [ServiceDocsImpersonateUserGetSingle](docs/ServiceDocsImpersonateUserGetSingle.md)
  - [ServiceDocsMediaGetAll](docs/ServiceDocsMediaGetAll.md)
  - [ServiceDocsMediaGetSingle](docs/ServiceDocsMediaGetSingle.md)
+ - [ServiceDocsMetaflowGet](docs/ServiceDocsMetaflowGet.md)
  - [ServiceDocsOrderPhonenumber](docs/ServiceDocsOrderPhonenumber.md)
  - [ServiceDocsParkedcallGet](docs/ServiceDocsParkedcallGet.md)
  - [ServiceDocsPhonenumberAssignPayload](docs/ServiceDocsPhonenumberAssignPayload.md)
@@ -423,6 +457,8 @@ Class | Method | HTTP request | Description
  - [ServiceFeatureCode](docs/ServiceFeatureCode.md)
  - [ServiceGroupOutputFull](docs/ServiceGroupOutputFull.md)
  - [ServiceGroupOutputShort](docs/ServiceGroupOutputShort.md)
+ - [ServiceImpersonateUserOutputFull](docs/ServiceImpersonateUserOutputFull.md)
+ - [ServiceImpersonatedUserInfo](docs/ServiceImpersonatedUserInfo.md)
  - [ServiceMediaOutputFull](docs/ServiceMediaOutputFull.md)
  - [ServiceMediaOutputShort](docs/ServiceMediaOutputShort.md)
  - [ServiceMetaflowOutput](docs/ServiceMetaflowOutput.md)
@@ -473,6 +509,7 @@ Class | Method | HTTP request | Description
  - [ServiceVOIPDeviceAddEdit5](docs/ServiceVOIPDeviceAddEdit5.md)
  - [ServiceVOIPDeviceAddEditProvision](docs/ServiceVOIPDeviceAddEditProvision.md)
  - [ServiceVOIPGroupAddEdit2](docs/ServiceVOIPGroupAddEdit2.md)
+ - [ServiceVOIPImpersonateUser](docs/ServiceVOIPImpersonateUser.md)
  - [ServiceVOIPMediaAddEditData](docs/ServiceVOIPMediaAddEditData.md)
  - [ServiceVOIPMetaflowAddData](docs/ServiceVOIPMetaflowAddData.md)
  - [ServiceVOIPPresenceSetResetEditData](docs/ServiceVOIPPresenceSetResetEditData.md)
