@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict
-from typing import Any, ClassVar, Dict, List
+from typing import Any, ClassVar, Dict, List, Optional
 from openapi_client.models.service_e911_location_input import ServiceE911LocationInput
 from openapi_client.models.service_e911_uri_input import ServiceE911URIInput
 from typing import Optional, Set
@@ -29,8 +29,8 @@ class ServiceE911AddLocationInput(BaseModel):
     """
     ServiceE911AddLocationInput
     """ # noqa: E501
-    location: ServiceE911LocationInput
-    uri: ServiceE911URIInput
+    location: Optional[ServiceE911LocationInput] = None
+    uri: Optional[ServiceE911URIInput] = None
     __properties: ClassVar[List[str]] = ["location", "uri"]
 
     model_config = ConfigDict(

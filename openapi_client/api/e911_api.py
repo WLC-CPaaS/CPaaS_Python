@@ -19,14 +19,14 @@ from typing_extensions import Annotated
 
 from pydantic import Field, StrictStr
 from typing_extensions import Annotated
-from openapi_client.models.service_doc_e911_active_location_output import ServiceDocE911ActiveLocationOutput
-from openapi_client.models.service_doc_e911_active_location_uri_api_output import ServiceDocE911ActiveLocationURIApiOutput
-from openapi_client.models.service_doc_e911_add_location_output import ServiceDocE911AddLocationOutput
-from openapi_client.models.service_doc_e911_locations_uri_api_output import ServiceDocE911LocationsURIApiOutput
-from openapi_client.models.service_doc_e911_remove_location_output import ServiceDocE911RemoveLocationOutput
-from openapi_client.models.service_doc_e911_remove_uri_api_output import ServiceDocE911RemoveURIApiOutput
-from openapi_client.models.service_doc_e911_uris_api_output import ServiceDocE911URIsApiOutput
-from openapi_client.models.service_doc_e911_validate_location_output import ServiceDocE911ValidateLocationOutput
+from openapi_client.models.service_docs_e911_active_location_output import ServiceDocsE911ActiveLocationOutput
+from openapi_client.models.service_docs_e911_active_location_uri_api_output import ServiceDocsE911ActiveLocationURIApiOutput
+from openapi_client.models.service_docs_e911_add_location_output import ServiceDocsE911AddLocationOutput
+from openapi_client.models.service_docs_e911_locations_uri_api_output import ServiceDocsE911LocationsURIApiOutput
+from openapi_client.models.service_docs_e911_remove_location_output import ServiceDocsE911RemoveLocationOutput
+from openapi_client.models.service_docs_e911_remove_uri_api_output import ServiceDocsE911RemoveURIApiOutput
+from openapi_client.models.service_docs_e911_uris_api_output import ServiceDocsE911URIsApiOutput
+from openapi_client.models.service_docs_e911_validate_location_output import ServiceDocsE911ValidateLocationOutput
 from openapi_client.models.service_e911_add_location_input import ServiceE911AddLocationInput
 from openapi_client.models.service_e911_validate_location_input import ServiceE911ValidateLocationInput
 
@@ -63,7 +63,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocE911URIsApiOutput:
+    ) -> ServiceDocsE911URIsApiOutput:
         """Get E911 List
 
         Obtain e911 URIs associated with the provided account ID.
@@ -98,7 +98,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911URIsApiOutput",
+            '200': "ServiceDocsE911URIsApiOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -128,7 +128,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocE911URIsApiOutput]:
+    ) -> ApiResponse[ServiceDocsE911URIsApiOutput]:
         """Get E911 List
 
         Obtain e911 URIs associated with the provided account ID.
@@ -163,7 +163,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911URIsApiOutput",
+            '200': "ServiceDocsE911URIsApiOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -228,7 +228,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911URIsApiOutput",
+            '200': "ServiceDocsE911URIsApiOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -315,7 +315,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocE911ActiveLocationOutput:
+    ) -> ServiceDocsE911ActiveLocationOutput:
         """Activate E911 Location
 
         Edit the provision location.
@@ -353,7 +353,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911ActiveLocationOutput",
+            '200': "ServiceDocsE911ActiveLocationOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -384,7 +384,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocE911ActiveLocationOutput]:
+    ) -> ApiResponse[ServiceDocsE911ActiveLocationOutput]:
         """Activate E911 Location
 
         Edit the provision location.
@@ -422,7 +422,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911ActiveLocationOutput",
+            '200': "ServiceDocsE911ActiveLocationOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -491,7 +491,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911ActiveLocationOutput",
+            '200': "ServiceDocsE911ActiveLocationOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -581,7 +581,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocE911RemoveLocationOutput:
+    ) -> ServiceDocsE911RemoveLocationOutput:
         """Delete E911 Location
 
         Remove the location.
@@ -619,7 +619,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911RemoveLocationOutput",
+            '200': "ServiceDocsE911RemoveLocationOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -650,7 +650,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocE911RemoveLocationOutput]:
+    ) -> ApiResponse[ServiceDocsE911RemoveLocationOutput]:
         """Delete E911 Location
 
         Remove the location.
@@ -688,7 +688,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911RemoveLocationOutput",
+            '200': "ServiceDocsE911RemoveLocationOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -757,7 +757,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911RemoveLocationOutput",
+            '200': "ServiceDocsE911RemoveLocationOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -847,7 +847,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocE911ValidateLocationOutput:
+    ) -> ServiceDocsE911ValidateLocationOutput:
         """Validate a Location
 
         Validate the location details.
@@ -885,7 +885,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911ValidateLocationOutput",
+            '200': "ServiceDocsE911ValidateLocationOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -916,7 +916,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocE911ValidateLocationOutput]:
+    ) -> ApiResponse[ServiceDocsE911ValidateLocationOutput]:
         """Validate a Location
 
         Validate the location details.
@@ -954,7 +954,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911ValidateLocationOutput",
+            '200': "ServiceDocsE911ValidateLocationOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -1023,7 +1023,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911ValidateLocationOutput",
+            '200': "ServiceDocsE911ValidateLocationOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -1126,7 +1126,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocE911RemoveURIApiOutput:
+    ) -> ServiceDocsE911RemoveURIApiOutput:
         """Delete E911 Phone Number
 
         Delete the e911 URI connected with the account URI.
@@ -1164,7 +1164,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911RemoveURIApiOutput",
+            '200': "ServiceDocsE911RemoveURIApiOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -1195,7 +1195,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocE911RemoveURIApiOutput]:
+    ) -> ApiResponse[ServiceDocsE911RemoveURIApiOutput]:
         """Delete E911 Phone Number
 
         Delete the e911 URI connected with the account URI.
@@ -1233,7 +1233,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911RemoveURIApiOutput",
+            '200': "ServiceDocsE911RemoveURIApiOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -1302,7 +1302,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911RemoveURIApiOutput",
+            '200': "ServiceDocsE911RemoveURIApiOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -1392,7 +1392,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocE911ActiveLocationURIApiOutput:
+    ) -> ServiceDocsE911ActiveLocationURIApiOutput:
         """Get Actvie Location for a Phone Number
 
         Get the e911 location connected with the URI.
@@ -1430,7 +1430,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911ActiveLocationURIApiOutput",
+            '200': "ServiceDocsE911ActiveLocationURIApiOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -1461,7 +1461,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocE911ActiveLocationURIApiOutput]:
+    ) -> ApiResponse[ServiceDocsE911ActiveLocationURIApiOutput]:
         """Get Actvie Location for a Phone Number
 
         Get the e911 location connected with the URI.
@@ -1499,7 +1499,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911ActiveLocationURIApiOutput",
+            '200': "ServiceDocsE911ActiveLocationURIApiOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -1568,7 +1568,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911ActiveLocationURIApiOutput",
+            '200': "ServiceDocsE911ActiveLocationURIApiOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -1658,7 +1658,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocE911LocationsURIApiOutput:
+    ) -> ServiceDocsE911LocationsURIApiOutput:
         """Get Location List for Phone Number
 
         Access a list of the e911 locations associated with the provided URI.
@@ -1696,7 +1696,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911LocationsURIApiOutput",
+            '200': "ServiceDocsE911LocationsURIApiOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -1727,7 +1727,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocE911LocationsURIApiOutput]:
+    ) -> ApiResponse[ServiceDocsE911LocationsURIApiOutput]:
         """Get Location List for Phone Number
 
         Access a list of the e911 locations associated with the provided URI.
@@ -1765,7 +1765,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911LocationsURIApiOutput",
+            '200': "ServiceDocsE911LocationsURIApiOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -1834,7 +1834,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911LocationsURIApiOutput",
+            '200': "ServiceDocsE911LocationsURIApiOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -1924,7 +1924,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocE911AddLocationOutput:
+    ) -> ServiceDocsE911AddLocationOutput:
         """Create an E911 Location
 
         Enter new location details.
@@ -1962,7 +1962,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911AddLocationOutput",
+            '200': "ServiceDocsE911AddLocationOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -1993,7 +1993,7 @@ class E911Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocE911AddLocationOutput]:
+    ) -> ApiResponse[ServiceDocsE911AddLocationOutput]:
         """Create an E911 Location
 
         Enter new location details.
@@ -2031,7 +2031,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911AddLocationOutput",
+            '200': "ServiceDocsE911AddLocationOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }
@@ -2100,7 +2100,7 @@ class E911Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocE911AddLocationOutput",
+            '200': "ServiceDocsE911AddLocationOutput",
             '403': "CPAASError",
             '500': "CPAASError",
         }

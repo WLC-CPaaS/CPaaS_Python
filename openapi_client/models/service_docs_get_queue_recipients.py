@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.service_queue_recipient_output_full import ServiceQueueRecipientOutputFull
+from openapi_client.models.service_queue_recipient_output import ServiceQueueRecipientOutput
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class ServiceDocsGetQueueRecipients(BaseModel):
     """
     ServiceDocsGetQueueRecipients
     """ # noqa: E501
-    data: Optional[ServiceQueueRecipientOutputFull] = None
+    data: Optional[ServiceQueueRecipientOutput] = None
     next_start_key: Optional[StrictStr] = Field(default=None, description="List Pagination: Used to get the next page of results. Will not exist if this is the last page.")
     page_size: Optional[StrictInt] = Field(default=None, description="List Pagination: The number of results returned in this page")
     request_id: Optional[StrictStr] = Field(default=None, description="Unique id for each request")
@@ -90,7 +90,7 @@ class ServiceDocsGetQueueRecipients(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "data": ServiceQueueRecipientOutputFull.from_dict(obj["data"]) if obj.get("data") is not None else None,
+            "data": ServiceQueueRecipientOutput.from_dict(obj["data"]) if obj.get("data") is not None else None,
             "next_start_key": obj.get("next_start_key"),
             "page_size": obj.get("page_size"),
             "request_id": obj.get("request_id"),

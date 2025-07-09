@@ -46,7 +46,6 @@ __all__ = [
     "VoIPUserApi",
     "VoicemailApi",
     "WebhookApi",
-    "ProvisionApi",
     "ApiResponse",
     "ApiClient",
     "Configuration",
@@ -105,6 +104,7 @@ __all__ = [
     "ModelsUserOutputFullCalleridInternal",
     "ModelsVOIPAccountMusicOnHold",
     "ModelsVOIPAccountOutputFullCallerid",
+    "ModelsVOIPDeviceOutputLineKey",
     "ModelsVOIPSharedDoNotDisturb",
     "ProvisioningDocsDocsBrandOutputSingle",
     "ProvisioningDocsDocsBrandsOutput",
@@ -147,14 +147,6 @@ __all__ = [
     "ServiceChannelOutput",
     "ServiceDeviceOutputShort",
     "ServiceDeviceStatusOutput",
-    "ServiceDocE911ActiveLocationOutput",
-    "ServiceDocE911ActiveLocationURIApiOutput",
-    "ServiceDocE911AddLocationOutput",
-    "ServiceDocE911LocationsURIApiOutput",
-    "ServiceDocE911RemoveLocationOutput",
-    "ServiceDocE911RemoveURIApiOutput",
-    "ServiceDocE911URIsApiOutput",
-    "ServiceDocE911ValidateLocationOutput",
     "ServiceDocGroupGetAll",
     "ServiceDocGroupGetSingle",
     "ServiceDocsAccountAPIKey",
@@ -173,12 +165,12 @@ __all__ = [
     "ServiceDocsCallQueueGetRoles",
     "ServiceDocsCallQueueGetSingle",
     "ServiceDocsCallQueueGetSingleStatus",
-    "ServiceDocsCallQueueMemberGetSingle",
-    "ServiceDocsCallQueueResponseShort",
+    "ServiceDocsCallQueueRecipientLoginLogoutOutput",
     "ServiceDocsCallRecordingGetAll",
     "ServiceDocsCallRecordingGetSingle",
     "ServiceDocsCallflowGetAll",
     "ServiceDocsCallflowGetSingle",
+    "ServiceDocsCallparkGet",
     "ServiceDocsCampaignImportOutput",
     "ServiceDocsCampaignImportedGetAllOutput",
     "ServiceDocsCampaignPhoneNumberOutput",
@@ -191,6 +183,14 @@ __all__ = [
     "ServiceDocsDeviceGetSingle",
     "ServiceDocsDeviceReboot",
     "ServiceDocsDeviceStatus",
+    "ServiceDocsE911ActiveLocationOutput",
+    "ServiceDocsE911ActiveLocationURIApiOutput",
+    "ServiceDocsE911AddLocationOutput",
+    "ServiceDocsE911LocationsURIApiOutput",
+    "ServiceDocsE911RemoveLocationOutput",
+    "ServiceDocsE911RemoveURIApiOutput",
+    "ServiceDocsE911URIsApiOutput",
+    "ServiceDocsE911ValidateLocationOutput",
     "ServiceDocsEndpointList",
     "ServiceDocsEventDailySummary",
     "ServiceDocsEventDetail",
@@ -203,12 +203,12 @@ __all__ = [
     "ServiceDocsMediaGetSingle",
     "ServiceDocsMetaflowGet",
     "ServiceDocsOrderPhonenumber",
-    "ServiceDocsParkedcallGet",
     "ServiceDocsPhonenumberAssignPayload",
     "ServiceDocsPhonenumberSearchGetAll",
     "ServiceDocsPhonenumberUnassignPayload",
     "ServiceDocsPingGet",
     "ServiceDocsPresenceGet",
+    "ServiceDocsQueueMembershipOutput",
     "ServiceDocsStorageGet",
     "ServiceDocsSystemStatusGetSingle",
     "ServiceDocsTemporalRuleGetAll",
@@ -255,9 +255,9 @@ __all__ = [
     "ServicePhoneNumberSearchOutput",
     "ServicePhonenumberOutput",
     "ServicePingOutput",
-    "ServiceQueueRecipientOutputFull",
-    "ServiceQueueRecipientOutputFullFeatures",
-    "ServiceQueueRecipientOutputFullRecipient",
+    "ServiceQueueRecipientOutput",
+    "ServiceQueueRecipientOutputRecipient",
+    "ServiceQueueRecipientOutputRecipientFeatures",
     "ServiceRemoveURIApiOutput",
     "ServiceStorageOutput",
     "ServiceStoragePlan",
@@ -294,6 +294,7 @@ __all__ = [
     "ServiceVOIPDeviceAddEdit3d",
     "ServiceVOIPDeviceAddEdit4",
     "ServiceVOIPDeviceAddEdit5",
+    "ServiceVOIPDeviceAddEditLineKey",
     "ServiceVOIPDeviceAddEditProvision",
     "ServiceVOIPGroupAddEdit2",
     "ServiceVOIPImpersonateUser",
@@ -345,7 +346,6 @@ from openapi_client.api.temporal_rule_set_api import TemporalRuleSetApi
 from openapi_client.api.vo_ip_user_api import VoIPUserApi
 from openapi_client.api.voicemail_api import VoicemailApi
 from openapi_client.api.webhook_api import WebhookApi
-from openapi_client.api.provision_api import ProvisionApi
 
 # import ApiClient
 from openapi_client.api_response import ApiResponse
@@ -408,6 +408,7 @@ from openapi_client.models.models_user_output_full_callerid_external import Mode
 from openapi_client.models.models_user_output_full_callerid_internal import ModelsUserOutputFullCalleridInternal
 from openapi_client.models.models_voip_account_music_on_hold import ModelsVOIPAccountMusicOnHold
 from openapi_client.models.models_voip_account_output_full_callerid import ModelsVOIPAccountOutputFullCallerid
+from openapi_client.models.models_voip_device_output_line_key import ModelsVOIPDeviceOutputLineKey
 from openapi_client.models.models_voip_shared_do_not_disturb import ModelsVOIPSharedDoNotDisturb
 from openapi_client.models.provisioning_docs_docs_brand_output_single import ProvisioningDocsDocsBrandOutputSingle
 from openapi_client.models.provisioning_docs_docs_brands_output import ProvisioningDocsDocsBrandsOutput
@@ -450,14 +451,6 @@ from openapi_client.models.service_cdr_output_short import ServiceCdrOutputShort
 from openapi_client.models.service_channel_output import ServiceChannelOutput
 from openapi_client.models.service_device_output_short import ServiceDeviceOutputShort
 from openapi_client.models.service_device_status_output import ServiceDeviceStatusOutput
-from openapi_client.models.service_doc_e911_active_location_output import ServiceDocE911ActiveLocationOutput
-from openapi_client.models.service_doc_e911_active_location_uri_api_output import ServiceDocE911ActiveLocationURIApiOutput
-from openapi_client.models.service_doc_e911_add_location_output import ServiceDocE911AddLocationOutput
-from openapi_client.models.service_doc_e911_locations_uri_api_output import ServiceDocE911LocationsURIApiOutput
-from openapi_client.models.service_doc_e911_remove_location_output import ServiceDocE911RemoveLocationOutput
-from openapi_client.models.service_doc_e911_remove_uri_api_output import ServiceDocE911RemoveURIApiOutput
-from openapi_client.models.service_doc_e911_uris_api_output import ServiceDocE911URIsApiOutput
-from openapi_client.models.service_doc_e911_validate_location_output import ServiceDocE911ValidateLocationOutput
 from openapi_client.models.service_doc_group_get_all import ServiceDocGroupGetAll
 from openapi_client.models.service_doc_group_get_single import ServiceDocGroupGetSingle
 from openapi_client.models.service_docs_account_api_key import ServiceDocsAccountAPIKey
@@ -476,12 +469,12 @@ from openapi_client.models.service_docs_call_queue_get_all import ServiceDocsCal
 from openapi_client.models.service_docs_call_queue_get_roles import ServiceDocsCallQueueGetRoles
 from openapi_client.models.service_docs_call_queue_get_single import ServiceDocsCallQueueGetSingle
 from openapi_client.models.service_docs_call_queue_get_single_status import ServiceDocsCallQueueGetSingleStatus
-from openapi_client.models.service_docs_call_queue_member_get_single import ServiceDocsCallQueueMemberGetSingle
-from openapi_client.models.service_docs_call_queue_response_short import ServiceDocsCallQueueResponseShort
+from openapi_client.models.service_docs_call_queue_recipient_login_logout_output import ServiceDocsCallQueueRecipientLoginLogoutOutput
 from openapi_client.models.service_docs_call_recording_get_all import ServiceDocsCallRecordingGetAll
 from openapi_client.models.service_docs_call_recording_get_single import ServiceDocsCallRecordingGetSingle
 from openapi_client.models.service_docs_callflow_get_all import ServiceDocsCallflowGetAll
 from openapi_client.models.service_docs_callflow_get_single import ServiceDocsCallflowGetSingle
+from openapi_client.models.service_docs_callpark_get import ServiceDocsCallparkGet
 from openapi_client.models.service_docs_campaign_import_output import ServiceDocsCampaignImportOutput
 from openapi_client.models.service_docs_campaign_imported_get_all_output import ServiceDocsCampaignImportedGetAllOutput
 from openapi_client.models.service_docs_campaign_phone_number_output import ServiceDocsCampaignPhoneNumberOutput
@@ -494,6 +487,14 @@ from openapi_client.models.service_docs_device_get_all import ServiceDocsDeviceG
 from openapi_client.models.service_docs_device_get_single import ServiceDocsDeviceGetSingle
 from openapi_client.models.service_docs_device_reboot import ServiceDocsDeviceReboot
 from openapi_client.models.service_docs_device_status import ServiceDocsDeviceStatus
+from openapi_client.models.service_docs_e911_active_location_output import ServiceDocsE911ActiveLocationOutput
+from openapi_client.models.service_docs_e911_active_location_uri_api_output import ServiceDocsE911ActiveLocationURIApiOutput
+from openapi_client.models.service_docs_e911_add_location_output import ServiceDocsE911AddLocationOutput
+from openapi_client.models.service_docs_e911_locations_uri_api_output import ServiceDocsE911LocationsURIApiOutput
+from openapi_client.models.service_docs_e911_remove_location_output import ServiceDocsE911RemoveLocationOutput
+from openapi_client.models.service_docs_e911_remove_uri_api_output import ServiceDocsE911RemoveURIApiOutput
+from openapi_client.models.service_docs_e911_uris_api_output import ServiceDocsE911URIsApiOutput
+from openapi_client.models.service_docs_e911_validate_location_output import ServiceDocsE911ValidateLocationOutput
 from openapi_client.models.service_docs_endpoint_list import ServiceDocsEndpointList
 from openapi_client.models.service_docs_event_daily_summary import ServiceDocsEventDailySummary
 from openapi_client.models.service_docs_event_detail import ServiceDocsEventDetail
@@ -506,12 +507,12 @@ from openapi_client.models.service_docs_media_get_all import ServiceDocsMediaGet
 from openapi_client.models.service_docs_media_get_single import ServiceDocsMediaGetSingle
 from openapi_client.models.service_docs_metaflow_get import ServiceDocsMetaflowGet
 from openapi_client.models.service_docs_order_phonenumber import ServiceDocsOrderPhonenumber
-from openapi_client.models.service_docs_parkedcall_get import ServiceDocsParkedcallGet
 from openapi_client.models.service_docs_phonenumber_assign_payload import ServiceDocsPhonenumberAssignPayload
 from openapi_client.models.service_docs_phonenumber_search_get_all import ServiceDocsPhonenumberSearchGetAll
 from openapi_client.models.service_docs_phonenumber_unassign_payload import ServiceDocsPhonenumberUnassignPayload
 from openapi_client.models.service_docs_ping_get import ServiceDocsPingGet
 from openapi_client.models.service_docs_presence_get import ServiceDocsPresenceGet
+from openapi_client.models.service_docs_queue_membership_output import ServiceDocsQueueMembershipOutput
 from openapi_client.models.service_docs_storage_get import ServiceDocsStorageGet
 from openapi_client.models.service_docs_system_status_get_single import ServiceDocsSystemStatusGetSingle
 from openapi_client.models.service_docs_temporal_rule_get_all import ServiceDocsTemporalRuleGetAll
@@ -558,9 +559,9 @@ from openapi_client.models.service_phone_number_result import ServicePhoneNumber
 from openapi_client.models.service_phone_number_search_output import ServicePhoneNumberSearchOutput
 from openapi_client.models.service_phonenumber_output import ServicePhonenumberOutput
 from openapi_client.models.service_ping_output import ServicePingOutput
-from openapi_client.models.service_queue_recipient_output_full import ServiceQueueRecipientOutputFull
-from openapi_client.models.service_queue_recipient_output_full_features import ServiceQueueRecipientOutputFullFeatures
-from openapi_client.models.service_queue_recipient_output_full_recipient import ServiceQueueRecipientOutputFullRecipient
+from openapi_client.models.service_queue_recipient_output import ServiceQueueRecipientOutput
+from openapi_client.models.service_queue_recipient_output_recipient import ServiceQueueRecipientOutputRecipient
+from openapi_client.models.service_queue_recipient_output_recipient_features import ServiceQueueRecipientOutputRecipientFeatures
 from openapi_client.models.service_remove_uri_api_output import ServiceRemoveURIApiOutput
 from openapi_client.models.service_storage_output import ServiceStorageOutput
 from openapi_client.models.service_storage_plan import ServiceStoragePlan
@@ -597,6 +598,7 @@ from openapi_client.models.service_voip_device_add_edit3c import ServiceVOIPDevi
 from openapi_client.models.service_voip_device_add_edit3d import ServiceVOIPDeviceAddEdit3d
 from openapi_client.models.service_voip_device_add_edit4 import ServiceVOIPDeviceAddEdit4
 from openapi_client.models.service_voip_device_add_edit5 import ServiceVOIPDeviceAddEdit5
+from openapi_client.models.service_voip_device_add_edit_line_key import ServiceVOIPDeviceAddEditLineKey
 from openapi_client.models.service_voip_device_add_edit_provision import ServiceVOIPDeviceAddEditProvision
 from openapi_client.models.service_voip_group_add_edit2 import ServiceVOIPGroupAddEdit2
 from openapi_client.models.service_voip_impersonate_user import ServiceVOIPImpersonateUser

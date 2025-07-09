@@ -1,24 +1,95 @@
 # openapi_client.ProvisioningApi
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1_ap_brand_brand_family_family_get**](ProvisioningApi.md#v1_ap_brand_brand_family_family_get) | **GET** /v1/ap/brand/{brand}/family/{family} | Get Family
+[**v1_account_account_id_provision_filename_get**](ProvisioningApi.md#v1_account_account_id_provision_filename_get) | **GET** /v1/account/{accountID}/provision/{filename} | Get Config File Details
+[**v1_ap_brand_brand_family_family_get**](ProvisioningApi.md#v1_ap_brand_brand_family_family_get) | **GET** /v1/ap/brand/{brand}/family/{family} | Get Family Details
 [**v1_ap_brand_brand_family_family_model_get**](ProvisioningApi.md#v1_ap_brand_brand_family_family_model_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model | Get Model List
-[**v1_ap_brand_brand_family_family_model_model_get**](ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model} | Get Model
+[**v1_ap_brand_brand_family_family_model_model_get**](ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model} | Get Model Details
 [**v1_ap_brand_brand_family_family_model_model_template_get**](ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_template_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model}/template | Get Template List
-[**v1_ap_brand_brand_family_family_model_model_template_template_get**](ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_template_template_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model}/template/{template} | Get Template
+[**v1_ap_brand_brand_family_family_model_model_template_template_get**](ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_template_template_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model}/template/{template} | Get Template Details
 [**v1_ap_brand_brand_family_get**](ProvisioningApi.md#v1_ap_brand_brand_family_get) | **GET** /v1/ap/brand/{brand}/family | Get Family List
-[**v1_ap_brand_brand_get**](ProvisioningApi.md#v1_ap_brand_brand_get) | **GET** /v1/ap/brand/{brand} | Get Brand
-[**v1_ap_brand_get**](ProvisioningApi.md#v1_ap_brand_get) | **GET** /v1/ap/brand | Get Brand
-[**v1_ap_configfile_generate_post**](ProvisioningApi.md#v1_ap_configfile_generate_post) | **POST** /v1/ap/configfile/generate | Generate config file
+[**v1_ap_brand_brand_get**](ProvisioningApi.md#v1_ap_brand_brand_get) | **GET** /v1/ap/brand/{brand} | Get Brand Details
+[**v1_ap_brand_get**](ProvisioningApi.md#v1_ap_brand_get) | **GET** /v1/ap/brand | Get Brand List
+[**v1_ap_configfile_generate_post**](ProvisioningApi.md#v1_ap_configfile_generate_post) | **POST** /v1/ap/configfile/generate | Generate Config File
 
+
+# **v1_account_account_id_provision_filename_get**
+> bytearray v1_account_account_id_provision_filename_get(account_id, filename)
+
+Get Config File Details
+
+Retrieve the configuration details (e.g., settings and parameters) for a device.
+
+### Example
+
+
+```python
+import openapi_client
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://api.beta.cpaaslabs.net"
+)
+
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.ProvisioningApi(api_client)
+    account_id = 'account_id_example' # str | Account ID, 32 alpha numeric
+    filename = 'filename_example' # str | Name of config file
+
+    try:
+        # Get Config File Details
+        api_response = api_instance.v1_account_account_id_provision_filename_get(account_id, filename)
+        print("The response of ProvisioningApi->v1_account_account_id_provision_filename_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ProvisioningApi->v1_account_account_id_provision_filename_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| Account ID, 32 alpha numeric | 
+ **filename** | **str**| Name of config file | 
+
+### Return type
+
+**bytearray**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_ap_brand_brand_family_family_get**
 > ProvisioningDocsDocsFamilyOutputSingle v1_ap_brand_brand_family_family_get(brand, family)
 
-Get Family
+Get Family Details
 
 Retrieve a family's details by the randomly generated ID.
 
@@ -32,10 +103,10 @@ from openapi_client.models.provisioning_docs_docs_family_output_single import Pr
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -57,7 +128,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     family = 'family_example' # str | family
 
     try:
-        # Get Family
+        # Get Family Details
         api_response = api_instance.v1_ap_brand_brand_family_family_get(brand, family)
         print("The response of ProvisioningApi->v1_ap_brand_brand_family_family_get:\n")
         pprint(api_response)
@@ -115,10 +186,10 @@ from openapi_client.models.provisioning_docs_docs_model_output import Provisioni
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -192,7 +263,7 @@ Name | Type | Description  | Notes
 # **v1_ap_brand_brand_family_family_model_model_get**
 > ProvisioningDocsDocsModelOutputSingle v1_ap_brand_brand_family_family_model_model_get(brand, family, model)
 
-Get Model
+Get Model Details
 
 Retrieve a model's details by the randomly generated ID.
 
@@ -206,10 +277,10 @@ from openapi_client.models.provisioning_docs_docs_model_output_single import Pro
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -232,7 +303,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     model = 'model_example' # str | model
 
     try:
-        # Get Model
+        # Get Model Details
         api_response = api_instance.v1_ap_brand_brand_family_family_model_model_get(brand, family, model)
         print("The response of ProvisioningApi->v1_ap_brand_brand_family_family_model_model_get:\n")
         pprint(api_response)
@@ -291,10 +362,10 @@ from openapi_client.models.provisioning_docs_docs_templates_output import Provis
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -372,7 +443,7 @@ Name | Type | Description  | Notes
 # **v1_ap_brand_brand_family_family_model_model_template_template_get**
 > ProvisioningDocsDocsTemplateOutputSingle v1_ap_brand_brand_family_family_model_model_template_template_get(brand, family, model, template)
 
-Get Template
+Get Template Details
 
 Retrieve details about a template for a model by the randomly generated ID.
 
@@ -386,10 +457,10 @@ from openapi_client.models.provisioning_docs_docs_template_output_single import 
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -413,7 +484,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     template = 'template_example' # str | template
 
     try:
-        # Get Template
+        # Get Template Details
         api_response = api_instance.v1_ap_brand_brand_family_family_model_model_template_template_get(brand, family, model, template)
         print("The response of ProvisioningApi->v1_ap_brand_brand_family_family_model_model_template_template_get:\n")
         pprint(api_response)
@@ -473,10 +544,10 @@ from openapi_client.models.provisioning_docs_docs_family_output import Provision
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -548,7 +619,7 @@ Name | Type | Description  | Notes
 # **v1_ap_brand_brand_get**
 > ProvisioningDocsDocsBrandOutputSingle v1_ap_brand_brand_get(brand)
 
-Get Brand
+Get Brand Details
 
 Retrieve a brand's details by the randomly generated ID.
 
@@ -562,10 +633,10 @@ from openapi_client.models.provisioning_docs_docs_brand_output_single import Pro
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -586,7 +657,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     brand = 'brand_example' # str | brand id to retrieve a brand
 
     try:
-        # Get Brand
+        # Get Brand Details
         api_response = api_instance.v1_ap_brand_brand_get(brand)
         print("The response of ProvisioningApi->v1_ap_brand_brand_get:\n")
         pprint(api_response)
@@ -629,7 +700,7 @@ Name | Type | Description  | Notes
 # **v1_ap_brand_get**
 > ProvisioningDocsDocsBrandsOutput v1_ap_brand_get(brand_name=brand_name, page_size=page_size, start_key=start_key, status=status)
 
-Get Brand
+Get Brand List
 
 Retrieve a list of all brands (e.g., Yealink and Polycom) by client.
 
@@ -643,10 +714,10 @@ from openapi_client.models.provisioning_docs_docs_brands_output import Provision
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -670,7 +741,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     status = 'status_example' # str |  (optional)
 
     try:
-        # Get Brand
+        # Get Brand List
         api_response = api_instance.v1_ap_brand_get(brand_name=brand_name, page_size=page_size, start_key=start_key, status=status)
         print("The response of ProvisioningApi->v1_ap_brand_get:\n")
         pprint(api_response)
@@ -716,7 +787,7 @@ Name | Type | Description  | Notes
 # **v1_ap_configfile_generate_post**
 > ProvisioningDocsDocsConfigFileOutput v1_ap_configfile_generate_post(params)
 
-Generate config file
+Generate Config File
 
 Generate a configuration file that includes a list of parameters passed to the specified template_id in the request payload, with populated values returned in the response.
 
@@ -731,10 +802,10 @@ from openapi_client.models.provisioning_docs_docs_config_file_output import Prov
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -755,7 +826,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     params = openapi_client.ModelsGenerateConfigFileRequest() # ModelsGenerateConfigFileRequest | body params to generate config file
 
     try:
-        # Generate config file
+        # Generate Config File
         api_response = api_instance.v1_ap_configfile_generate_post(params)
         print("The response of ProvisioningApi->v1_ap_configfile_generate_post:\n")
         pprint(api_response)

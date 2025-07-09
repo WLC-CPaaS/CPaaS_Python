@@ -1,6 +1,6 @@
 # openapi_client.E911Api
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **v1_e911_get**
-> ServiceDocE911URIsApiOutput v1_e911_get()
+> ServiceDocsE911URIsApiOutput v1_e911_get()
 
 Get E911 List
 
@@ -26,14 +26,14 @@ Obtain e911 URIs associated with the provided account ID.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_e911_uris_api_output import ServiceDocE911URIsApiOutput
+from openapi_client.models.service_docs_e911_uris_api_output import ServiceDocsE911URIsApiOutput
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 
@@ -59,7 +59,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ServiceDocE911URIsApiOutput**](ServiceDocE911URIsApiOutput.md)
+[**ServiceDocsE911URIsApiOutput**](ServiceDocsE911URIsApiOutput.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_e911_location_location_id_activate_put**
-> ServiceDocE911ActiveLocationOutput v1_e911_location_location_id_activate_put(location_id)
+> ServiceDocsE911ActiveLocationOutput v1_e911_location_location_id_activate_put(location_id)
 
 Activate E911 Location
 
@@ -92,14 +92,14 @@ Edit the provision location.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_e911_active_location_output import ServiceDocE911ActiveLocationOutput
+from openapi_client.models.service_docs_e911_active_location_output import ServiceDocsE911ActiveLocationOutput
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911ActiveLocationOutput**](ServiceDocE911ActiveLocationOutput.md)
+[**ServiceDocsE911ActiveLocationOutput**](ServiceDocsE911ActiveLocationOutput.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_e911_location_location_id_delete**
-> ServiceDocE911RemoveLocationOutput v1_e911_location_location_id_delete(location_id)
+> ServiceDocsE911RemoveLocationOutput v1_e911_location_location_id_delete(location_id)
 
 Delete E911 Location
 
@@ -162,14 +162,14 @@ Remove the location.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_e911_remove_location_output import ServiceDocE911RemoveLocationOutput
+from openapi_client.models.service_docs_e911_remove_location_output import ServiceDocsE911RemoveLocationOutput
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911RemoveLocationOutput**](ServiceDocE911RemoveLocationOutput.md)
+[**ServiceDocsE911RemoveLocationOutput**](ServiceDocsE911RemoveLocationOutput.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_e911_location_validate_put**
-> ServiceDocE911ValidateLocationOutput v1_e911_location_validate_put(req_body)
+> ServiceDocsE911ValidateLocationOutput v1_e911_location_validate_put(req_body)
 
 Validate a Location
 
@@ -232,15 +232,15 @@ Validate the location details.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_e911_validate_location_output import ServiceDocE911ValidateLocationOutput
+from openapi_client.models.service_docs_e911_validate_location_output import ServiceDocsE911ValidateLocationOutput
 from openapi_client.models.service_e911_validate_location_input import ServiceE911ValidateLocationInput
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911ValidateLocationOutput**](ServiceDocE911ValidateLocationOutput.md)
+[**ServiceDocsE911ValidateLocationOutput**](ServiceDocsE911ValidateLocationOutput.md)
 
 ### Authorization
 
@@ -292,7 +292,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_e911_phone_number_delete**
-> ServiceDocE911RemoveURIApiOutput v1_e911_phone_number_delete(phone_number)
+> ServiceDocsE911RemoveURIApiOutput v1_e911_phone_number_delete(phone_number)
 
 Delete E911 Phone Number
 
@@ -303,14 +303,14 @@ Delete the e911 URI connected with the account URI.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_e911_remove_uri_api_output import ServiceDocE911RemoveURIApiOutput
+from openapi_client.models.service_docs_e911_remove_uri_api_output import ServiceDocsE911RemoveURIApiOutput
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911RemoveURIApiOutput**](ServiceDocE911RemoveURIApiOutput.md)
+[**ServiceDocsE911RemoveURIApiOutput**](ServiceDocsE911RemoveURIApiOutput.md)
 
 ### Authorization
 
@@ -362,7 +362,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_e911_phone_number_location_active_get**
-> ServiceDocE911ActiveLocationURIApiOutput v1_e911_phone_number_location_active_get(phone_number)
+> ServiceDocsE911ActiveLocationURIApiOutput v1_e911_phone_number_location_active_get(phone_number)
 
 Get Actvie Location for a Phone Number
 
@@ -373,14 +373,14 @@ Get the e911 location connected with the URI.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_e911_active_location_uri_api_output import ServiceDocE911ActiveLocationURIApiOutput
+from openapi_client.models.service_docs_e911_active_location_uri_api_output import ServiceDocsE911ActiveLocationURIApiOutput
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 
@@ -410,7 +410,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911ActiveLocationURIApiOutput**](ServiceDocE911ActiveLocationURIApiOutput.md)
+[**ServiceDocsE911ActiveLocationURIApiOutput**](ServiceDocsE911ActiveLocationURIApiOutput.md)
 
 ### Authorization
 
@@ -432,7 +432,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_e911_phone_number_location_get**
-> ServiceDocE911LocationsURIApiOutput v1_e911_phone_number_location_get(phone_number)
+> ServiceDocsE911LocationsURIApiOutput v1_e911_phone_number_location_get(phone_number)
 
 Get Location List for Phone Number
 
@@ -443,14 +443,14 @@ Access a list of the e911 locations associated with the provided URI.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_e911_locations_uri_api_output import ServiceDocE911LocationsURIApiOutput
+from openapi_client.models.service_docs_e911_locations_uri_api_output import ServiceDocsE911LocationsURIApiOutput
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 
@@ -480,7 +480,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911LocationsURIApiOutput**](ServiceDocE911LocationsURIApiOutput.md)
+[**ServiceDocsE911LocationsURIApiOutput**](ServiceDocsE911LocationsURIApiOutput.md)
 
 ### Authorization
 
@@ -502,7 +502,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_e911_post**
-> ServiceDocE911AddLocationOutput v1_e911_post(req_body)
+> ServiceDocsE911AddLocationOutput v1_e911_post(req_body)
 
 Create an E911 Location
 
@@ -513,15 +513,15 @@ Enter new location details.
 
 ```python
 import openapi_client
-from openapi_client.models.service_doc_e911_add_location_output import ServiceDocE911AddLocationOutput
+from openapi_client.models.service_docs_e911_add_location_output import ServiceDocsE911AddLocationOutput
 from openapi_client.models.service_e911_add_location_input import ServiceE911AddLocationInput
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 
@@ -551,7 +551,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911AddLocationOutput**](ServiceDocE911AddLocationOutput.md)
+[**ServiceDocsE911AddLocationOutput**](ServiceDocsE911AddLocationOutput.md)
 
 ### Authorization
 

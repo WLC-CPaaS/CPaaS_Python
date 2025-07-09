@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **endpoint_family** | **str** |  | [optional] 
 **endpoint_model** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
+**line_keys** | [**List[ServiceVOIPDeviceAddEditLineKey]**](ServiceVOIPDeviceAddEditLineKey.md) |  | [optional] 
 
 ## Example
 

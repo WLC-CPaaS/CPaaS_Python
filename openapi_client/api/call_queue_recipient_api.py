@@ -20,7 +20,7 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr
 from typing_extensions import Annotated
 from openapi_client.models.service_api_response import ServiceAPIResponse
-from openapi_client.models.service_docs_call_queue_response_short import ServiceDocsCallQueueResponseShort
+from openapi_client.models.service_docs_call_queue_recipient_login_logout_output import ServiceDocsCallQueueRecipientLoginLogoutOutput
 from openapi_client.models.service_docs_get_queue_recipients import ServiceDocsGetQueueRecipients
 from openapi_client.models.service_voip_call_queue_recipient_login_logout_data import ServiceVOIPCallQueueRecipientLoginLogoutData
 from openapi_client.models.service_voip_call_queue_recipient_status_data import ServiceVOIPCallQueueRecipientStatusData
@@ -61,7 +61,7 @@ class CallQueueRecipientApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocsCallQueueResponseShort:
+    ) -> ServiceDocsCallQueueRecipientLoginLogoutOutput:
         """Login as Recipient
 
         Agents must log in to receive calls. Depending on their membership, they can log in to one or more queues. (If an agent is a member of more than one queue, they will receive calls from all the queues they are a part of.)
@@ -105,7 +105,7 @@ class CallQueueRecipientApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsCallQueueResponseShort",
+            '200': "ServiceDocsCallQueueRecipientLoginLogoutOutput",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -137,7 +137,7 @@ class CallQueueRecipientApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocsCallQueueResponseShort]:
+    ) -> ApiResponse[ServiceDocsCallQueueRecipientLoginLogoutOutput]:
         """Login as Recipient
 
         Agents must log in to receive calls. Depending on their membership, they can log in to one or more queues. (If an agent is a member of more than one queue, they will receive calls from all the queues they are a part of.)
@@ -181,7 +181,7 @@ class CallQueueRecipientApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsCallQueueResponseShort",
+            '200': "ServiceDocsCallQueueRecipientLoginLogoutOutput",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -257,7 +257,7 @@ class CallQueueRecipientApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsCallQueueResponseShort",
+            '200': "ServiceDocsCallQueueRecipientLoginLogoutOutput",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(

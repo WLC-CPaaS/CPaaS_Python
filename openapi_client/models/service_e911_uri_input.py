@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
-from typing import Any, ClassVar, Dict, List
+from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class ServiceE911URIInput(BaseModel):
     """
     ServiceE911URIInput
     """ # noqa: E501
-    caller_name: StrictStr = Field(alias="callerName")
+    caller_name: Optional[StrictStr] = Field(default=None, alias="callerName")
     uri: StrictStr
     __properties: ClassVar[List[str]] = ["callerName", "uri"]
 

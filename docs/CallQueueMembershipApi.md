@@ -1,6 +1,6 @@
 # openapi_client.CallQueueMembershipApi
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **v1_account_account_id_queuemembership_post**
-> ServiceDocsCallQueueMemberGetSingle v1_account_account_id_queuemembership_post(account_id, req_body)
+> ServiceDocsQueueMembershipOutput v1_account_account_id_queuemembership_post(account_id, req_body)
 
 Grant Queue Membership to User
 
@@ -22,15 +22,15 @@ Allow users to create queue memberships for recipients.
 
 ```python
 import openapi_client
-from openapi_client.models.service_docs_call_queue_member_get_single import ServiceDocsCallQueueMemberGetSingle
+from openapi_client.models.service_docs_queue_membership_output import ServiceDocsQueueMembershipOutput
 from openapi_client.models.service_voip_queue_membership_add_data import ServiceVOIPQueueMembershipAddData
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsCallQueueMemberGetSingle**](ServiceDocsCallQueueMemberGetSingle.md)
+[**ServiceDocsQueueMembershipOutput**](ServiceDocsQueueMembershipOutput.md)
 
 ### Authorization
 
@@ -109,10 +109,10 @@ from openapi_client.models.service_api_response import ServiceAPIResponse
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -192,10 +192,10 @@ from openapi_client.models.service_voip_call_queue_enable_membership_data import
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters

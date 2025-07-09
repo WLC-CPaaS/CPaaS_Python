@@ -27,21 +27,18 @@ class ServiceE911LocationInput(BaseModel):
     """
     ServiceE911LocationInput
     """ # noqa: E501
-    address_1: StrictStr
+    address_1: Optional[StrictStr] = None
     address_2: Optional[StrictStr] = None
-    community: StrictStr
+    community: Optional[StrictStr] = None
     plus_four: Optional[StrictStr] = None
-    postal_code: StrictStr
-    state: StrictStr
-    type: Optional[StrictStr] = None
+    postal_code: Optional[StrictStr] = None
+    state: Optional[StrictStr] = None
+    type: StrictStr
     __properties: ClassVar[List[str]] = ["address_1", "address_2", "community", "plus_four", "postal_code", "state", "type"]
 
     @field_validator('type')
     def type_validate_enum(cls, value):
         """Validates the enum"""
-        if value is None:
-            return value
-
         if value not in set(['ADDRESS']):
             raise ValueError("must be one of enum values ('ADDRESS')")
         return value

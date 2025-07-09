@@ -5,13 +5,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address_1** | **str** |  | 
+**address_1** | **str** |  | [optional] 
 **address_2** | **str** |  | [optional] 
-**community** | **str** |  | 
+**community** | **str** |  | [optional] 
 **plus_four** | **str** |  | [optional] 
-**postal_code** | **str** |  | 
-**state** | **str** |  | 
-**type** | **str** |  | [optional] 
+**postal_code** | **str** |  | [optional] 
+**state** | **str** |  | [optional] 
+**type** | **str** |  | 
 
 ## Example
 

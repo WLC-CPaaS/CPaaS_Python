@@ -1520,7 +1520,7 @@ class VoIPUserApi:
     ) -> ServiceDocsImpersonateUserGetSingle:
         """Impersonate a User
 
-        Impersonate as another user if you have access to admin.
+        Retrieve a token for making presence calls.
 
         :param accountid: Account ID, 32 alpha numeric (required)
         :type accountid: str
@@ -1596,7 +1596,7 @@ class VoIPUserApi:
     ) -> ApiResponse[ServiceDocsImpersonateUserGetSingle]:
         """Impersonate a User
 
-        Impersonate as another user if you have access to admin.
+        Retrieve a token for making presence calls.
 
         :param accountid: Account ID, 32 alpha numeric (required)
         :type accountid: str
@@ -1672,7 +1672,7 @@ class VoIPUserApi:
     ) -> RESTResponseType:
         """Impersonate a User
 
-        Impersonate as another user if you have access to admin.
+        Retrieve a token for making presence calls.
 
         :param accountid: Account ID, 32 alpha numeric (required)
         :type accountid: str

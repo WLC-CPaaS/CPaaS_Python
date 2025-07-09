@@ -20,7 +20,7 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr
 from typing_extensions import Annotated
 from openapi_client.models.service_api_response import ServiceAPIResponse
-from openapi_client.models.service_docs_call_queue_member_get_single import ServiceDocsCallQueueMemberGetSingle
+from openapi_client.models.service_docs_queue_membership_output import ServiceDocsQueueMembershipOutput
 from openapi_client.models.service_voip_call_queue_enable_membership_data import ServiceVOIPCallQueueEnableMembershipData
 from openapi_client.models.service_voip_queue_membership_add_data import ServiceVOIPQueueMembershipAddData
 
@@ -59,7 +59,7 @@ class CallQueueMembershipApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocsCallQueueMemberGetSingle:
+    ) -> ServiceDocsQueueMembershipOutput:
         """Grant Queue Membership to User
 
         Allow users to create queue memberships for recipients.
@@ -100,7 +100,7 @@ class CallQueueMembershipApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsCallQueueMemberGetSingle",
+            '200': "ServiceDocsQueueMembershipOutput",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -131,7 +131,7 @@ class CallQueueMembershipApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocsCallQueueMemberGetSingle]:
+    ) -> ApiResponse[ServiceDocsQueueMembershipOutput]:
         """Grant Queue Membership to User
 
         Allow users to create queue memberships for recipients.
@@ -172,7 +172,7 @@ class CallQueueMembershipApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsCallQueueMemberGetSingle",
+            '200': "ServiceDocsQueueMembershipOutput",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -244,7 +244,7 @@ class CallQueueMembershipApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsCallQueueMemberGetSingle",
+            '200': "ServiceDocsQueueMembershipOutput",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(

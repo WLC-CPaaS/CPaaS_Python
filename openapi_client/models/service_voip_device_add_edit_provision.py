@@ -20,6 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from openapi_client.models.service_voip_device_add_edit_line_key import ServiceVOIPDeviceAddEditLineKey
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -31,7 +32,8 @@ class ServiceVOIPDeviceAddEditProvision(BaseModel):
     endpoint_family: Optional[StrictStr] = None
     endpoint_model: Optional[StrictStr] = None
     id: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["endpoint_brand", "endpoint_family", "endpoint_model", "id"]
+    line_keys: Optional[List[ServiceVOIPDeviceAddEditLineKey]] = None
+    __properties: ClassVar[List[str]] = ["endpoint_brand", "endpoint_family", "endpoint_model", "id", "line_keys"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -72,6 +74,13 @@ class ServiceVOIPDeviceAddEditProvision(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each item in line_keys (list)
+        _items = []
+        if self.line_keys:
+            for _item_line_keys in self.line_keys:
+                if _item_line_keys:
+                    _items.append(_item_line_keys.to_dict())
+            _dict['line_keys'] = _items
         return _dict
 
     @classmethod
@@ -87,7 +96,8 @@ class ServiceVOIPDeviceAddEditProvision(BaseModel):
             "endpoint_brand": obj.get("endpoint_brand"),
             "endpoint_family": obj.get("endpoint_family"),
             "endpoint_model": obj.get("endpoint_model"),
-            "id": obj.get("id")
+            "id": obj.get("id"),
+            "line_keys": [ServiceVOIPDeviceAddEditLineKey.from_dict(_item) for _item in obj["line_keys"]] if obj.get("line_keys") is not None else None
         })
         return _obj
 

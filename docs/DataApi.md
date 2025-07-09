@@ -1,6 +1,6 @@
 # openapi_client.DataApi
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -34,10 +34,10 @@ from openapi_client.models.service_docs_cdr_get_single import ServiceDocsCdrGetS
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -116,10 +116,10 @@ from openapi_client.models.service_docs_cdr_get_all import ServiceDocsCdrGetAll
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -204,10 +204,10 @@ from openapi_client.models.service_docs_call_daily_summary import ServiceDocsCal
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -296,10 +296,10 @@ from openapi_client.models.service_docs_call_detail import ServiceDocsCallDetail
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -396,10 +396,10 @@ from openapi_client.models.service_docs_call_monthly_summary import ServiceDocsC
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -492,10 +492,10 @@ from openapi_client.models.service_docs_endpoint_list import ServiceDocsEndpoint
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -584,10 +584,10 @@ from openapi_client.models.service_docs_event_daily_summary import ServiceDocsEv
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -676,10 +676,10 @@ from openapi_client.models.service_docs_event_detail import ServiceDocsEventDeta
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -774,10 +774,10 @@ from openapi_client.models.service_docs_event_monthly_summary import ServiceDocs
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -870,10 +870,10 @@ from openapi_client.models.service_docs_feature_daily_summary import ServiceDocs
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -960,10 +960,10 @@ from openapi_client.models.service_docs_feature_monthly_summary import ServiceDo
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters

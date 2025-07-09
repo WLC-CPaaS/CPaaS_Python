@@ -1,6 +1,6 @@
 # openapi_client.CallParkApi
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **v1_account_account_id_parkedcall_get**
-> ServiceDocsParkedcallGet v1_account_account_id_parkedcall_get(account_id)
+> ServiceDocsCallparkGet v1_account_account_id_parkedcall_get(account_id)
 
 Get Call Park List
 
@@ -20,14 +20,14 @@ Retrieve a list of calls parked on hold in a numbered slot.
 
 ```python
 import openapi_client
-from openapi_client.models.service_docs_parkedcall_get import ServiceDocsParkedcallGet
+from openapi_client.models.service_docs_callpark_get import ServiceDocsCallparkGet
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsParkedcallGet**](ServiceDocsParkedcallGet.md)
+[**ServiceDocsCallparkGet**](ServiceDocsCallparkGet.md)
 
 ### Authorization
 

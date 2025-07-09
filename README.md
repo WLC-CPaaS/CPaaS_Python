@@ -56,10 +56,10 @@ import openapi_client
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -94,7 +94,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -209,15 +209,16 @@ Class | Method | HTTP request | Description
 *PresenceApi* | [**v1_account_account_id_presence_extension_put**](docs/PresenceApi.md#v1_account_account_id_presence_extension_put) | **PUT** /v1/account/{accountID}/presence/{extension} | Set/Reset Presence for Extension
 *PresenceApi* | [**v1_account_account_id_presence_get**](docs/PresenceApi.md#v1_account_account_id_presence_get) | **GET** /v1/account/{accountID}/presence | Get Presence Details
 *PresenceApi* | [**v1_account_account_id_user_user_id_presence_put**](docs/PresenceApi.md#v1_account_account_id_user_user_id_presence_put) | **PUT** /v1/account/{accountID}/user/{userID}/presence | Set/Reset Presence for User
-*ProvisioningApi* | [**v1_ap_brand_brand_family_family_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_get) | **GET** /v1/ap/brand/{brand}/family/{family} | Get Family
+*ProvisioningApi* | [**v1_account_account_id_provision_filename_get**](docs/ProvisioningApi.md#v1_account_account_id_provision_filename_get) | **GET** /v1/account/{accountID}/provision/{filename} | Get Config File Details
+*ProvisioningApi* | [**v1_ap_brand_brand_family_family_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_get) | **GET** /v1/ap/brand/{brand}/family/{family} | Get Family Details
 *ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model | Get Model List
-*ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_model_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model} | Get Model
+*ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_model_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model} | Get Model Details
 *ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_model_template_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_template_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model}/template | Get Template List
-*ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_model_template_template_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_template_template_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model}/template/{template} | Get Template
+*ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_model_template_template_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_template_template_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model}/template/{template} | Get Template Details
 *ProvisioningApi* | [**v1_ap_brand_brand_family_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_get) | **GET** /v1/ap/brand/{brand}/family | Get Family List
-*ProvisioningApi* | [**v1_ap_brand_brand_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_get) | **GET** /v1/ap/brand/{brand} | Get Brand
-*ProvisioningApi* | [**v1_ap_brand_get**](docs/ProvisioningApi.md#v1_ap_brand_get) | **GET** /v1/ap/brand | Get Brand
-*ProvisioningApi* | [**v1_ap_configfile_generate_post**](docs/ProvisioningApi.md#v1_ap_configfile_generate_post) | **POST** /v1/ap/configfile/generate | Generate config file
+*ProvisioningApi* | [**v1_ap_brand_brand_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_get) | **GET** /v1/ap/brand/{brand} | Get Brand Details
+*ProvisioningApi* | [**v1_ap_brand_get**](docs/ProvisioningApi.md#v1_ap_brand_get) | **GET** /v1/ap/brand | Get Brand List
+*ProvisioningApi* | [**v1_ap_configfile_generate_post**](docs/ProvisioningApi.md#v1_ap_configfile_generate_post) | **POST** /v1/ap/configfile/generate | Generate Config File
 *SMSApi* | [**v1_sms_account_account_id_campaign_campaign_id_import_get**](docs/SMSApi.md#v1_sms_account_account_id_campaign_campaign_id_import_get) | **GET** /v1/sms/account/{accountID}/campaign/{campaignID}/import | 
 *SMSApi* | [**v1_sms_account_account_id_campaign_campaign_id_import_post**](docs/SMSApi.md#v1_sms_account_account_id_campaign_campaign_id_import_post) | **POST** /v1/sms/account/{accountID}/campaign/{campaignID}/import | 
 *SMSApi* | [**v1_sms_account_account_id_campaign_campaign_id_phonenumber_get**](docs/SMSApi.md#v1_sms_account_account_id_campaign_campaign_id_phonenumber_get) | **GET** /v1/sms/account/{accountID}/campaign/{campaignID}/phonenumber | 
@@ -264,7 +265,6 @@ Class | Method | HTTP request | Description
 *WebhookApi* | [**v1_webhook_account_account_id_webhook_id_delete**](docs/WebhookApi.md#v1_webhook_account_account_id_webhook_id_delete) | **DELETE** /v1/webhook/account/{accountID}/{webhookID} | Delete Webhook
 *WebhookApi* | [**v1_webhook_account_account_id_webhook_id_get**](docs/WebhookApi.md#v1_webhook_account_account_id_webhook_id_get) | **GET** /v1/webhook/account/{accountID}/{webhookID} | Get Webhook Details
 *WebhookApi* | [**v1_webhook_account_account_id_webhook_id_put**](docs/WebhookApi.md#v1_webhook_account_account_id_webhook_id_put) | **PUT** /v1/webhook/account/{accountID}/{webhookID} | Update Webhook
-*ProvisionApi* | [**v1_account_account_id_provision_filename_get**](docs/ProvisionApi.md#v1_account_account_id_provision_filename_get) | **GET** /v1/account/{accountID}/provision/{filename} | 
 
 
 ## Documentation For Models
@@ -318,6 +318,7 @@ Class | Method | HTTP request | Description
  - [ModelsUserOutputFullCalleridInternal](docs/ModelsUserOutputFullCalleridInternal.md)
  - [ModelsVOIPAccountMusicOnHold](docs/ModelsVOIPAccountMusicOnHold.md)
  - [ModelsVOIPAccountOutputFullCallerid](docs/ModelsVOIPAccountOutputFullCallerid.md)
+ - [ModelsVOIPDeviceOutputLineKey](docs/ModelsVOIPDeviceOutputLineKey.md)
  - [ModelsVOIPSharedDoNotDisturb](docs/ModelsVOIPSharedDoNotDisturb.md)
  - [ProvisioningDocsDocsBrandOutputSingle](docs/ProvisioningDocsDocsBrandOutputSingle.md)
  - [ProvisioningDocsDocsBrandsOutput](docs/ProvisioningDocsDocsBrandsOutput.md)
@@ -360,14 +361,6 @@ Class | Method | HTTP request | Description
  - [ServiceChannelOutput](docs/ServiceChannelOutput.md)
  - [ServiceDeviceOutputShort](docs/ServiceDeviceOutputShort.md)
  - [ServiceDeviceStatusOutput](docs/ServiceDeviceStatusOutput.md)
- - [ServiceDocE911ActiveLocationOutput](docs/ServiceDocE911ActiveLocationOutput.md)
- - [ServiceDocE911ActiveLocationURIApiOutput](docs/ServiceDocE911ActiveLocationURIApiOutput.md)
- - [ServiceDocE911AddLocationOutput](docs/ServiceDocE911AddLocationOutput.md)
- - [ServiceDocE911LocationsURIApiOutput](docs/ServiceDocE911LocationsURIApiOutput.md)
- - [ServiceDocE911RemoveLocationOutput](docs/ServiceDocE911RemoveLocationOutput.md)
- - [ServiceDocE911RemoveURIApiOutput](docs/ServiceDocE911RemoveURIApiOutput.md)
- - [ServiceDocE911URIsApiOutput](docs/ServiceDocE911URIsApiOutput.md)
- - [ServiceDocE911ValidateLocationOutput](docs/ServiceDocE911ValidateLocationOutput.md)
  - [ServiceDocGroupGetAll](docs/ServiceDocGroupGetAll.md)
  - [ServiceDocGroupGetSingle](docs/ServiceDocGroupGetSingle.md)
  - [ServiceDocsAccountAPIKey](docs/ServiceDocsAccountAPIKey.md)
@@ -386,12 +379,12 @@ Class | Method | HTTP request | Description
  - [ServiceDocsCallQueueGetRoles](docs/ServiceDocsCallQueueGetRoles.md)
  - [ServiceDocsCallQueueGetSingle](docs/ServiceDocsCallQueueGetSingle.md)
  - [ServiceDocsCallQueueGetSingleStatus](docs/ServiceDocsCallQueueGetSingleStatus.md)
- - [ServiceDocsCallQueueMemberGetSingle](docs/ServiceDocsCallQueueMemberGetSingle.md)
- - [ServiceDocsCallQueueResponseShort](docs/ServiceDocsCallQueueResponseShort.md)
+ - [ServiceDocsCallQueueRecipientLoginLogoutOutput](docs/ServiceDocsCallQueueRecipientLoginLogoutOutput.md)
  - [ServiceDocsCallRecordingGetAll](docs/ServiceDocsCallRecordingGetAll.md)
  - [ServiceDocsCallRecordingGetSingle](docs/ServiceDocsCallRecordingGetSingle.md)
  - [ServiceDocsCallflowGetAll](docs/ServiceDocsCallflowGetAll.md)
  - [ServiceDocsCallflowGetSingle](docs/ServiceDocsCallflowGetSingle.md)
+ - [ServiceDocsCallparkGet](docs/ServiceDocsCallparkGet.md)
  - [ServiceDocsCampaignImportOutput](docs/ServiceDocsCampaignImportOutput.md)
  - [ServiceDocsCampaignImportedGetAllOutput](docs/ServiceDocsCampaignImportedGetAllOutput.md)
  - [ServiceDocsCampaignPhoneNumberOutput](docs/ServiceDocsCampaignPhoneNumberOutput.md)
@@ -404,6 +397,14 @@ Class | Method | HTTP request | Description
  - [ServiceDocsDeviceGetSingle](docs/ServiceDocsDeviceGetSingle.md)
  - [ServiceDocsDeviceReboot](docs/ServiceDocsDeviceReboot.md)
  - [ServiceDocsDeviceStatus](docs/ServiceDocsDeviceStatus.md)
+ - [ServiceDocsE911ActiveLocationOutput](docs/ServiceDocsE911ActiveLocationOutput.md)
+ - [ServiceDocsE911ActiveLocationURIApiOutput](docs/ServiceDocsE911ActiveLocationURIApiOutput.md)
+ - [ServiceDocsE911AddLocationOutput](docs/ServiceDocsE911AddLocationOutput.md)
+ - [ServiceDocsE911LocationsURIApiOutput](docs/ServiceDocsE911LocationsURIApiOutput.md)
+ - [ServiceDocsE911RemoveLocationOutput](docs/ServiceDocsE911RemoveLocationOutput.md)
+ - [ServiceDocsE911RemoveURIApiOutput](docs/ServiceDocsE911RemoveURIApiOutput.md)
+ - [ServiceDocsE911URIsApiOutput](docs/ServiceDocsE911URIsApiOutput.md)
+ - [ServiceDocsE911ValidateLocationOutput](docs/ServiceDocsE911ValidateLocationOutput.md)
  - [ServiceDocsEndpointList](docs/ServiceDocsEndpointList.md)
  - [ServiceDocsEventDailySummary](docs/ServiceDocsEventDailySummary.md)
  - [ServiceDocsEventDetail](docs/ServiceDocsEventDetail.md)
@@ -416,12 +417,12 @@ Class | Method | HTTP request | Description
  - [ServiceDocsMediaGetSingle](docs/ServiceDocsMediaGetSingle.md)
  - [ServiceDocsMetaflowGet](docs/ServiceDocsMetaflowGet.md)
  - [ServiceDocsOrderPhonenumber](docs/ServiceDocsOrderPhonenumber.md)
- - [ServiceDocsParkedcallGet](docs/ServiceDocsParkedcallGet.md)
  - [ServiceDocsPhonenumberAssignPayload](docs/ServiceDocsPhonenumberAssignPayload.md)
  - [ServiceDocsPhonenumberSearchGetAll](docs/ServiceDocsPhonenumberSearchGetAll.md)
  - [ServiceDocsPhonenumberUnassignPayload](docs/ServiceDocsPhonenumberUnassignPayload.md)
  - [ServiceDocsPingGet](docs/ServiceDocsPingGet.md)
  - [ServiceDocsPresenceGet](docs/ServiceDocsPresenceGet.md)
+ - [ServiceDocsQueueMembershipOutput](docs/ServiceDocsQueueMembershipOutput.md)
  - [ServiceDocsStorageGet](docs/ServiceDocsStorageGet.md)
  - [ServiceDocsSystemStatusGetSingle](docs/ServiceDocsSystemStatusGetSingle.md)
  - [ServiceDocsTemporalRuleGetAll](docs/ServiceDocsTemporalRuleGetAll.md)
@@ -468,9 +469,9 @@ Class | Method | HTTP request | Description
  - [ServicePhoneNumberSearchOutput](docs/ServicePhoneNumberSearchOutput.md)
  - [ServicePhonenumberOutput](docs/ServicePhonenumberOutput.md)
  - [ServicePingOutput](docs/ServicePingOutput.md)
- - [ServiceQueueRecipientOutputFull](docs/ServiceQueueRecipientOutputFull.md)
- - [ServiceQueueRecipientOutputFullFeatures](docs/ServiceQueueRecipientOutputFullFeatures.md)
- - [ServiceQueueRecipientOutputFullRecipient](docs/ServiceQueueRecipientOutputFullRecipient.md)
+ - [ServiceQueueRecipientOutput](docs/ServiceQueueRecipientOutput.md)
+ - [ServiceQueueRecipientOutputRecipient](docs/ServiceQueueRecipientOutputRecipient.md)
+ - [ServiceQueueRecipientOutputRecipientFeatures](docs/ServiceQueueRecipientOutputRecipientFeatures.md)
  - [ServiceRemoveURIApiOutput](docs/ServiceRemoveURIApiOutput.md)
  - [ServiceStorageOutput](docs/ServiceStorageOutput.md)
  - [ServiceStoragePlan](docs/ServiceStoragePlan.md)
@@ -507,6 +508,7 @@ Class | Method | HTTP request | Description
  - [ServiceVOIPDeviceAddEdit3d](docs/ServiceVOIPDeviceAddEdit3d.md)
  - [ServiceVOIPDeviceAddEdit4](docs/ServiceVOIPDeviceAddEdit4.md)
  - [ServiceVOIPDeviceAddEdit5](docs/ServiceVOIPDeviceAddEdit5.md)
+ - [ServiceVOIPDeviceAddEditLineKey](docs/ServiceVOIPDeviceAddEditLineKey.md)
  - [ServiceVOIPDeviceAddEditProvision](docs/ServiceVOIPDeviceAddEditProvision.md)
  - [ServiceVOIPGroupAddEdit2](docs/ServiceVOIPGroupAddEdit2.md)
  - [ServiceVOIPImpersonateUser](docs/ServiceVOIPImpersonateUser.md)

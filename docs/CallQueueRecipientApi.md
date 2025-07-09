@@ -1,6 +1,6 @@
 # openapi_client.CallQueueRecipientApi
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **v1_account_account_id_loginrecipient_recipient_id_post**
-> ServiceDocsCallQueueResponseShort v1_account_account_id_loginrecipient_recipient_id_post(account_id, recipient_id, req_body)
+> ServiceDocsCallQueueRecipientLoginLogoutOutput v1_account_account_id_loginrecipient_recipient_id_post(account_id, recipient_id, req_body)
 
 Login as Recipient
 
@@ -22,15 +22,15 @@ Agents must log in to receive calls. Depending on their membership, they can log
 
 ```python
 import openapi_client
-from openapi_client.models.service_docs_call_queue_response_short import ServiceDocsCallQueueResponseShort
+from openapi_client.models.service_docs_call_queue_recipient_login_logout_output import ServiceDocsCallQueueRecipientLoginLogoutOutput
 from openapi_client.models.service_voip_call_queue_recipient_login_logout_data import ServiceVOIPCallQueueRecipientLoginLogoutData
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsCallQueueResponseShort**](ServiceDocsCallQueueResponseShort.md)
+[**ServiceDocsCallQueueRecipientLoginLogoutOutput**](ServiceDocsCallQueueRecipientLoginLogoutOutput.md)
 
 ### Authorization
 
@@ -111,10 +111,10 @@ from openapi_client.models.service_docs_get_queue_recipients import ServiceDocsG
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -192,10 +192,10 @@ from openapi_client.models.service_voip_call_queue_recipient_status_data import 
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://API_HOSTNAME
+# Defining the host is optional and defaults to http://api.beta.cpaaslabs.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "http://API_HOSTNAME"
+    host = "http://api.beta.cpaaslabs.net"
 )
 
 # The client must configure the authentication and authorization parameters
