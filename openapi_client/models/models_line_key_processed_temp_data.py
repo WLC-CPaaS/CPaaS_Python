@@ -18,28 +18,20 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.models_line_key_processed_temp_data import ModelsLineKeyProcessedTempData
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ModelsConfigFileParameter(BaseModel):
+class ModelsLineKeyProcessedTempData(BaseModel):
     """
-    ModelsConfigFileParameter
+    ModelsLineKeyProcessedTempData
     """ # noqa: E501
-    extension: Optional[StrictStr] = None
-    https_host: Optional[StrictStr] = None
-    https_password: Optional[StrictStr] = None
-    https_username: Optional[StrictStr] = None
-    line_keys: Optional[List[ModelsLineKeyProcessedTempData]] = None
-    mac_address: Optional[StrictStr] = None
-    realm: Optional[StrictStr] = None
-    sip_password: Optional[StrictStr] = None
-    sip_username: Optional[StrictStr] = None
-    timezone: Optional[StrictStr] = None
-    voicemail_box_number: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["extension", "https_host", "https_password", "https_username", "line_keys", "mac_address", "realm", "sip_password", "sip_username", "timezone", "voicemail_box_number"]
+    label: Optional[StrictStr] = None
+    line: Optional[StrictInt] = None
+    type: Optional[StrictStr] = None
+    value: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["label", "line", "type", "value"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -59,7 +51,7 @@ class ModelsConfigFileParameter(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ModelsConfigFileParameter from a JSON string"""
+        """Create an instance of ModelsLineKeyProcessedTempData from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -80,18 +72,11 @@ class ModelsConfigFileParameter(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in line_keys (list)
-        _items = []
-        if self.line_keys:
-            for _item_line_keys in self.line_keys:
-                if _item_line_keys:
-                    _items.append(_item_line_keys.to_dict())
-            _dict['line_keys'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ModelsConfigFileParameter from a dict"""
+        """Create an instance of ModelsLineKeyProcessedTempData from a dict"""
         if obj is None:
             return None
 
@@ -99,17 +84,10 @@ class ModelsConfigFileParameter(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "extension": obj.get("extension"),
-            "https_host": obj.get("https_host"),
-            "https_password": obj.get("https_password"),
-            "https_username": obj.get("https_username"),
-            "line_keys": [ModelsLineKeyProcessedTempData.from_dict(_item) for _item in obj["line_keys"]] if obj.get("line_keys") is not None else None,
-            "mac_address": obj.get("mac_address"),
-            "realm": obj.get("realm"),
-            "sip_password": obj.get("sip_password"),
-            "sip_username": obj.get("sip_username"),
-            "timezone": obj.get("timezone"),
-            "voicemail_box_number": obj.get("voicemail_box_number")
+            "label": obj.get("label"),
+            "line": obj.get("line"),
+            "type": obj.get("type"),
+            "value": obj.get("value")
         })
         return _obj
 

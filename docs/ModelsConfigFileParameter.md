@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **https_host** | **str** |  | [optional] 
 **https_password** | **str** |  | [optional] 
 **https_username** | **str** |  | [optional] 
+**line_keys** | [**List[ModelsLineKeyProcessedTempData]**](ModelsLineKeyProcessedTempData.md) |  | [optional] 
 **mac_address** | **str** |  | [optional] 
 **realm** | **str** |  | [optional] 
 **sip_password** | **str** |  | [optional] 

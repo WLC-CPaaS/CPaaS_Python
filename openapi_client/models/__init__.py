@@ -54,6 +54,7 @@ from openapi_client.models.models_device_output_full_provision import ModelsDevi
 from openapi_client.models.models_device_output_full_sip import ModelsDeviceOutputFullSIP
 from openapi_client.models.models_family import ModelsFamily
 from openapi_client.models.models_generate_config_file_request import ModelsGenerateConfigFileRequest
+from openapi_client.models.models_line_key_processed_temp_data import ModelsLineKeyProcessedTempData
 from openapi_client.models.models_model import ModelsModel
 from openapi_client.models.models_music_on_hold import ModelsMusicOnHold
 from openapi_client.models.models_template import ModelsTemplate

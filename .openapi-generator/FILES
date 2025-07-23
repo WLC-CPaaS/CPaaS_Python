@@ -58,6 +58,7 @@ docs/ModelsDeviceOutputFullProvision.md
 docs/ModelsDeviceOutputFullSIP.md
 docs/ModelsFamily.md
 docs/ModelsGenerateConfigFileRequest.md
+docs/ModelsLineKeyProcessedTempData.md
 docs/ModelsModel.md
 docs/ModelsMusicOnHold.md
 docs/ModelsTemplate.md
@@ -365,6 +366,7 @@ openapi_client/models/models_device_output_full_provision.py
 openapi_client/models/models_device_output_full_sip.py
 openapi_client/models/models_family.py
 openapi_client/models/models_generate_config_file_request.py
+openapi_client/models/models_line_key_processed_temp_data.py
 openapi_client/models/models_model.py
 openapi_client/models/models_music_on_hold.py
 openapi_client/models/models_template.py
@@ -595,20 +597,5 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_models_voip_device_output_line_key.py
-test/test_service_docs_call_queue_recipient_login_logout_output.py
-test/test_service_docs_callpark_get.py
-test/test_service_docs_e911_active_location_output.py
-test/test_service_docs_e911_active_location_uri_api_output.py
-test/test_service_docs_e911_add_location_output.py
-test/test_service_docs_e911_locations_uri_api_output.py
-test/test_service_docs_e911_remove_location_output.py
-test/test_service_docs_e911_remove_uri_api_output.py
-test/test_service_docs_e911_uris_api_output.py
-test/test_service_docs_e911_validate_location_output.py
-test/test_service_docs_queue_membership_output.py
-test/test_service_queue_recipient_output.py
-test/test_service_queue_recipient_output_recipient.py
-test/test_service_queue_recipient_output_recipient_features.py
-test/test_service_voip_device_add_edit_line_key.py
+test/test_models_line_key_processed_temp_data.py
 tox.ini
