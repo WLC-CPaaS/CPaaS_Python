@@ -214,7 +214,6 @@ docs/ServiceFeatureCode.md
 docs/ServiceGroupOutputFull.md
 docs/ServiceGroupOutputShort.md
 docs/ServiceImpersonateUserOutputFull.md
-docs/ServiceImpersonatedUserInfo.md
 docs/ServiceMediaOutputFull.md
 docs/ServiceMediaOutputShort.md
 docs/ServiceMetaflowOutput.md
@@ -239,7 +238,6 @@ docs/ServiceSystemStatusCPAASService.md
 docs/ServiceSystemStatusMessagingService.md
 docs/ServiceSystemStatusOutput.md
 docs/ServiceSystemStatusSupportService.md
-docs/ServiceSystemStatusVOIPService.md
 docs/ServiceTTS.md
 docs/ServiceTemporalRuleOutputFull.md
 docs/ServiceTemporalRuleOutputShort.md
@@ -518,7 +516,6 @@ openapi_client/models/service_feature_code.py
 openapi_client/models/service_group_output_full.py
 openapi_client/models/service_group_output_short.py
 openapi_client/models/service_impersonate_user_output_full.py
-openapi_client/models/service_impersonated_user_info.py
 openapi_client/models/service_media_output_full.py
 openapi_client/models/service_media_output_short.py
 openapi_client/models/service_metaflow_output.py
@@ -543,7 +540,6 @@ openapi_client/models/service_system_status_cpaas_service.py
 openapi_client/models/service_system_status_messaging_service.py
 openapi_client/models/service_system_status_output.py
 openapi_client/models/service_system_status_support_service.py
-openapi_client/models/service_system_status_voip_service.py
 openapi_client/models/service_temporal_rule_output_full.py
 openapi_client/models/service_temporal_rule_output_short.py
 openapi_client/models/service_temporal_rule_set_output_full.py
@@ -597,5 +593,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_models_line_key_processed_temp_data.py
 tox.ini

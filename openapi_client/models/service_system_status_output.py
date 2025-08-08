@@ -23,7 +23,6 @@ from typing import Any, ClassVar, Dict, List, Optional
 from openapi_client.models.service_system_status_cpaas_service import ServiceSystemStatusCPAASService
 from openapi_client.models.service_system_status_messaging_service import ServiceSystemStatusMessagingService
 from openapi_client.models.service_system_status_support_service import ServiceSystemStatusSupportService
-from openapi_client.models.service_system_status_voip_service import ServiceSystemStatusVOIPService
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -34,8 +33,7 @@ class ServiceSystemStatusOutput(BaseModel):
     cpaas_services: Optional[ServiceSystemStatusCPAASService] = None
     messaging_services: Optional[ServiceSystemStatusMessagingService] = None
     support_services: Optional[ServiceSystemStatusSupportService] = None
-    voip_services: Optional[ServiceSystemStatusVOIPService] = None
-    __properties: ClassVar[List[str]] = ["cpaas_services", "messaging_services", "support_services", "voip_services"]
+    __properties: ClassVar[List[str]] = ["cpaas_services", "messaging_services", "support_services"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -85,9 +83,6 @@ class ServiceSystemStatusOutput(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of support_services
         if self.support_services:
             _dict['support_services'] = self.support_services.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of voip_services
-        if self.voip_services:
-            _dict['voip_services'] = self.voip_services.to_dict()
         return _dict
 
     @classmethod
@@ -102,8 +97,7 @@ class ServiceSystemStatusOutput(BaseModel):
         _obj = cls.model_validate({
             "cpaas_services": ServiceSystemStatusCPAASService.from_dict(obj["cpaas_services"]) if obj.get("cpaas_services") is not None else None,
             "messaging_services": ServiceSystemStatusMessagingService.from_dict(obj["messaging_services"]) if obj.get("messaging_services") is not None else None,
-            "support_services": ServiceSystemStatusSupportService.from_dict(obj["support_services"]) if obj.get("support_services") is not None else None,
-            "voip_services": ServiceSystemStatusVOIPService.from_dict(obj["voip_services"]) if obj.get("voip_services") is not None else None
+            "support_services": ServiceSystemStatusSupportService.from_dict(obj["support_services"]) if obj.get("support_services") is not None else None
         })
         return _obj
 

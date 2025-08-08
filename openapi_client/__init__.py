@@ -246,7 +246,6 @@ __all__ = [
     "ServiceGroupOutputFull",
     "ServiceGroupOutputShort",
     "ServiceImpersonateUserOutputFull",
-    "ServiceImpersonatedUserInfo",
     "ServiceMediaOutputFull",
     "ServiceMediaOutputShort",
     "ServiceMetaflowOutput",
@@ -271,7 +270,6 @@ __all__ = [
     "ServiceSystemStatusMessagingService",
     "ServiceSystemStatusOutput",
     "ServiceSystemStatusSupportService",
-    "ServiceSystemStatusVOIPService",
     "ServiceTTS",
     "ServiceTemporalRuleOutputFull",
     "ServiceTemporalRuleOutputShort",
@@ -551,7 +549,6 @@ from openapi_client.models.service_feature_code import ServiceFeatureCode
 from openapi_client.models.service_group_output_full import ServiceGroupOutputFull
 from openapi_client.models.service_group_output_short import ServiceGroupOutputShort
 from openapi_client.models.service_impersonate_user_output_full import ServiceImpersonateUserOutputFull
-from openapi_client.models.service_impersonated_user_info import ServiceImpersonatedUserInfo
 from openapi_client.models.service_media_output_full import ServiceMediaOutputFull
 from openapi_client.models.service_media_output_short import ServiceMediaOutputShort
 from openapi_client.models.service_metaflow_output import ServiceMetaflowOutput
@@ -576,7 +573,6 @@ from openapi_client.models.service_system_status_cpaas_service import ServiceSys
 from openapi_client.models.service_system_status_messaging_service import ServiceSystemStatusMessagingService
 from openapi_client.models.service_system_status_output import ServiceSystemStatusOutput
 from openapi_client.models.service_system_status_support_service import ServiceSystemStatusSupportService
-from openapi_client.models.service_system_status_voip_service import ServiceSystemStatusVOIPService
 from openapi_client.models.service_tts import ServiceTTS
 from openapi_client.models.service_temporal_rule_output_full import ServiceTemporalRuleOutputFull
 from openapi_client.models.service_temporal_rule_output_short import ServiceTemporalRuleOutputShort

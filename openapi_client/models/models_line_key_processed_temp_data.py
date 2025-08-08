@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -28,10 +28,9 @@ class ModelsLineKeyProcessedTempData(BaseModel):
     ModelsLineKeyProcessedTempData
     """ # noqa: E501
     label: Optional[StrictStr] = None
-    line: Optional[StrictInt] = None
     type: Optional[StrictStr] = None
     value: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["label", "line", "type", "value"]
+    __properties: ClassVar[List[str]] = ["label", "type", "value"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -85,7 +84,6 @@ class ModelsLineKeyProcessedTempData(BaseModel):
 
         _obj = cls.model_validate({
             "label": obj.get("label"),
-            "line": obj.get("line"),
             "type": obj.get("type"),
             "value": obj.get("value")
         })

@@ -18,9 +18,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictBool, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.service_impersonated_user_info import ServiceImpersonatedUserInfo
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,16 +27,8 @@ class ServiceImpersonateUserOutputFull(BaseModel):
     """
     ServiceImpersonateUserOutputFull
     """ # noqa: E501
-    account_id: Optional[StrictStr] = None
-    account_name: Optional[StrictStr] = None
     auth_token: Optional[StrictStr] = None
-    cluster_id: Optional[StrictStr] = None
-    is_master_account: Optional[StrictBool] = None
-    is_reseller: Optional[StrictBool] = None
-    owner_id: Optional[StrictStr] = None
-    reseller_id: Optional[StrictStr] = None
-    user_info: Optional[ServiceImpersonatedUserInfo] = None
-    __properties: ClassVar[List[str]] = ["account_id", "account_name", "auth_token", "cluster_id", "is_master_account", "is_reseller", "owner_id", "reseller_id", "user_info"]
+    __properties: ClassVar[List[str]] = ["auth_token"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -78,9 +69,6 @@ class ServiceImpersonateUserOutputFull(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of user_info
-        if self.user_info:
-            _dict['user_info'] = self.user_info.to_dict()
         return _dict
 
     @classmethod
@@ -93,15 +81,7 @@ class ServiceImpersonateUserOutputFull(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "account_id": obj.get("account_id"),
-            "account_name": obj.get("account_name"),
-            "auth_token": obj.get("auth_token"),
-            "cluster_id": obj.get("cluster_id"),
-            "is_master_account": obj.get("is_master_account"),
-            "is_reseller": obj.get("is_reseller"),
-            "owner_id": obj.get("owner_id"),
-            "reseller_id": obj.get("reseller_id"),
-            "user_info": ServiceImpersonatedUserInfo.from_dict(obj["user_info"]) if obj.get("user_info") is not None else None
+            "auth_token": obj.get("auth_token")
         })
         return _obj
 

@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **cpaas_services** | [**ServiceSystemStatusCPAASService**](ServiceSystemStatusCPAASService.md) |  | [optional] 
 **messaging_services** | [**ServiceSystemStatusMessagingService**](ServiceSystemStatusMessagingService.md) |  | [optional] 
 **support_services** | [**ServiceSystemStatusSupportService**](ServiceSystemStatusSupportService.md) |  | [optional] 
-**voip_services** | [**ServiceSystemStatusVOIPService**](ServiceSystemStatusVOIPService.md) |  | [optional] 
 
 ## Example
 
