@@ -22,6 +22,7 @@ from pydantic import BaseModel, ConfigDict, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class ServiceChannelOutput(BaseModel):
     """
@@ -55,7 +56,8 @@ class ServiceChannelOutput(BaseModel):
     __properties: ClassVar[List[str]] = ["answered", "authorizing_id", "authorizing_type", "callflow_id", "channel_authorized", "custom_application_vars", "custom_auth_headers", "custom_channel_vars", "custom_sip_headers", "destination", "direction", "elapsed_s", "from_tag", "interaction_id", "is_loopback", "is_onhold", "other_leg", "owner_id", "presence_id", "request", "reseller_id", "timestamp", "to_tag", "username", "uuid"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -67,8 +69,7 @@ class ServiceChannelOutput(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:

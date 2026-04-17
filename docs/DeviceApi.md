@@ -22,7 +22,7 @@ Remove one device from a CPaaS account.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -41,11 +41,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -104,7 +104,7 @@ Permit a user to view specific device details.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -123,11 +123,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -186,7 +186,7 @@ Edit specifics about the device, such as the device type, name, and owner.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -206,11 +206,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -271,7 +271,7 @@ Reboot a device in an account to mitigate malware and improve device performance
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -290,11 +290,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -353,7 +353,7 @@ Obtain a list of all devices associated with an account such as fax machines, ce
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -372,11 +372,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -437,7 +437,7 @@ Connect a new device to an account to enhance communication methods.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -457,11 +457,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -520,7 +520,7 @@ Retrieve a device’s status (e.g., registered or not registered) in an account.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -539,11 +539,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -575,7 +575,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 

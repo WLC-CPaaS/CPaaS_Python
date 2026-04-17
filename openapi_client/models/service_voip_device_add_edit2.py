@@ -30,6 +30,7 @@ from openapi_client.models.service_voip_device_add_edit3d import ServiceVOIPDevi
 from openapi_client.models.service_voip_device_add_edit_provision import ServiceVOIPDeviceAddEditProvision
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class ServiceVOIPDeviceAddEdit2(BaseModel):
     """
@@ -37,7 +38,7 @@ class ServiceVOIPDeviceAddEdit2(BaseModel):
     """ # noqa: E501
     call_forward: Optional[ModelsCallForward] = None
     caller_id: Optional[ServiceVOIPDeviceAddEdit3c] = None
-    device_type: Optional[StrictStr] = None
+    device_type: StrictStr
     do_not_disturb: Optional[ModelsVOIPSharedDoNotDisturb] = None
     enabled: Optional[StrictBool] = Field(default=None, description="cannot use required, else it has to be true and false is not allowed")
     mac_address: Optional[StrictStr] = Field(default=None, description="dont use mac, it enforces :, which voip does not like")
@@ -52,15 +53,13 @@ class ServiceVOIPDeviceAddEdit2(BaseModel):
     @field_validator('device_type')
     def device_type_validate_enum(cls, value):
         """Validates the enum"""
-        if value is None:
-            return value
-
         if value not in set(['softphone', 'sip_uri', 'sip_device']):
             raise ValueError("must be one of enum values ('softphone', 'sip_uri', 'sip_device')")
         return value
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -72,8 +71,7 @@ class ServiceVOIPDeviceAddEdit2(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:

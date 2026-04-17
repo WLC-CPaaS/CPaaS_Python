@@ -39,6 +39,8 @@ class TestServiceVOIPDeviceAddEdit3c(unittest.TestCase):
                 emergency = openapi_client.models.service/voip_device_add_edit4.service.VOIPDeviceAddEdit4(
                     number = '', ),
                 external = openapi_client.models.service/voip_device_add_edit4.service.VOIPDeviceAddEdit4(
+                    number = '', ),
+                internal = openapi_client.models.service/voip_device_add_edit4.service.VOIPDeviceAddEdit4(
                     number = '', )
             )
         else:

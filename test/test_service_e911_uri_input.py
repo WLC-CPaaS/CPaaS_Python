@@ -41,7 +41,6 @@ class TestServiceE911URIInput(unittest.TestCase):
             )
         else:
             return ServiceE911URIInput(
-                caller_name = '',
                 uri = '',
         )
         """

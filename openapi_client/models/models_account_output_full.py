@@ -25,6 +25,7 @@ from openapi_client.models.models_voip_account_output_full_callerid import Model
 from openapi_client.models.models_voip_shared_do_not_disturb import ModelsVOIPSharedDoNotDisturb
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class ModelsAccountOutputFull(BaseModel):
     """
@@ -41,7 +42,8 @@ class ModelsAccountOutputFull(BaseModel):
     __properties: ClassVar[List[str]] = ["caller_id", "do_not_disturb", "enabled", "id", "music_on_hold", "name", "realm", "timezone"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -53,8 +55,7 @@ class ModelsAccountOutputFull(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:

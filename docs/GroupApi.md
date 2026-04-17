@@ -20,7 +20,7 @@ Get a list of groups associated with an account.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -39,11 +39,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -104,7 +104,7 @@ Delete a call group in an account.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -123,11 +123,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -186,7 +186,7 @@ Access details about a single group within an account.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -205,11 +205,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -268,7 +268,7 @@ Modify the name, settings and other information for a group within an account.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -288,11 +288,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -353,7 +353,7 @@ Provide an additional resource by adding a group list to an account.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -373,11 +373,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -411,7 +411,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 

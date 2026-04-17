@@ -27,6 +27,20 @@ class TestDataApi(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
+    def test_v1_account_account_id_cdr_cdr_id_get(self) -> None:
+        """Test case for v1_account_account_id_cdr_cdr_id_get
+
+        Get CDR Details
+        """
+        pass
+
+    def test_v1_account_account_id_cdr_get(self) -> None:
+        """Test case for v1_account_account_id_cdr_get
+
+        Get CDR List
+        """
+        pass
+
     def test_v1_data_call_daily_summary_get(self) -> None:
         """Test case for v1_data_call_daily_summary_get
 

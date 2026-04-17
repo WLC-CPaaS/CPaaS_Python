@@ -22,6 +22,7 @@ from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class ServiceCallRecordingOutput(BaseModel):
     """
@@ -34,7 +35,7 @@ class ServiceCallRecordingOutput(BaseModel):
     caller_id_number: Optional[StrictStr] = None
     cdr_id: Optional[StrictStr] = None
     content_type: Optional[StrictStr] = None
-    custom_channel_vars: Optional[Dict[str, Any]] = None
+    custom_channel_vars: Optional[Dict[str, Dict[str, Any]]] = None
     description: Optional[StrictStr] = None
     direction: Optional[StrictStr] = None
     duration: Optional[StrictInt] = None
@@ -56,7 +57,8 @@ class ServiceCallRecordingOutput(BaseModel):
     __properties: ClassVar[List[str]] = ["call_id", "callee_id_name", "callee_id_number", "caller_id_name", "caller_id_number", "cdr_id", "content_type", "custom_channel_vars", "description", "direction", "duration", "duration_ms", "endpoint_id", "from", "id", "interaction_id", "media_source", "media_type", "name", "origin", "owner_id", "request", "source_type", "start", "to", "url"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -68,8 +70,7 @@ class ServiceCallRecordingOutput(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:

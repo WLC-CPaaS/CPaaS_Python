@@ -50,17 +50,6 @@ class TestServiceE911AddLocationInput(unittest.TestCase):
             )
         else:
             return ServiceE911AddLocationInput(
-                location = openapi_client.models.service/e911_location_input.service.E911LocationInput(
-                    address_1 = '', 
-                    address_2 = '', 
-                    community = '', 
-                    plus_four = '', 
-                    postal_code = '', 
-                    state = '', 
-                    type = 'ADDRESS', ),
-                uri = openapi_client.models.service/e911_uri_input.service.E911URIInput(
-                    caller_name = '', 
-                    uri = '', ),
         )
         """
 

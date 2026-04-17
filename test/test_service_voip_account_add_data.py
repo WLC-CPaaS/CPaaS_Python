@@ -36,43 +36,25 @@ class TestServiceVOIPAccountAddData(unittest.TestCase):
         model = ServiceVOIPAccountAddData()
         if include_optional:
             return ServiceVOIPAccountAddData(
-                call_recording = openapi_client.models.service/voip_account_call_recording.service.VOIPAccountCallRecording(
-                    account = openapi_client.models.service/call_recording_settings.service.CallRecordingSettings(
-                        any = openapi_client.models.service/call_recording_source.service.CallRecordingSource(
-                            offnet = openapi_client.models.service/call_recording_parameters.service.CallRecordingParameters(
-                                enabled = True, 
-                                format = 'mp3', 
-                                record_min_sec = 56, 
-                                record_on_answer = True, 
-                                record_on_bridge = True, 
-                                record_sample_rate = 56, 
-                                time_limit = 5, 
-                                url = '', ), 
-                            onnet = openapi_client.models.service/call_recording_parameters.service.CallRecordingParameters(
-                                enabled = True, 
-                                format = 'mp3', 
-                                record_min_sec = 56, 
-                                record_on_answer = True, 
-                                record_on_bridge = True, 
-                                record_sample_rate = 56, 
-                                time_limit = 5, 
-                                url = '', ), ), 
-                        inbound = openapi_client.models.service/call_recording_source.service.CallRecordingSource(), 
-                        outbound = , ), 
-                    endpoint = openapi_client.models.service/call_recording_settings.service.CallRecordingSettings(), ),
-                do_not_disturb = openapi_client.models.service/voip_shared_do_not_disturb.service.VOIPSharedDoNotDisturb(
+                caller_id = openapi_client.models.models/voip_account_output_full_callerid.models.VOIPAccountOutputFullCallerid(
+                    emergency = openapi_client.models.models/account_output_full_callerid_emergency.models.AccountOutputFullCalleridEmergency(
+                        number = '', ), 
+                    external = openapi_client.models.models/account_output_full_callerid_external.models.AccountOutputFullCalleridExternal(
+                        number = '', ), 
+                    internal = openapi_client.models.models/account_output_full_callerid_internal.models.AccountOutputFullCalleridInternal(
+                        number = '', ), ),
+                do_not_disturb = openapi_client.models.models/voip_shared_do_not_disturb.models.VOIPSharedDoNotDisturb(
                     enabled = True, ),
-                enabled = True,
-                music_on_hold = openapi_client.models.service/voip_account_music_on_hold.service.VOIPAccountMusicOnHold(
+                music_on_hold = openapi_client.models.models/voip_account_music_on_hold.models.VOIPAccountMusicOnHold(
                     media_id = '', ),
                 name = '',
-                realm = '',
-                timezone = '012'
+                realm = '012',
+                timezone = '01234'
             )
         else:
             return ServiceVOIPAccountAddData(
                 name = '',
-                timezone = '012',
+                timezone = '01234',
         )
         """
 

@@ -62,6 +62,13 @@ class TestVoIPUserApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_account_accountid_user_userid_userauth_post(self) -> None:
+        """Test case for v1_account_accountid_user_userid_userauth_post
+
+        Impersonate a User
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

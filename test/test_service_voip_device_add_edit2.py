@@ -36,56 +36,55 @@ class TestServiceVOIPDeviceAddEdit2(unittest.TestCase):
         model = ServiceVOIPDeviceAddEdit2()
         if include_optional:
             return ServiceVOIPDeviceAddEdit2(
-                call_forward = openapi_client.models.service/call_forward.service.CallForward(
+                call_forward = openapi_client.models.models/call_forward.models.CallForward(
                     enabled = True, 
                     number = '', ),
-                call_recording = openapi_client.models.service/call_recording_settings.service.CallRecordingSettings(
-                    any = openapi_client.models.service/call_recording_source.service.CallRecordingSource(
-                        offnet = openapi_client.models.service/call_recording_parameters.service.CallRecordingParameters(
-                            enabled = True, 
-                            format = 'mp3', 
-                            record_min_sec = 56, 
-                            record_on_answer = True, 
-                            record_on_bridge = True, 
-                            record_sample_rate = 56, 
-                            time_limit = 5, 
-                            url = '', ), 
-                        onnet = openapi_client.models.service/call_recording_parameters.service.CallRecordingParameters(
-                            enabled = True, 
-                            format = 'mp3', 
-                            record_min_sec = 56, 
-                            record_on_answer = True, 
-                            record_on_bridge = True, 
-                            record_sample_rate = 56, 
-                            time_limit = 5, 
-                            url = '', ), ), 
-                    inbound = openapi_client.models.service/call_recording_source.service.CallRecordingSource(), 
-                    outbound = , ),
                 caller_id = openapi_client.models.service/voip_device_add_edit3c.service.VOIPDeviceAddEdit3c(
                     emergency = openapi_client.models.service/voip_device_add_edit4.service.VOIPDeviceAddEdit4(
                         number = '', ), 
                     external = openapi_client.models.service/voip_device_add_edit4.service.VOIPDeviceAddEdit4(
-                        number = '', ), ),
+                        number = '', ), 
+                    internal = , ),
                 device_type = 'softphone',
-                do_not_disturb = openapi_client.models.service/voip_shared_do_not_disturb.service.VOIPSharedDoNotDisturb(
+                do_not_disturb = openapi_client.models.models/voip_shared_do_not_disturb.models.VOIPSharedDoNotDisturb(
                     enabled = True, ),
                 enabled = True,
                 mac_address = '',
-                music_on_hold = openapi_client.models.service/music_on_hold.service.MusicOnHold(
+                media = openapi_client.models.service/voip_device_add_edit3d.service.VOIPDeviceAddEdit3d(
+                    audio = openapi_client.models.service/voip_device_add_edit5.service.VOIPDeviceAddEdit5(
+                        codecs = [
+                            ''
+                            ], ), ),
+                music_on_hold = openapi_client.models.models/music_on_hold.models.MusicOnHold(
                     media_id = '', ),
                 name = '',
                 owner_id = '',
+                provision = openapi_client.models.service/voip_device_add_edit_provision.service.VOIPDeviceAddEditProvision(
+                    endpoint_brand = '', 
+                    endpoint_family = '', 
+                    endpoint_model = '', 
+                    id = '', 
+                    line_keys = [
+                        openapi_client.models.service/voip_device_add_edit_line_key.service.VOIPDeviceAddEditLineKey(
+                            count = 56, 
+                            label = '', 
+                            type = 'line', 
+                            value = '', )
+                        ], ),
                 sip = openapi_client.models.service/voip_device_add_edit3a.service.VOIPDeviceAddEdit3a(
                     invite_format = 'username', 
                     password = '01234', 
+                    route = '', 
                     username = '01', )
             )
         else:
             return ServiceVOIPDeviceAddEdit2(
+                device_type = 'softphone',
                 name = '',
                 sip = openapi_client.models.service/voip_device_add_edit3a.service.VOIPDeviceAddEdit3a(
                     invite_format = 'username', 
                     password = '01234', 
+                    route = '', 
                     username = '01', ),
         )
         """

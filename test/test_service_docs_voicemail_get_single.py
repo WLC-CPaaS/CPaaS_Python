@@ -36,7 +36,7 @@ class TestServiceDocsVoicemailGetSingle(unittest.TestCase):
         model = ServiceDocsVoicemailGetSingle()
         if include_optional:
             return ServiceDocsVoicemailGetSingle(
-                data = openapi_client.models.service/voicemail_output.service.VoicemailOutput(
+                data = openapi_client.models.service/voicemail_output_full.service.VoicemailOutputFull(
                     id = '', 
                     mailbox = '', 
                     media = openapi_client.models.service/voicemail_media.service.VoicemailMedia(

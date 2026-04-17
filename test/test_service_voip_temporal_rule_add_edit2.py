@@ -47,9 +47,9 @@ class TestServiceVOIPTemporalRuleAddEdit2(unittest.TestCase):
                 ordinal = 'every',
                 start_date = 56,
                 start_date_req = '',
-                time_window_start = 0,
+                time_window_start = 56,
                 time_window_start_req = '',
-                time_window_stop = 0,
+                time_window_stop = 56,
                 time_window_stop_req = '',
                 wdays = [
                     ''

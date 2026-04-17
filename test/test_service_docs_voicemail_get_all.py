@@ -36,18 +36,20 @@ class TestServiceDocsVoicemailGetAll(unittest.TestCase):
         model = ServiceDocsVoicemailGetAll()
         if include_optional:
             return ServiceDocsVoicemailGetAll(
-                data = openapi_client.models.service/voicemail_output_short.service.VoicemailOutputShort(
-                    features = [
-                        ''
-                        ], 
-                    flags = [
-                        ''
-                        ], 
-                    id = '', 
-                    mailbox = '', 
-                    messages = 56, 
-                    name = '', 
-                    owner_id = '', ),
+                data = [
+                    openapi_client.models.service/voicemail_output_short.service.VoicemailOutputShort(
+                        features = [
+                            ''
+                            ], 
+                        flags = [
+                            ''
+                            ], 
+                        id = '', 
+                        mailbox = '', 
+                        messages = 56, 
+                        name = '', 
+                        owner_id = '', )
+                    ],
                 next_start_key = '',
                 page_size = 56,
                 request_id = '',

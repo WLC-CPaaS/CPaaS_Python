@@ -41,6 +41,12 @@ class TestModelsGenerateConfigFileRequest(unittest.TestCase):
                     https_host = '', 
                     https_password = '', 
                     https_username = '', 
+                    line_keys = [
+                        openapi_client.models.models/line_key_processed_temp_data.models.LineKeyProcessedTempData(
+                            label = '', 
+                            type = '', 
+                            value = '', )
+                        ], 
                     mac_address = '', 
                     realm = '', 
                     sip_password = '', 
@@ -57,6 +63,12 @@ class TestModelsGenerateConfigFileRequest(unittest.TestCase):
                     https_host = '', 
                     https_password = '', 
                     https_username = '', 
+                    line_keys = [
+                        openapi_client.models.models/line_key_processed_temp_data.models.LineKeyProcessedTempData(
+                            label = '', 
+                            type = '', 
+                            value = '', )
+                        ], 
                     mac_address = '', 
                     realm = '', 
                     sip_password = '', 

@@ -22,6 +22,7 @@ from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class ServiceCdrOutputShort(BaseModel):
     """
@@ -60,7 +61,8 @@ class ServiceCdrOutputShort(BaseModel):
     __properties: ClassVar[List[str]] = ["authorizing_id", "billing_seconds", "bridge_id", "call_id", "call_priority", "call_type", "callee_id_name", "callee_id_number", "caller_id_name", "caller_id_number", "calling_from", "cost", "dialed_number", "direction", "duration_seconds", "from", "hangup_cause", "id", "interaction_id", "media_recordings", "media_server", "other_leg_call_id", "owner_id", "rate", "rate_name", "recording_url", "request", "timestamp", "timestamp_datetime", "to"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -72,8 +74,7 @@ class ServiceCdrOutputShort(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:

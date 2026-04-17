@@ -90,6 +90,20 @@ class TestAccountApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_account_accountid_provisioningdetails_get(self) -> None:
+        """Test case for v1_account_accountid_provisioningdetails_get
+
+        Get Account Provisioning Details
+        """
+        pass
+
+    def test_v1_account_accountid_provisioningdetails_resetpw_put(self) -> None:
+        """Test case for v1_account_accountid_provisioningdetails_resetpw_put
+
+        Reset the provisioning details password.
+        """
+        pass
+
     def test_v1_account_accountid_put(self) -> None:
         """Test case for v1_account_accountid_put
 

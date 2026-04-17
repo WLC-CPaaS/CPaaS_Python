@@ -27,10 +27,17 @@ class TestProvisioningApi(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
+    def test_v1_account_account_id_provision_filename_get(self) -> None:
+        """Test case for v1_account_account_id_provision_filename_get
+
+        Get Config File Details
+        """
+        pass
+
     def test_v1_ap_brand_brand_family_family_get(self) -> None:
         """Test case for v1_ap_brand_brand_family_family_get
 
-        Get Family
+        Get Family Details
         """
         pass
 
@@ -44,7 +51,7 @@ class TestProvisioningApi(unittest.TestCase):
     def test_v1_ap_brand_brand_family_family_model_model_get(self) -> None:
         """Test case for v1_ap_brand_brand_family_family_model_model_get
 
-        Get Model
+        Get Model Details
         """
         pass
 
@@ -58,7 +65,7 @@ class TestProvisioningApi(unittest.TestCase):
     def test_v1_ap_brand_brand_family_family_model_model_template_template_get(self) -> None:
         """Test case for v1_ap_brand_brand_family_family_model_model_template_template_get
 
-        Get Template
+        Get Template Details
         """
         pass
 
@@ -72,21 +79,21 @@ class TestProvisioningApi(unittest.TestCase):
     def test_v1_ap_brand_brand_get(self) -> None:
         """Test case for v1_ap_brand_brand_get
 
-        Get Brand
+        Get Brand Details
         """
         pass
 
     def test_v1_ap_brand_get(self) -> None:
         """Test case for v1_ap_brand_get
 
-        Get Brand
+        Get Brand List
         """
         pass
 
     def test_v1_ap_configfile_generate_post(self) -> None:
         """Test case for v1_ap_configfile_generate_post
 
-        Generate config file
+        Generate Config File
         """
         pass
 

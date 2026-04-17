@@ -47,14 +47,6 @@ class TestServiceE911ValidateLocationInput(unittest.TestCase):
             )
         else:
             return ServiceE911ValidateLocationInput(
-                location = openapi_client.models.service/e911_location_input.service.E911LocationInput(
-                    address_1 = '', 
-                    address_2 = '', 
-                    community = '', 
-                    plus_four = '', 
-                    postal_code = '', 
-                    state = '', 
-                    type = 'ADDRESS', ),
         )
         """
 

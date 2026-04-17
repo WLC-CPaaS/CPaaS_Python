@@ -38,30 +38,8 @@ class TestServiceDocsDeviceGetAll(unittest.TestCase):
             return ServiceDocsDeviceGetAll(
                 data = [
                     openapi_client.models.service/device_output_short.service.DeviceOutputShort(
-                        call_recording = openapi_client.models.service/call_recording_settings.service.CallRecordingSettings(
-                            any = openapi_client.models.service/call_recording_source.service.CallRecordingSource(
-                                offnet = openapi_client.models.service/call_recording_parameters.service.CallRecordingParameters(
-                                    enabled = True, 
-                                    format = 'mp3', 
-                                    record_min_sec = 56, 
-                                    record_on_answer = True, 
-                                    record_on_bridge = True, 
-                                    record_sample_rate = 56, 
-                                    time_limit = 5, 
-                                    url = '', ), 
-                                onnet = openapi_client.models.service/call_recording_parameters.service.CallRecordingParameters(
-                                    enabled = True, 
-                                    format = 'mp3', 
-                                    record_min_sec = 56, 
-                                    record_on_answer = True, 
-                                    record_on_bridge = True, 
-                                    record_sample_rate = 56, 
-                                    time_limit = 5, 
-                                    url = '', ), ), 
-                            inbound = openapi_client.models.service/call_recording_source.service.CallRecordingSource(), 
-                            outbound = , ), 
                         device_type = '', 
-                        do_not_disturb = openapi_client.models.service/voip_shared_do_not_disturb.service.VOIPSharedDoNotDisturb(
+                        do_not_disturb = openapi_client.models.models/voip_shared_do_not_disturb.models.VOIPSharedDoNotDisturb(
                             enabled = True, ), 
                         enabled = True, 
                         features = [

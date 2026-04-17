@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **v1_account_account_id_provision_filename_get**
-> bytearray v1_account_account_id_provision_filename_get(account_id, filename)
+> bytes v1_account_account_id_provision_filename_get(account_id, filename)
 
 Get Config File Details
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**bytearray**
+**bytes**
 
 ### Authorization
 
@@ -95,7 +95,7 @@ Retrieve a family's details by the randomly generated ID.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -114,11 +114,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -178,7 +178,7 @@ Retrieve a list of all models within a family for a brand (e.g., Yealink and Pol
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -197,11 +197,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -269,7 +269,7 @@ Retrieve a model's details by the randomly generated ID.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -288,11 +288,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -354,7 +354,7 @@ Retrieve a list of all templates for a model within a brand (e.g., Yealink and P
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -373,11 +373,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -423,7 +423,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -449,7 +449,7 @@ Retrieve details about a template for a model by the randomly generated ID.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -468,11 +468,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -510,7 +510,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -536,7 +536,7 @@ Retrieve a list of all families for a brand (e.g., Yealink and Polycom).
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -555,11 +555,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -599,7 +599,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -625,7 +625,7 @@ Retrieve a brand's details by the randomly generated ID.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -644,11 +644,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -680,7 +680,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -706,7 +706,7 @@ Retrieve a list of all brands (e.g., Yealink and Polycom) by client.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -725,11 +725,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -767,7 +767,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -793,7 +793,7 @@ Generate a configuration file that includes a list of parameters passed to the s
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -813,11 +813,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -849,7 +849,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 

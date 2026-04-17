@@ -36,12 +36,12 @@ class TestServiceDocsGetQueueRecipients(unittest.TestCase):
         model = ServiceDocsGetQueueRecipients()
         if include_optional:
             return ServiceDocsGetQueueRecipients(
-                data = openapi_client.models.service/queue_recipient_output_full.service.QueueRecipientOutputFull(
+                data = openapi_client.models.service/queue_recipient_output.service.QueueRecipientOutput(
                     display_name = '', 
                     id = '', 
                     name = '', 
-                    recipient = openapi_client.models.service/queue_recipient_output_full_recipient.service.QueueRecipientOutputFullRecipient(
-                        features = openapi_client.models.service/queue_recipient_output_full_features.service.QueueRecipientOutputFullFeatures(
+                    recipient = openapi_client.models.service/queue_recipient_output_recipient.service.QueueRecipientOutputRecipient(
+                        features = openapi_client.models.service/queue_recipient_output_recipient_features.service.QueueRecipientOutputRecipientFeatures(
                             account_upgrade = '', 
                             pro = True, ), ), 
                     roles = {

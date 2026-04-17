@@ -38,7 +38,7 @@ class TestServiceDocsCallparkGet(unittest.TestCase):
             return ServiceDocsCallparkGet(
                 data = [
                     {
-                        'key' : openapi_client.models.service/parking_slot_data.service.ParkingSlotData(
+                        'key' : openapi_client.models.models/parking_slot_data.models.ParkingSlotData(
                             attended = True, 
                             call_id = '', 
                             cid_name = '', 

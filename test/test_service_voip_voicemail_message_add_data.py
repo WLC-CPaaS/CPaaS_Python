@@ -44,6 +44,7 @@ class TestServiceVOIPVoicemailMessageAddData(unittest.TestCase):
             )
         else:
             return ServiceVOIPVoicemailMessageAddData(
+                folder = 'deleted',
         )
         """
 

@@ -48,6 +48,13 @@ class TestDeviceApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_account_accountid_device_deviceid_reboot_post(self) -> None:
+        """Test case for v1_account_accountid_device_deviceid_reboot_post
+
+        Reboot Device
+        """
+        pass
+
     def test_v1_account_accountid_device_get(self) -> None:
         """Test case for v1_account_accountid_device_get
 
@@ -59,6 +66,13 @@ class TestDeviceApi(unittest.TestCase):
         """Test case for v1_account_accountid_device_post
 
         Create Device
+        """
+        pass
+
+    def test_v1_account_accountid_device_status_get(self) -> None:
+        """Test case for v1_account_accountid_device_status_get
+
+        Get Device Status
         """
         pass
 

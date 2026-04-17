@@ -39,7 +39,14 @@ class TestServiceVOIPDeviceAddEditProvision(unittest.TestCase):
                 endpoint_brand = '',
                 endpoint_family = '',
                 endpoint_model = '',
-                id = ''
+                id = '',
+                line_keys = [
+                    openapi_client.models.service/voip_device_add_edit_line_key.service.VOIPDeviceAddEditLineKey(
+                        count = 56, 
+                        label = '', 
+                        type = 'line', 
+                        value = '', )
+                    ]
             )
         else:
             return ServiceVOIPDeviceAddEditProvision(

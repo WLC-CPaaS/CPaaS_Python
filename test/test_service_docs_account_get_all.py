@@ -37,40 +37,14 @@ class TestServiceDocsAccountGetAll(unittest.TestCase):
         if include_optional:
             return ServiceDocsAccountGetAll(
                 data = [
-                    openapi_client.models.service/account_output.service.AccountOutput(
-                        call_recording = openapi_client.models.service/voip_account_call_recording.service.VOIPAccountCallRecording(
-                            account = openapi_client.models.service/call_recording_settings.service.CallRecordingSettings(
-                                any = openapi_client.models.service/call_recording_source.service.CallRecordingSource(
-                                    offnet = openapi_client.models.service/call_recording_parameters.service.CallRecordingParameters(
-                                        enabled = True, 
-                                        format = 'mp3', 
-                                        record_min_sec = 56, 
-                                        record_on_answer = True, 
-                                        record_on_bridge = True, 
-                                        record_sample_rate = 56, 
-                                        time_limit = 5, 
-                                        url = '', ), 
-                                    onnet = openapi_client.models.service/call_recording_parameters.service.CallRecordingParameters(
-                                        enabled = True, 
-                                        format = 'mp3', 
-                                        record_min_sec = 56, 
-                                        record_on_answer = True, 
-                                        record_on_bridge = True, 
-                                        record_sample_rate = 56, 
-                                        time_limit = 5, 
-                                        url = '', ), ), 
-                                inbound = openapi_client.models.service/call_recording_source.service.CallRecordingSource(), 
-                                outbound = , ), 
-                            endpoint = openapi_client.models.service/call_recording_settings.service.CallRecordingSettings(), ), 
-                        do_not_disturb = openapi_client.models.service/voip_shared_do_not_disturb.service.VOIPSharedDoNotDisturb(
-                            enabled = True, ), 
-                        enabled = True, 
+                    openapi_client.models.service/account_output_short.service.AccountOutputShort(
+                        descendants_count = 56, 
+                        flags = [
+                            ''
+                            ], 
                         id = '', 
-                        music_on_hold = openapi_client.models.service/voip_account_music_on_hold.service.VOIPAccountMusicOnHold(
-                            media_id = '', ), 
                         name = '', 
-                        realm = '', 
-                        timezone = '', )
+                        realm = '', )
                     ],
                 next_start_key = '',
                 page_size = 56,

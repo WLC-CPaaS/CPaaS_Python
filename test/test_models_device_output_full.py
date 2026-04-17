@@ -87,10 +87,18 @@ class TestModelsDeviceOutputFull(unittest.TestCase):
                     endpoint_brand = '', 
                     endpoint_family = '', 
                     endpoint_model = '', 
-                    id = '', ),
+                    id = '', 
+                    line_keys = [
+                        openapi_client.models.models/voip_device_output_line_key.models.VOIPDeviceOutputLineKey(
+                            count = 56, 
+                            label = '', 
+                            type = '', 
+                            value = '', )
+                        ], ),
                 sip = openapi_client.models.models/device_output_full_sip.models.DeviceOutputFullSIP(
                     invite_format = '', 
                     password = '', 
+                    route = '', 
                     username = '', )
             )
         else:

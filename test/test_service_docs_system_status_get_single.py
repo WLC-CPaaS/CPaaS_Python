@@ -45,14 +45,7 @@ class TestServiceDocsSystemStatusGetSingle(unittest.TestCase):
                         messaging_server = '', ), 
                     support_services = openapi_client.models.service/system_status_support_service.service.SystemStatusSupportService(
                         e911_server = '', 
-                        phone_number_server = '', ), 
-                    voip_services = openapi_client.models.service/system_status_voip_service.service.SystemStatusVOIPService(
-                        apps = '', 
-                        backend = '', 
-                        call_manager = '', 
-                        media_server = '', 
-                        message_broker = '', 
-                        sip_proxy = '', ), ),
+                        phone_number_server = '', ), ),
                 request_id = '',
                 status_code = 56,
                 system_status = ''

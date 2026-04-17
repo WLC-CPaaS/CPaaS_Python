@@ -27,6 +27,13 @@ class TestSystemStatusApi(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
+    def test_v1_ap_ping_get(self) -> None:
+        """Test case for v1_ap_ping_get
+
+        Provisioning Ping
+        """
+        pass
+
     def test_v1_ping_get(self) -> None:
         """Test case for v1_ping_get
 

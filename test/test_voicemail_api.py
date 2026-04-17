@@ -69,6 +69,20 @@ class TestVoicemailApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_account_account_id_voicemail_voicemail_id_message_message_id_file_get(self) -> None:
+        """Test case for v1_account_account_id_voicemail_voicemail_id_message_message_id_file_get
+
+        Get Voicemail Message File
+        """
+        pass
+
+    def test_v1_account_account_id_voicemail_voicemail_id_message_message_id_file_post(self) -> None:
+        """Test case for v1_account_account_id_voicemail_voicemail_id_message_message_id_file_post
+
+        Add Voicemail Message File
+        """
+        pass
+
     def test_v1_account_account_id_voicemail_voicemail_id_message_message_id_get(self) -> None:
         """Test case for v1_account_account_id_voicemail_voicemail_id_message_message_id_get
 
@@ -86,14 +100,14 @@ class TestVoicemailApi(unittest.TestCase):
     def test_v1_account_account_id_voicemail_voicemail_id_message_message_id_raw_get(self) -> None:
         """Test case for v1_account_account_id_voicemail_voicemail_id_message_message_id_raw_get
 
-        Get Voicemail Message File
+        Get Voicemail Message File (Deprecated)
         """
         pass
 
     def test_v1_account_account_id_voicemail_voicemail_id_message_message_id_raw_post(self) -> None:
         """Test case for v1_account_account_id_voicemail_voicemail_id_message_message_id_raw_post
 
-        Add Voicemail Message File
+        Add Voicemail Message File (Deprecated)
         """
         pass
 

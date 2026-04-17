@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
     White Label Communications CPaas API Documentation
 
@@ -11,6 +9,7 @@
 
     Do not edit the class manually.
 """  # noqa: E501
+
 
 import warnings
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
@@ -313,7 +312,7 @@ class CallQueueMembershipApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -592,7 +591,7 @@ class CallQueueMembershipApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -899,7 +898,7 @@ class CallQueueMembershipApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(

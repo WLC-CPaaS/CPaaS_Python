@@ -7,7 +7,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **invite_format** | **str** |  | 
 **password** | **str** |  | [optional] 
-**username** | **str** |  | 
+**route** | **str** |  | [optional] 
+**username** | **str** |  | [optional] 
 
 ## Example
 

@@ -58,6 +58,14 @@ class TestServiceCallflowOutputFull(unittest.TestCase):
             )
         else:
             return ServiceCallflowOutputFull(
+                flow = openapi_client.models.service/callflow_add_edit_flow_data.service.CallflowAddEditFlowData(
+                    children = {
+                        'key' : openapi_client.models.service/callflow_add_edit_flow_data.service.CallflowAddEditFlowData(
+                            data = { }, 
+                            module = 'device', )
+                        }, 
+                    data = { }, 
+                    module = 'device', ),
                 numbers = [
                     ''
                     ],

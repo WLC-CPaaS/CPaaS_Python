@@ -38,6 +38,7 @@ class TestModelsDeviceOutputFullSIP(unittest.TestCase):
             return ModelsDeviceOutputFullSIP(
                 invite_format = '',
                 password = '',
+                route = '',
                 username = ''
             )
         else:

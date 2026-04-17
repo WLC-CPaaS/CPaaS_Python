@@ -38,12 +38,12 @@ class TestServiceVOIPDeviceAddEdit3a(unittest.TestCase):
             return ServiceVOIPDeviceAddEdit3a(
                 invite_format = 'username',
                 password = '01234',
+                route = '',
                 username = '01'
             )
         else:
             return ServiceVOIPDeviceAddEdit3a(
                 invite_format = 'username',
-                username = '01',
         )
         """
 

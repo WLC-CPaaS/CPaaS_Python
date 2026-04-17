@@ -20,7 +20,7 @@ Retrieve the webhook list in an account.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -39,11 +39,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -106,7 +106,7 @@ Create a webhook for a specific account ID.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -126,11 +126,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -190,7 +190,7 @@ Remove a webhook identified by its ID for a particular account ID.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -209,11 +209,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -274,7 +274,7 @@ Access details about a single webhook ID for an individual account ID.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -293,11 +293,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -358,7 +358,7 @@ Update a webhook identified by its ID for a distinct account ID.
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
+* Api Key Authentication (bearerauth):
 
 ```python
 import openapi_client
@@ -378,11 +378,11 @@ configuration = openapi_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+# Configure API key authorization: bearerauth
+configuration.api_key['bearerauth'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerauth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 

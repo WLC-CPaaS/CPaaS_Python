@@ -39,7 +39,14 @@ class TestModelsDeviceOutputFullProvision(unittest.TestCase):
                 endpoint_brand = '',
                 endpoint_family = '',
                 endpoint_model = '',
-                id = ''
+                id = '',
+                line_keys = [
+                    openapi_client.models.models/voip_device_output_line_key.models.VOIPDeviceOutputLineKey(
+                        count = 56, 
+                        label = '', 
+                        type = '', 
+                        value = '', )
+                    ]
             )
         else:
             return ModelsDeviceOutputFullProvision(

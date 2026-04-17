@@ -23,6 +23,7 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class ServiceVOIPDeviceAddEdit3a(BaseModel):
     """
@@ -30,18 +31,20 @@ class ServiceVOIPDeviceAddEdit3a(BaseModel):
     """ # noqa: E501
     invite_format: StrictStr
     password: Optional[Annotated[str, Field(min_length=5, strict=True, max_length=32)]] = None
-    username: Annotated[str, Field(min_length=2, strict=True, max_length=32)]
-    __properties: ClassVar[List[str]] = ["invite_format", "password", "username"]
+    route: Optional[StrictStr] = None
+    username: Optional[Annotated[str, Field(min_length=2, strict=True, max_length=32)]] = None
+    __properties: ClassVar[List[str]] = ["invite_format", "password", "route", "username"]
 
     @field_validator('invite_format')
     def invite_format_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in set(['username']):
-            raise ValueError("must be one of enum values ('username')")
+        if value not in set(['username', 'route']):
+            raise ValueError("must be one of enum values ('username', 'route')")
         return value
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -53,8 +56,7 @@ class ServiceVOIPDeviceAddEdit3a(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
@@ -93,6 +95,7 @@ class ServiceVOIPDeviceAddEdit3a(BaseModel):
         _obj = cls.model_validate({
             "invite_format": obj.get("invite_format"),
             "password": obj.get("password"),
+            "route": obj.get("route"),
             "username": obj.get("username")
         })
         return _obj

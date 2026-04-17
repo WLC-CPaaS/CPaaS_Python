@@ -36,21 +36,26 @@ class TestServiceDocGroupGetAll(unittest.TestCase):
         model = ServiceDocGroupGetAll()
         if include_optional:
             return ServiceDocGroupGetAll(
-                data = openapi_client.models.service/group_output_short.service.GroupOutputShort(
-                    endpoints = 56, 
-                    features = [
-                        ''
-                        ], 
-                    flags = [
-                        ''
-                        ], 
-                    group_endpoints = {
-                        'key' : openapi_client.models.service/endpoint.service.Endpoint(
-                            type = '', )
-                        }, 
-                    id = '', 
-                    name = '', ),
+                data = [
+                    openapi_client.models.service/group_output_short.service.GroupOutputShort(
+                        endpoints = 56, 
+                        features = [
+                            ''
+                            ], 
+                        flags = [
+                            ''
+                            ], 
+                        group_endpoints = {
+                            'key' : openapi_client.models.service/endpoint.service.Endpoint(
+                                type = '', )
+                            }, 
+                        id = '', 
+                        name = '', )
+                    ],
+                next_start_key = '',
+                page_size = 56,
                 request_id = '',
+                start_key = '',
                 status_code = 56
             )
         else:

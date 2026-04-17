@@ -36,12 +36,12 @@ class TestServiceVOIPUserAdd2(unittest.TestCase):
         model = ServiceVOIPUserAdd2()
         if include_optional:
             return ServiceVOIPUserAdd2(
-                call_forward = openapi_client.models.service/call_forward.service.CallForward(
+                call_forward = openapi_client.models.models/call_forward.models.CallForward(
                     enabled = True, 
                     number = '', ),
-                call_recording = openapi_client.models.service/call_recording_settings.service.CallRecordingSettings(
-                    any = openapi_client.models.service/call_recording_source.service.CallRecordingSource(
-                        offnet = openapi_client.models.service/call_recording_parameters.service.CallRecordingParameters(
+                call_recording = openapi_client.models.models/call_recording_settings.models.CallRecordingSettings(
+                    any = openapi_client.models.models/call_recording_source.models.CallRecordingSource(
+                        offnet = openapi_client.models.models/call_recording_parameters.models.CallRecordingParameters(
                             enabled = True, 
                             format = 'mp3', 
                             record_min_sec = 56, 
@@ -50,7 +50,7 @@ class TestServiceVOIPUserAdd2(unittest.TestCase):
                             record_sample_rate = 56, 
                             time_limit = 5, 
                             url = '', ), 
-                        onnet = openapi_client.models.service/call_recording_parameters.service.CallRecordingParameters(
+                        onnet = openapi_client.models.models/call_recording_parameters.models.CallRecordingParameters(
                             enabled = True, 
                             format = 'mp3', 
                             record_min_sec = 56, 
@@ -59,15 +59,22 @@ class TestServiceVOIPUserAdd2(unittest.TestCase):
                             record_sample_rate = 56, 
                             time_limit = 5, 
                             url = '', ), ), 
-                    inbound = openapi_client.models.service/call_recording_source.service.CallRecordingSource(), 
+                    inbound = openapi_client.models.models/call_recording_source.models.CallRecordingSource(), 
                     outbound = , ),
-                do_not_disturb = openapi_client.models.service/voip_shared_do_not_disturb.service.VOIPSharedDoNotDisturb(
+                caller_id = openapi_client.models.models/user_output_full_callerid.models.UserOutputFullCallerid(
+                    emergency = openapi_client.models.models/user_output_full_callerid_emergency.models.UserOutputFullCalleridEmergency(
+                        number = '', ), 
+                    external = openapi_client.models.models/user_output_full_callerid_external.models.UserOutputFullCalleridExternal(
+                        number = '', ), 
+                    internal = openapi_client.models.models/user_output_full_callerid_internal.models.UserOutputFullCalleridInternal(
+                        number = '', ), ),
+                do_not_disturb = openapi_client.models.models/voip_shared_do_not_disturb.models.VOIPSharedDoNotDisturb(
                     enabled = True, ),
                 email = '012',
                 enabled = True,
                 first_name = '',
                 last_name = '',
-                music_on_hold = openapi_client.models.service/music_on_hold.service.MusicOnHold(
+                music_on_hold = openapi_client.models.models/music_on_hold.models.MusicOnHold(
                     media_id = '', ),
                 presence_id = '',
                 timezone = '',

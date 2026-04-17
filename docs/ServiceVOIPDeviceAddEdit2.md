@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **call_forward** | [**ModelsCallForward**](ModelsCallForward.md) |  | [optional] 
 **caller_id** | [**ServiceVOIPDeviceAddEdit3c**](ServiceVOIPDeviceAddEdit3c.md) |  | [optional] 
-**device_type** | **str** |  | [optional] 
+**device_type** | **str** |  | 
 **do_not_disturb** | [**ModelsVOIPSharedDoNotDisturb**](ModelsVOIPSharedDoNotDisturb.md) |  | [optional] 
 **enabled** | **bool** | cannot use required, else it has to be true and false is not allowed | [optional] 
 **mac_address** | **str** | dont use mac, it enforces :, which voip does not like | [optional] 

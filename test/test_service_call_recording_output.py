@@ -43,7 +43,9 @@ class TestServiceCallRecordingOutput(unittest.TestCase):
                 caller_id_number = '',
                 cdr_id = '',
                 content_type = '',
-                custom_channel_vars = { },
+                custom_channel_vars = {
+                    'key' : None
+                    },
                 description = '',
                 direction = '',
                 duration = 56,

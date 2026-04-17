@@ -37,21 +37,7 @@ class TestServiceDocsImpersonateUserGetSingle(unittest.TestCase):
         if include_optional:
             return ServiceDocsImpersonateUserGetSingle(
                 data = openapi_client.models.service/impersonate_user_output_full.service.ImpersonateUserOutputFull(
-                    account_id = '', 
-                    account_name = '', 
-                    auth_token = '', 
-                    cluster_id = '', 
-                    is_master_account = True, 
-                    is_reseller = True, 
-                    owner_id = '', 
-                    reseller_id = '', 
-                    user_info = openapi_client.models.service/impersonated_user_info.service.ImpersonatedUserInfo(
-                        email = '', 
-                        first_name = '', 
-                        full_name = '', 
-                        has_avatar = True, 
-                        last_name = '', 
-                        priv_level = '', ), ),
+                    auth_token = '', ),
                 request_id = '',
                 status_code = 56
             )

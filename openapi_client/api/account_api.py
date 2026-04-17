@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
     White Label Communications CPaas API Documentation
 
@@ -12,6 +10,7 @@
     Do not edit the class manually.
 """  # noqa: E501
 
+
 import warnings
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
@@ -20,6 +19,7 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
+from openapi_client.models.service_api_response import ServiceAPIResponse
 from openapi_client.models.service_docs_account_api_key import ServiceDocsAccountAPIKey
 from openapi_client.models.service_docs_account_get_all import ServiceDocsAccountGetAll
 from openapi_client.models.service_docs_account_get_single import ServiceDocsAccountGetSingle
@@ -29,6 +29,7 @@ from openapi_client.models.service_update_record_type_for_account import Service
 from openapi_client.models.service_voip_account_add_data import ServiceVOIPAccountAddData
 from openapi_client.models.service_voip_account_edit_data import ServiceVOIPAccountEditData
 from openapi_client.models.service_voip_account_limit2 import ServiceVOIPAccountLimit2
+from openapi_client.models.v1_account_accountid_dnsrecord_get200_response import V1AccountAccountidDnsrecordGet200Response
 
 from openapi_client.api_client import ApiClient, RequestSerialized
 from openapi_client.api_response import ApiResponse
@@ -325,7 +326,7 @@ class AccountApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -589,7 +590,7 @@ class AccountApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -626,7 +627,7 @@ class AccountApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocsAccountGetSingle:
+    ) -> V1AccountAccountidDnsrecordGet200Response:
         """Get Account DNS Record
 
         Get the DNS record of an account from the Route 53 entry.
@@ -664,7 +665,7 @@ class AccountApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsAccountGetSingle",
+            '200': "V1AccountAccountidDnsrecordGet200Response",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -694,7 +695,7 @@ class AccountApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocsAccountGetSingle]:
+    ) -> ApiResponse[V1AccountAccountidDnsrecordGet200Response]:
         """Get Account DNS Record
 
         Get the DNS record of an account from the Route 53 entry.
@@ -732,7 +733,7 @@ class AccountApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsAccountGetSingle",
+            '200': "V1AccountAccountidDnsrecordGet200Response",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -800,7 +801,7 @@ class AccountApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsAccountGetSingle",
+            '200': "V1AccountAccountidDnsrecordGet200Response",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -853,7 +854,7 @@ class AccountApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -890,7 +891,7 @@ class AccountApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocsAccountGetSingle:
+    ) -> V1AccountAccountidDnsrecordGet200Response:
         """Create Account DNS Record
 
         Create the DNS record of an account with the help realm in the Route 53 entry.
@@ -928,7 +929,7 @@ class AccountApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsAccountGetSingle",
+            '200': "V1AccountAccountidDnsrecordGet200Response",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -958,7 +959,7 @@ class AccountApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocsAccountGetSingle]:
+    ) -> ApiResponse[V1AccountAccountidDnsrecordGet200Response]:
         """Create Account DNS Record
 
         Create the DNS record of an account with the help realm in the Route 53 entry.
@@ -996,7 +997,7 @@ class AccountApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsAccountGetSingle",
+            '200': "V1AccountAccountidDnsrecordGet200Response",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1064,7 +1065,7 @@ class AccountApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsAccountGetSingle",
+            '200': "V1AccountAccountidDnsrecordGet200Response",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1117,7 +1118,7 @@ class AccountApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -1155,7 +1156,7 @@ class AccountApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServiceDocsAccountGetSingle:
+    ) -> ServiceAPIResponse:
         """Convert Account DNS Record
 
         Toggle the realm DNS record between srv and cname.
@@ -1196,7 +1197,7 @@ class AccountApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsAccountGetSingle",
+            '200': "ServiceAPIResponse",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1227,7 +1228,7 @@ class AccountApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServiceDocsAccountGetSingle]:
+    ) -> ApiResponse[ServiceAPIResponse]:
         """Convert Account DNS Record
 
         Toggle the realm DNS record between srv and cname.
@@ -1268,7 +1269,7 @@ class AccountApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsAccountGetSingle",
+            '200': "ServiceAPIResponse",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1340,7 +1341,7 @@ class AccountApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServiceDocsAccountGetSingle",
+            '200': "ServiceAPIResponse",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -1409,7 +1410,7 @@ class AccountApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -1673,7 +1674,7 @@ class AccountApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -1937,7 +1938,7 @@ class AccountApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -2229,7 +2230,7 @@ class AccountApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -2521,7 +2522,7 @@ class AccountApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -2785,7 +2786,7 @@ class AccountApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -3049,7 +3050,7 @@ class AccountApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -3341,7 +3342,7 @@ class AccountApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -3590,7 +3591,7 @@ class AccountApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -3873,7 +3874,7 @@ class AccountApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -4150,7 +4151,7 @@ class AccountApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(

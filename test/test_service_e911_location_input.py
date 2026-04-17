@@ -46,10 +46,7 @@ class TestServiceE911LocationInput(unittest.TestCase):
             )
         else:
             return ServiceE911LocationInput(
-                address_1 = '',
-                community = '',
-                postal_code = '',
-                state = '',
+                type = 'ADDRESS',
         )
         """
 

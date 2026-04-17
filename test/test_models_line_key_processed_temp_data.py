@@ -37,7 +37,6 @@ class TestModelsLineKeyProcessedTempData(unittest.TestCase):
         if include_optional:
             return ModelsLineKeyProcessedTempData(
                 label = '',
-                line = 56,
                 type = '',
                 value = ''
             )

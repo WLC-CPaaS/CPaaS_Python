@@ -36,13 +36,13 @@ class TestServiceDocsDeviceGetSingle(unittest.TestCase):
         model = ServiceDocsDeviceGetSingle()
         if include_optional:
             return ServiceDocsDeviceGetSingle(
-                data = openapi_client.models.service/device_output_full.service.DeviceOutputFull(
-                    call_forward = openapi_client.models.service/call_forward.service.CallForward(
+                data = openapi_client.models.models/device_output_full.models.DeviceOutputFull(
+                    call_forward = openapi_client.models.models/call_forward.models.CallForward(
                         enabled = True, 
                         number = '', ), 
-                    call_recording = openapi_client.models.service/call_recording_settings.service.CallRecordingSettings(
-                        any = openapi_client.models.service/call_recording_source.service.CallRecordingSource(
-                            offnet = openapi_client.models.service/call_recording_parameters.service.CallRecordingParameters(
+                    call_recording = openapi_client.models.models/call_recording_settings.models.CallRecordingSettings(
+                        any = openapi_client.models.models/call_recording_source.models.CallRecordingSource(
+                            offnet = openapi_client.models.models/call_recording_parameters.models.CallRecordingParameters(
                                 enabled = True, 
                                 format = 'mp3', 
                                 record_min_sec = 56, 
@@ -51,7 +51,7 @@ class TestServiceDocsDeviceGetSingle(unittest.TestCase):
                                 record_sample_rate = 56, 
                                 time_limit = 5, 
                                 url = '', ), 
-                            onnet = openapi_client.models.service/call_recording_parameters.service.CallRecordingParameters(
+                            onnet = openapi_client.models.models/call_recording_parameters.models.CallRecordingParameters(
                                 enabled = True, 
                                 format = 'mp3', 
                                 record_min_sec = 56, 
@@ -60,25 +60,46 @@ class TestServiceDocsDeviceGetSingle(unittest.TestCase):
                                 record_sample_rate = 56, 
                                 time_limit = 5, 
                                 url = '', ), ), 
-                        inbound = openapi_client.models.service/call_recording_source.service.CallRecordingSource(), 
+                        inbound = openapi_client.models.models/call_recording_source.models.CallRecordingSource(), 
                         outbound = , ), 
-                    caller_id = openapi_client.models.service/device_output_full_callerid.service.DeviceOutputFullCallerid(
-                        emergency = openapi_client.models.service/device_output_full_callerid_emergency.service.DeviceOutputFullCalleridEmergency(
+                    caller_id = openapi_client.models.models/device_output_full_callerid.models.DeviceOutputFullCallerid(
+                        emergency = openapi_client.models.models/device_output_full_callerid_emergency.models.DeviceOutputFullCalleridEmergency(
                             number = '', ), 
-                        external = openapi_client.models.service/device_output_full_callerid_external.service.DeviceOutputFullCalleridExternal(
+                        external = openapi_client.models.models/device_output_full_callerid_external.models.DeviceOutputFullCalleridExternal(
+                            number = '', ), 
+                        internal = openapi_client.models.models/device_output_full_callerid_internal.models.DeviceOutputFullCalleridInternal(
                             number = '', ), ), 
                     device_type = '', 
-                    do_not_disturb = openapi_client.models.service/voip_shared_do_not_disturb.service.VOIPSharedDoNotDisturb(
+                    do_not_disturb = openapi_client.models.models/voip_shared_do_not_disturb.models.VOIPSharedDoNotDisturb(
                         enabled = True, ), 
                     enabled = True, 
                     id = '', 
                     mac_address = '', 
-                    music_on_hold = openapi_client.models.music_on_hold.music_on_hold(), 
+                    media = openapi_client.models.models/device_output_full_media.models.DeviceOutputFullMedia(
+                        audio = openapi_client.models.models/device_output_full_media_audio.models.DeviceOutputFullMediaAudio(
+                            codecs = [
+                                ''
+                                ], ), ), 
+                    music_on_hold = openapi_client.models.models/music_on_hold.models.MusicOnHold(
+                        media_id = '', ), 
                     name = '', 
                     owner_id = '', 
-                    sip = openapi_client.models.service/device_output_full_sip.service.DeviceOutputFullSIP(
+                    provision = openapi_client.models.models/device_output_full_provision.models.DeviceOutputFullProvision(
+                        endpoint_brand = '', 
+                        endpoint_family = '', 
+                        endpoint_model = '', 
+                        id = '', 
+                        line_keys = [
+                            openapi_client.models.models/voip_device_output_line_key.models.VOIPDeviceOutputLineKey(
+                                count = 56, 
+                                label = '', 
+                                type = '', 
+                                value = '', )
+                            ], ), 
+                    sip = openapi_client.models.models/device_output_full_sip.models.DeviceOutputFullSIP(
                         invite_format = '', 
                         password = '', 
+                        route = '', 
                         username = '', ), ),
                 request_id = '',
                 status_code = 56

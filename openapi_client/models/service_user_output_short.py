@@ -24,6 +24,7 @@ from openapi_client.models.models_call_recording_settings import ModelsCallRecor
 from openapi_client.models.models_voip_shared_do_not_disturb import ModelsVOIPSharedDoNotDisturb
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class ServiceUserOutputShort(BaseModel):
     """
@@ -42,7 +43,8 @@ class ServiceUserOutputShort(BaseModel):
     __properties: ClassVar[List[str]] = ["call_recording", "do_not_disturb", "email", "enabled", "features", "first_name", "flags", "id", "last_name", "presence_id"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -54,8 +56,7 @@ class ServiceUserOutputShort(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:

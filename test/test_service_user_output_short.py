@@ -36,9 +36,9 @@ class TestServiceUserOutputShort(unittest.TestCase):
         model = ServiceUserOutputShort()
         if include_optional:
             return ServiceUserOutputShort(
-                call_recording = openapi_client.models.service/call_recording_settings.service.CallRecordingSettings(
-                    any = openapi_client.models.service/call_recording_source.service.CallRecordingSource(
-                        offnet = openapi_client.models.service/call_recording_parameters.service.CallRecordingParameters(
+                call_recording = openapi_client.models.models/call_recording_settings.models.CallRecordingSettings(
+                    any = openapi_client.models.models/call_recording_source.models.CallRecordingSource(
+                        offnet = openapi_client.models.models/call_recording_parameters.models.CallRecordingParameters(
                             enabled = True, 
                             format = 'mp3', 
                             record_min_sec = 56, 
@@ -47,7 +47,7 @@ class TestServiceUserOutputShort(unittest.TestCase):
                             record_sample_rate = 56, 
                             time_limit = 5, 
                             url = '', ), 
-                        onnet = openapi_client.models.service/call_recording_parameters.service.CallRecordingParameters(
+                        onnet = openapi_client.models.models/call_recording_parameters.models.CallRecordingParameters(
                             enabled = True, 
                             format = 'mp3', 
                             record_min_sec = 56, 
@@ -56,9 +56,9 @@ class TestServiceUserOutputShort(unittest.TestCase):
                             record_sample_rate = 56, 
                             time_limit = 5, 
                             url = '', ), ), 
-                    inbound = openapi_client.models.service/call_recording_source.service.CallRecordingSource(), 
+                    inbound = openapi_client.models.models/call_recording_source.models.CallRecordingSource(), 
                     outbound = , ),
-                do_not_disturb = openapi_client.models.service/voip_shared_do_not_disturb.service.VOIPSharedDoNotDisturb(
+                do_not_disturb = openapi_client.models.models/voip_shared_do_not_disturb.models.VOIPSharedDoNotDisturb(
                     enabled = True, ),
                 email = '',
                 enabled = True,

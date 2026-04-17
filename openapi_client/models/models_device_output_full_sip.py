@@ -22,6 +22,7 @@ from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class ModelsDeviceOutputFullSIP(BaseModel):
     """
@@ -29,11 +30,13 @@ class ModelsDeviceOutputFullSIP(BaseModel):
     """ # noqa: E501
     invite_format: Optional[StrictStr] = None
     password: Optional[StrictStr] = None
+    route: Optional[StrictStr] = None
     username: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["invite_format", "password", "username"]
+    __properties: ClassVar[List[str]] = ["invite_format", "password", "route", "username"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -45,8 +48,7 @@ class ModelsDeviceOutputFullSIP(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
@@ -85,6 +87,7 @@ class ModelsDeviceOutputFullSIP(BaseModel):
         _obj = cls.model_validate({
             "invite_format": obj.get("invite_format"),
             "password": obj.get("password"),
+            "route": obj.get("route"),
             "username": obj.get("username")
         })
         return _obj

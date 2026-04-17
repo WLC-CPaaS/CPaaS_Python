@@ -23,6 +23,7 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class ServiceVOIPTemporalRuleAddEdit2(BaseModel):
     """
@@ -37,9 +38,9 @@ class ServiceVOIPTemporalRuleAddEdit2(BaseModel):
     ordinal: Optional[StrictStr] = None
     start_date: Optional[StrictInt] = None
     start_date_req: Optional[StrictStr] = None
-    time_window_start: Optional[Annotated[int, Field(le=86400, strict=True, ge=0)]] = None
+    time_window_start: Optional[StrictInt] = None
     time_window_start_req: Optional[StrictStr] = None
-    time_window_stop: Optional[Annotated[int, Field(le=86400, strict=True, ge=0)]] = None
+    time_window_stop: Optional[StrictInt] = None
     time_window_stop_req: Optional[StrictStr] = None
     wdays: Optional[List[StrictStr]] = None
     __properties: ClassVar[List[str]] = ["cycle", "days", "enabled", "interval", "month", "name", "ordinal", "start_date", "start_date_req", "time_window_start", "time_window_start_req", "time_window_stop", "time_window_stop_req", "wdays"]
@@ -62,7 +63,8 @@ class ServiceVOIPTemporalRuleAddEdit2(BaseModel):
         return value
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -74,8 +76,7 @@ class ServiceVOIPTemporalRuleAddEdit2(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:

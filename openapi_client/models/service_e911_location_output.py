@@ -24,6 +24,7 @@ from openapi_client.models.service_e911_legacy_data_output import ServiceE911Leg
 from openapi_client.models.service_e911_status_output import ServiceE911StatusOutput
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class ServiceE911LocationOutput(BaseModel):
     """
@@ -49,7 +50,8 @@ class ServiceE911LocationOutput(BaseModel):
     __properties: ClassVar[List[str]] = ["activated_time", "address_1", "address_2", "caller_name", "comments", "community", "customer_order_id", "latitude", "legacy_data", "location_id", "longitude", "plus_four", "postal_code", "state", "status", "type", "update_time"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -61,8 +63,7 @@ class ServiceE911LocationOutput(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:

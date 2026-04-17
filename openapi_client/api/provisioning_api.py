@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
     White Label Communications CPaas API Documentation
 
@@ -11,6 +9,7 @@
 
     Do not edit the class manually.
 """  # noqa: E501
+
 
 import warnings
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
@@ -66,7 +65,7 @@ class ProvisioningApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> bytearray:
+    ) -> bytes:
         """Get Config File Details
 
         Retrieve the configuration details (e.g., settings and parameters) for a device.
@@ -107,7 +106,7 @@ class ProvisioningApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "bytearray",
+            '200': "bytes",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -138,7 +137,7 @@ class ProvisioningApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[bytearray]:
+    ) -> ApiResponse[bytes]:
         """Get Config File Details
 
         Retrieve the configuration details (e.g., settings and parameters) for a device.
@@ -179,7 +178,7 @@ class ProvisioningApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "bytearray",
+            '200': "bytes",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -251,7 +250,7 @@ class ProvisioningApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "bytearray",
+            '200': "bytes",
             '400': "CPAASError",
         }
         response_data = self.api_client.call_api(
@@ -588,7 +587,7 @@ class ProvisioningApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -938,7 +937,7 @@ class ProvisioningApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -1235,7 +1234,7 @@ class ProvisioningApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -1617,7 +1616,7 @@ class ProvisioningApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -1929,7 +1928,7 @@ class ProvisioningApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -2264,7 +2263,7 @@ class ProvisioningApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -2531,7 +2530,7 @@ class ProvisioningApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -2851,7 +2850,7 @@ class ProvisioningApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(
@@ -3131,7 +3130,7 @@ class ProvisioningApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'BearerAuth'
+            'bearerauth'
         ]
 
         return self.api_client.param_serialize(

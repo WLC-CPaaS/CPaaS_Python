@@ -13,7 +13,6 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
 # import models into model package
 from openapi_client.models.cpaas_error import CPAASError
 from openapi_client.models.menu_input_data import MenuInputData
@@ -57,6 +56,7 @@ from openapi_client.models.models_generate_config_file_request import ModelsGene
 from openapi_client.models.models_line_key_processed_temp_data import ModelsLineKeyProcessedTempData
 from openapi_client.models.models_model import ModelsModel
 from openapi_client.models.models_music_on_hold import ModelsMusicOnHold
+from openapi_client.models.models_parking_slot_data import ModelsParkingSlotData
 from openapi_client.models.models_template import ModelsTemplate
 from openapi_client.models.models_user_output_full import ModelsUserOutputFull
 from openapi_client.models.models_user_output_full_callerid import ModelsUserOutputFullCallerid
@@ -210,7 +210,6 @@ from openapi_client.models.service_media_output_full import ServiceMediaOutputFu
 from openapi_client.models.service_media_output_short import ServiceMediaOutputShort
 from openapi_client.models.service_metaflow_output import ServiceMetaflowOutput
 from openapi_client.models.service_metaflow_pattern import ServiceMetaflowPattern
-from openapi_client.models.service_parking_slot_data import ServiceParkingSlotData
 from openapi_client.models.service_phone_number_result import ServicePhoneNumberResult
 from openapi_client.models.service_phone_number_search_output import ServicePhoneNumberSearchOutput
 from openapi_client.models.service_phonenumber_output import ServicePhonenumberOutput
@@ -275,3 +274,15 @@ from openapi_client.models.service_voicemail_output_short import ServiceVoicemai
 from openapi_client.models.service_webhook_add import ServiceWebhookAdd
 from openapi_client.models.service_webhook_delete_output import ServiceWebhookDeleteOutput
 from openapi_client.models.service_webhook_edit import ServiceWebhookEdit
+from openapi_client.models.types_alias_target import TypesAliasTarget
+from openapi_client.models.types_cidr_routing_config import TypesCidrRoutingConfig
+from openapi_client.models.types_coordinates import TypesCoordinates
+from openapi_client.models.types_geo_location import TypesGeoLocation
+from openapi_client.models.types_geo_proximity_location import TypesGeoProximityLocation
+from openapi_client.models.types_rr_type import TypesRRType
+from openapi_client.models.types_resource_record import TypesResourceRecord
+from openapi_client.models.types_resource_record_set import TypesResourceRecordSet
+from openapi_client.models.types_resource_record_set_failover import TypesResourceRecordSetFailover
+from openapi_client.models.types_resource_record_set_region import TypesResourceRecordSetRegion
+from openapi_client.models.v1_account_accountid_dnsrecord_get200_response import V1AccountAccountidDnsrecordGet200Response
+

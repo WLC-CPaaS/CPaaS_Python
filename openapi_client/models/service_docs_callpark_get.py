@@ -20,15 +20,16 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.service_parking_slot_data import ServiceParkingSlotData
+from openapi_client.models.models_parking_slot_data import ModelsParkingSlotData
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class ServiceDocsCallparkGet(BaseModel):
     """
     ServiceDocsCallparkGet
     """ # noqa: E501
-    data: Optional[List[Dict[str, ServiceParkingSlotData]]] = None
+    data: Optional[List[Dict[str, ModelsParkingSlotData]]] = None
     next_start_key: Optional[StrictStr] = Field(default=None, description="List Pagination: Used to get the next page of results. Will not exist if this is the last page.")
     page_size: Optional[StrictInt] = Field(default=None, description="List Pagination: The number of results returned in this page")
     request_id: Optional[StrictStr] = Field(default=None, description="Unique id for each request")
@@ -37,7 +38,8 @@ class ServiceDocsCallparkGet(BaseModel):
     __properties: ClassVar[List[str]] = ["data", "next_start_key", "page_size", "request_id", "start_key", "status_code"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -49,8 +51,7 @@ class ServiceDocsCallparkGet(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
@@ -75,12 +76,14 @@ class ServiceDocsCallparkGet(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in data (list)
+        # override the default output from pydantic by calling `to_dict()` of each item in data (list of dict)
         _items = []
         if self.data:
             for _item_data in self.data:
                 if _item_data:
-                    _items.append(_item_data.to_dict())
+                    _items.append(
+                         {_inner_key: _inner_value.to_dict() for _inner_key, _inner_value in _item_data.items()}
+                    )
             _dict['data'] = _items
         return _dict
 
@@ -94,7 +97,10 @@ class ServiceDocsCallparkGet(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "data": [Dict[str, ServiceParkingSlotData].from_dict(_item) for _item in obj["data"]] if obj.get("data") is not None else None,
+            "data": [
+                    {_inner_key: ModelsParkingSlotData.from_dict(_inner_value) for _inner_key, _inner_value in _item.items()}
+                    for _item in obj["data"]
+                ] if obj.get("data") is not None else None,
             "next_start_key": obj.get("next_start_key"),
             "page_size": obj.get("page_size"),
             "request_id": obj.get("request_id"),
